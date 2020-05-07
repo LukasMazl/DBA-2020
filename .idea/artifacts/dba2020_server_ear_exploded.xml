@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ear" name="dba2020-server:ear exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/dba2020_server_ear_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="dba2020-server/javaeeApplication/javaEEApplication" />
+      <element id="dir-copy" path="$PROJECT_DIR$/dba2020-server/src/main/webapp" />
+    </root>
+  </artifact>
+</component>

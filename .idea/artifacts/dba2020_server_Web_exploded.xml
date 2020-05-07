@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="dba2020-server:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/dba2020_server_Web_exploded</output-path>
+    <root id="archive" name="dba2020-server_Web exploded.war">
+      <element id="javaee-facet-resources" facet="dba2020-server/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="dba2020-server" />
+        </element>
+        <element id="dir-copy" path="$PROJECT_DIR$/dba2020-server/src/main/webapp" />
+      </element>
+    </root>
+  </artifact>
+</component>
