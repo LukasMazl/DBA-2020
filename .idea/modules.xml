@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/DBA-2020.iml" filepath="$PROJECT_DIR$/.idea/DBA-2020.iml" />
-      <module fileurl="file://$PROJECT_DIR$/dba2020-client/dba2020-client.iml" filepath="$PROJECT_DIR$/dba2020-client/dba2020-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dba2020-client/dba2020-device.iml" filepath="$PROJECT_DIR$/dba2020-client/dba2020-device.iml" />
       <module fileurl="file://$PROJECT_DIR$/dba2020-server/dba2020-server.iml" filepath="$PROJECT_DIR$/dba2020-server/dba2020-server.iml" />
     </modules>
   </component>

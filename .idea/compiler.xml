@@ -6,12 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="dba2020-client" />
+        <module name="dba2020-device" />
         <module name="dba2020-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="dba2020-client" target="1.5" />
+      <module name="dba2020-device" target="1.5" />
       <module name="dba2020-server" target="1.8" />
     </bytecodeTargetLevel>
   </component>
