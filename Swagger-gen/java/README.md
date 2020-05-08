@@ -108,7 +108,6 @@ Class | Method | HTTP request | Description
 *DeviceEntityEntityApi* | [**saveDeviceEntityUsingPATCH**](docs/DeviceEntityEntityApi.md#saveDeviceEntityUsingPATCH) | **PATCH** /deviceEntities/{id} | saveDeviceEntity
 *DeviceEntityEntityApi* | [**saveDeviceEntityUsingPOST**](docs/DeviceEntityEntityApi.md#saveDeviceEntityUsingPOST) | **POST** /deviceEntities | saveDeviceEntity
 *DeviceEntityEntityApi* | [**saveDeviceEntityUsingPUT**](docs/DeviceEntityEntityApi.md#saveDeviceEntityUsingPUT) | **PUT** /deviceEntities/{id} | saveDeviceEntity
-*IndexcontrollerApi* | [**getIndexUsingGET**](docs/IndexcontrollerApi.md#getIndexUsingGET) | **GET** /index | getIndex
 *MachineEntityEntityApi* | [**deleteMachineEntityUsingDELETE**](docs/MachineEntityEntityApi.md#deleteMachineEntityUsingDELETE) | **DELETE** /machineEntities/{id} | deleteMachineEntity
 *MachineEntityEntityApi* | [**findAllMachineEntityUsingGET**](docs/MachineEntityEntityApi.md#findAllMachineEntityUsingGET) | **GET** /machineEntities | findAllMachineEntity
 *MachineEntityEntityApi* | [**findByIdMachineEntityUsingGET**](docs/MachineEntityEntityApi.md#findByIdMachineEntityUsingGET) | **GET** /machineEntities/{id} | findByIdMachineEntity

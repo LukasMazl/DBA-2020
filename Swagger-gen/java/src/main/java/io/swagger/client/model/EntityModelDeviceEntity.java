@@ -37,7 +37,7 @@ import io.swagger.client.model.MachineEntity;
 /**
  * EntityModelDeviceEntity
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-08T14:25:41.506+02:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-08T15:19:24.422+02:00")
 public class EntityModelDeviceEntity   {
   @SerializedName("deviceCode")
   private String deviceCode = null;

@@ -35,7 +35,7 @@ import io.swagger.client.model.DeviceEntity;
 /**
  * DeviceConfigurationEntity
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-08T14:25:41.506+02:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-08T15:19:24.422+02:00")
 public class DeviceConfigurationEntity   {
   @SerializedName("deviceEntity")
   private DeviceEntity deviceEntity = null;
