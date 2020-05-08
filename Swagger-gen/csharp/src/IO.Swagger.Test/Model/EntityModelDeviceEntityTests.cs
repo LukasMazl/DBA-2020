@@ -77,12 +77,12 @@ namespace IO.Swagger.Test
         }
 
         /// <summary>
-        /// Test the property 'DeviceCode'
+        /// Test the property 'Created'
         /// </summary>
         [Test]
-        public void DeviceCodeTest()
+        public void CreatedTest()
         {
-            // TODO unit test for the property 'DeviceCode'
+            // TODO unit test for the property 'Created'
         }
         /// <summary>
         /// Test the property 'DeviceConfigurationEntity'
@@ -91,6 +91,22 @@ namespace IO.Swagger.Test
         public void DeviceConfigurationEntityTest()
         {
             // TODO unit test for the property 'DeviceConfigurationEntity'
+        }
+        /// <summary>
+        /// Test the property 'DeviceDescription'
+        /// </summary>
+        [Test]
+        public void DeviceDescriptionTest()
+        {
+            // TODO unit test for the property 'DeviceDescription'
+        }
+        /// <summary>
+        /// Test the property 'DeviceStateEntity'
+        /// </summary>
+        [Test]
+        public void DeviceStateEntityTest()
+        {
+            // TODO unit test for the property 'DeviceStateEntity'
         }
         /// <summary>
         /// Test the property 'Id'
@@ -115,6 +131,14 @@ namespace IO.Swagger.Test
         public void MachineEntityTest()
         {
             // TODO unit test for the property 'MachineEntity'
+        }
+        /// <summary>
+        /// Test the property 'SerialNumber'
+        /// </summary>
+        [Test]
+        public void SerialNumberTest()
+        {
+            // TODO unit test for the property 'SerialNumber'
         }
 
     }

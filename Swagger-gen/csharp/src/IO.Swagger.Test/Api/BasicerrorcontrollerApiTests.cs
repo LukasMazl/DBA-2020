@@ -31,6 +31,7 @@ using NUnit.Framework;
 
 using IO.Swagger.Client;
 using IO.Swagger.Api;
+using IO.Swagger.Model;
 
 namespace IO.Swagger.Test
 {
@@ -76,80 +77,80 @@ namespace IO.Swagger.Test
 
         
         /// <summary>
-        /// Test ErrorUsingDELETE
+        /// Test ErrorHtmlUsingDELETE
         /// </summary>
         [Test]
-        public void ErrorUsingDELETETest()
+        public void ErrorHtmlUsingDELETETest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.ErrorUsingDELETE();
-            //Assert.IsInstanceOf<Dictionary<string, Object>> (response, "response is Dictionary<string, Object>");
+            //var response = instance.ErrorHtmlUsingDELETE();
+            //Assert.IsInstanceOf<ModelAndView> (response, "response is ModelAndView");
         }
         
         /// <summary>
-        /// Test ErrorUsingGET
+        /// Test ErrorHtmlUsingGET
         /// </summary>
         [Test]
-        public void ErrorUsingGETTest()
+        public void ErrorHtmlUsingGETTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.ErrorUsingGET();
-            //Assert.IsInstanceOf<Dictionary<string, Object>> (response, "response is Dictionary<string, Object>");
+            //var response = instance.ErrorHtmlUsingGET();
+            //Assert.IsInstanceOf<ModelAndView> (response, "response is ModelAndView");
         }
         
         /// <summary>
-        /// Test ErrorUsingHEAD
+        /// Test ErrorHtmlUsingHEAD
         /// </summary>
         [Test]
-        public void ErrorUsingHEADTest()
+        public void ErrorHtmlUsingHEADTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.ErrorUsingHEAD();
-            //Assert.IsInstanceOf<Dictionary<string, Object>> (response, "response is Dictionary<string, Object>");
+            //var response = instance.ErrorHtmlUsingHEAD();
+            //Assert.IsInstanceOf<ModelAndView> (response, "response is ModelAndView");
         }
         
         /// <summary>
-        /// Test ErrorUsingOPTIONS
+        /// Test ErrorHtmlUsingOPTIONS
         /// </summary>
         [Test]
-        public void ErrorUsingOPTIONSTest()
+        public void ErrorHtmlUsingOPTIONSTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.ErrorUsingOPTIONS();
-            //Assert.IsInstanceOf<Dictionary<string, Object>> (response, "response is Dictionary<string, Object>");
+            //var response = instance.ErrorHtmlUsingOPTIONS();
+            //Assert.IsInstanceOf<ModelAndView> (response, "response is ModelAndView");
         }
         
         /// <summary>
-        /// Test ErrorUsingPATCH
+        /// Test ErrorHtmlUsingPATCH
         /// </summary>
         [Test]
-        public void ErrorUsingPATCHTest()
+        public void ErrorHtmlUsingPATCHTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.ErrorUsingPATCH();
-            //Assert.IsInstanceOf<Dictionary<string, Object>> (response, "response is Dictionary<string, Object>");
+            //var response = instance.ErrorHtmlUsingPATCH();
+            //Assert.IsInstanceOf<ModelAndView> (response, "response is ModelAndView");
         }
         
         /// <summary>
-        /// Test ErrorUsingPOST
+        /// Test ErrorHtmlUsingPOST
         /// </summary>
         [Test]
-        public void ErrorUsingPOSTTest()
+        public void ErrorHtmlUsingPOSTTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.ErrorUsingPOST();
-            //Assert.IsInstanceOf<Dictionary<string, Object>> (response, "response is Dictionary<string, Object>");
+            //var response = instance.ErrorHtmlUsingPOST();
+            //Assert.IsInstanceOf<ModelAndView> (response, "response is ModelAndView");
         }
         
         /// <summary>
-        /// Test ErrorUsingPUT
+        /// Test ErrorHtmlUsingPUT
         /// </summary>
         [Test]
-        public void ErrorUsingPUTTest()
+        public void ErrorHtmlUsingPUTTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.ErrorUsingPUT();
-            //Assert.IsInstanceOf<Dictionary<string, Object>> (response, "response is Dictionary<string, Object>");
+            //var response = instance.ErrorHtmlUsingPUT();
+            //Assert.IsInstanceOf<ModelAndView> (response, "response is ModelAndView");
         }
         
     }

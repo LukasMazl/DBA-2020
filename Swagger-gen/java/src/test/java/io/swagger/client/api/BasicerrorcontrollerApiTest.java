@@ -26,6 +26,7 @@
 package io.swagger.client.api;
 
 import io.swagger.client.ApiException;
+import io.swagger.client.model.ModelAndView;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -42,7 +43,7 @@ public class BasicerrorcontrollerApiTest {
 
     
     /**
-     * error
+     * errorHtml
      *
      * 
      *
@@ -50,14 +51,14 @@ public class BasicerrorcontrollerApiTest {
      *          if the Api call fails
      */
     @Test
-    public void errorUsingDELETETest() throws ApiException {
-        // Map<String, Object> response = api.errorUsingDELETE();
+    public void errorHtmlUsingDELETETest() throws ApiException {
+        // ModelAndView response = api.errorHtmlUsingDELETE();
 
         // TODO: test validations
     }
     
     /**
-     * error
+     * errorHtml
      *
      * 
      *
@@ -65,14 +66,14 @@ public class BasicerrorcontrollerApiTest {
      *          if the Api call fails
      */
     @Test
-    public void errorUsingGETTest() throws ApiException {
-        // Map<String, Object> response = api.errorUsingGET();
+    public void errorHtmlUsingGETTest() throws ApiException {
+        // ModelAndView response = api.errorHtmlUsingGET();
 
         // TODO: test validations
     }
     
     /**
-     * error
+     * errorHtml
      *
      * 
      *
@@ -80,14 +81,14 @@ public class BasicerrorcontrollerApiTest {
      *          if the Api call fails
      */
     @Test
-    public void errorUsingHEADTest() throws ApiException {
-        // Map<String, Object> response = api.errorUsingHEAD();
+    public void errorHtmlUsingHEADTest() throws ApiException {
+        // ModelAndView response = api.errorHtmlUsingHEAD();
 
         // TODO: test validations
     }
     
     /**
-     * error
+     * errorHtml
      *
      * 
      *
@@ -95,14 +96,14 @@ public class BasicerrorcontrollerApiTest {
      *          if the Api call fails
      */
     @Test
-    public void errorUsingOPTIONSTest() throws ApiException {
-        // Map<String, Object> response = api.errorUsingOPTIONS();
+    public void errorHtmlUsingOPTIONSTest() throws ApiException {
+        // ModelAndView response = api.errorHtmlUsingOPTIONS();
 
         // TODO: test validations
     }
     
     /**
-     * error
+     * errorHtml
      *
      * 
      *
@@ -110,14 +111,14 @@ public class BasicerrorcontrollerApiTest {
      *          if the Api call fails
      */
     @Test
-    public void errorUsingPATCHTest() throws ApiException {
-        // Map<String, Object> response = api.errorUsingPATCH();
+    public void errorHtmlUsingPATCHTest() throws ApiException {
+        // ModelAndView response = api.errorHtmlUsingPATCH();
 
         // TODO: test validations
     }
     
     /**
-     * error
+     * errorHtml
      *
      * 
      *
@@ -125,14 +126,14 @@ public class BasicerrorcontrollerApiTest {
      *          if the Api call fails
      */
     @Test
-    public void errorUsingPOSTTest() throws ApiException {
-        // Map<String, Object> response = api.errorUsingPOST();
+    public void errorHtmlUsingPOSTTest() throws ApiException {
+        // ModelAndView response = api.errorHtmlUsingPOST();
 
         // TODO: test validations
     }
     
     /**
-     * error
+     * errorHtml
      *
      * 
      *
@@ -140,8 +141,8 @@ public class BasicerrorcontrollerApiTest {
      *          if the Api call fails
      */
     @Test
-    public void errorUsingPUTTest() throws ApiException {
-        // Map<String, Object> response = api.errorUsingPUT();
+    public void errorHtmlUsingPUTTest() throws ApiException {
+        // ModelAndView response = api.errorHtmlUsingPUT();
 
         // TODO: test validations
     }

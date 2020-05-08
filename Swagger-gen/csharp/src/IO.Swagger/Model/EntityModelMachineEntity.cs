@@ -56,7 +56,51 @@ namespace IO.Swagger.Model
             /// Enum STOPPED for "STOPPED"
             /// </summary>
             [EnumMember(Value = "STOPPED")]
-            STOPPED
+            STOPPED,
+            
+            /// <summary>
+            /// Enum WORKING for "WORKING"
+            /// </summary>
+            [EnumMember(Value = "WORKING")]
+            WORKING
+        }
+
+        /// <summary>
+        /// Gets or Sets MachineTypeEntity
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum MachineTypeEntityEnum
+        {
+            
+            /// <summary>
+            /// Enum TRACTOR for "TRACTOR"
+            /// </summary>
+            [EnumMember(Value = "TRACTOR")]
+            TRACTOR,
+            
+            /// <summary>
+            /// Enum COMBINE for "COMBINE"
+            /// </summary>
+            [EnumMember(Value = "COMBINE")]
+            COMBINE,
+            
+            /// <summary>
+            /// Enum CAR for "CAR"
+            /// </summary>
+            [EnumMember(Value = "CAR")]
+            CAR,
+            
+            /// <summary>
+            /// Enum TRACK for "TRACK"
+            /// </summary>
+            [EnumMember(Value = "TRACK")]
+            TRACK,
+            
+            /// <summary>
+            /// Enum GRADER for "GRADER"
+            /// </summary>
+            [EnumMember(Value = "GRADER")]
+            GRADER
         }
 
         /// <summary>
@@ -65,22 +109,45 @@ namespace IO.Swagger.Model
         [DataMember(Name="machineEntityState", EmitDefaultValue=false)]
         public MachineEntityStateEnum? MachineEntityState { get; set; }
         /// <summary>
+        /// Gets or Sets MachineTypeEntity
+        /// </summary>
+        [DataMember(Name="machineTypeEntity", EmitDefaultValue=false)]
+        public MachineTypeEntityEnum? MachineTypeEntity { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="EntityModelMachineEntity" /> class.
         /// </summary>
+        /// <param name="Created">Created.</param>
+        /// <param name="Description">Description.</param>
         /// <param name="DeviceEntity">DeviceEntity.</param>
         /// <param name="Id">Id.</param>
         /// <param name="Links">Links.</param>
         /// <param name="MachineEntityState">MachineEntityState.</param>
+        /// <param name="MachineTypeEntity">MachineTypeEntity.</param>
+        /// <param name="Manufacturer">Manufacturer.</param>
         /// <param name="Vin">Vin.</param>
-        public EntityModelMachineEntity(DeviceEntity DeviceEntity = null, long? Id = null, Links Links = null, MachineEntityStateEnum? MachineEntityState = null, string Vin = null)
+        public EntityModelMachineEntity(DateTime? Created = null, string Description = null, DeviceEntity DeviceEntity = null, long? Id = null, Links Links = null, MachineEntityStateEnum? MachineEntityState = null, MachineTypeEntityEnum? MachineTypeEntity = null, string Manufacturer = null, string Vin = null)
         {
+            this.Created = Created;
+            this.Description = Description;
             this.DeviceEntity = DeviceEntity;
             this.Id = Id;
             this.Links = Links;
             this.MachineEntityState = MachineEntityState;
+            this.MachineTypeEntity = MachineTypeEntity;
+            this.Manufacturer = Manufacturer;
             this.Vin = Vin;
         }
         
+        /// <summary>
+        /// Gets or Sets Created
+        /// </summary>
+        [DataMember(Name="created", EmitDefaultValue=false)]
+        public DateTime? Created { get; set; }
+        /// <summary>
+        /// Gets or Sets Description
+        /// </summary>
+        [DataMember(Name="description", EmitDefaultValue=false)]
+        public string Description { get; set; }
         /// <summary>
         /// Gets or Sets DeviceEntity
         /// </summary>
@@ -97,6 +164,11 @@ namespace IO.Swagger.Model
         [DataMember(Name="links", EmitDefaultValue=false)]
         public Links Links { get; set; }
         /// <summary>
+        /// Gets or Sets Manufacturer
+        /// </summary>
+        [DataMember(Name="manufacturer", EmitDefaultValue=false)]
+        public string Manufacturer { get; set; }
+        /// <summary>
         /// Gets or Sets Vin
         /// </summary>
         [DataMember(Name="vin", EmitDefaultValue=false)]
@@ -109,10 +181,14 @@ namespace IO.Swagger.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EntityModelMachineEntity {\n");
+            sb.Append("  Created: ").Append(Created).Append("\n");
+            sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  DeviceEntity: ").Append(DeviceEntity).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Links: ").Append(Links).Append("\n");
             sb.Append("  MachineEntityState: ").Append(MachineEntityState).Append("\n");
+            sb.Append("  MachineTypeEntity: ").Append(MachineTypeEntity).Append("\n");
+            sb.Append("  Manufacturer: ").Append(Manufacturer).Append("\n");
             sb.Append("  Vin: ").Append(Vin).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -151,6 +227,16 @@ namespace IO.Swagger.Model
 
             return 
                 (
+                    this.Created == other.Created ||
+                    this.Created != null &&
+                    this.Created.Equals(other.Created)
+                ) && 
+                (
+                    this.Description == other.Description ||
+                    this.Description != null &&
+                    this.Description.Equals(other.Description)
+                ) && 
+                (
                     this.DeviceEntity == other.DeviceEntity ||
                     this.DeviceEntity != null &&
                     this.DeviceEntity.Equals(other.DeviceEntity)
@@ -171,6 +257,16 @@ namespace IO.Swagger.Model
                     this.MachineEntityState.Equals(other.MachineEntityState)
                 ) && 
                 (
+                    this.MachineTypeEntity == other.MachineTypeEntity ||
+                    this.MachineTypeEntity != null &&
+                    this.MachineTypeEntity.Equals(other.MachineTypeEntity)
+                ) && 
+                (
+                    this.Manufacturer == other.Manufacturer ||
+                    this.Manufacturer != null &&
+                    this.Manufacturer.Equals(other.Manufacturer)
+                ) && 
+                (
                     this.Vin == other.Vin ||
                     this.Vin != null &&
                     this.Vin.Equals(other.Vin)
@@ -188,6 +284,10 @@ namespace IO.Swagger.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.Created != null)
+                    hash = hash * 59 + this.Created.GetHashCode();
+                if (this.Description != null)
+                    hash = hash * 59 + this.Description.GetHashCode();
                 if (this.DeviceEntity != null)
                     hash = hash * 59 + this.DeviceEntity.GetHashCode();
                 if (this.Id != null)
@@ -196,6 +296,10 @@ namespace IO.Swagger.Model
                     hash = hash * 59 + this.Links.GetHashCode();
                 if (this.MachineEntityState != null)
                     hash = hash * 59 + this.MachineEntityState.GetHashCode();
+                if (this.MachineTypeEntity != null)
+                    hash = hash * 59 + this.MachineTypeEntity.GetHashCode();
+                if (this.Manufacturer != null)
+                    hash = hash * 59 + this.Manufacturer.GetHashCode();
                 if (this.Vin != null)
                     hash = hash * 59 + this.Vin.GetHashCode();
                 return hash;

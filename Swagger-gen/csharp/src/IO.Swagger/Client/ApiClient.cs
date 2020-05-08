@@ -80,7 +80,7 @@ namespace IO.Swagger.Client
             else
                 Configuration = config;
 
-            RestClient = new RestClient("https://localhost:8080/");
+            RestClient = new RestClient("http://localhost:8080/");
         }
 
         /// <summary>
@@ -88,7 +88,7 @@ namespace IO.Swagger.Client
         /// with default configuration.
         /// </summary>
         /// <param name="basePath">The base path.</param>
-        public ApiClient(String basePath = "https://localhost:8080/")
+        public ApiClient(String basePath = "http://localhost:8080/")
         {
            if (String.IsNullOrEmpty(basePath))
                 throw new ArgumentException("basePath cannot be empty");

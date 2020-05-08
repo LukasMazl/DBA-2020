@@ -4,9 +4,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**created** | [**DateTime**](DateTime.md) |  |  [optional]
+**description** | **String** |  |  [optional]
 **deviceEntity** | [**DeviceEntity**](DeviceEntity.md) |  |  [optional]
 **id** | **Long** |  |  [optional]
 **machineEntityState** | [**MachineEntityStateEnum**](#MachineEntityStateEnum) |  |  [optional]
+**machineTypeEntity** | [**MachineTypeEntityEnum**](#MachineTypeEntityEnum) |  |  [optional]
+**manufacturer** | **String** |  |  [optional]
 **vin** | **String** |  |  [optional]
 
 
@@ -16,6 +20,18 @@ Name | Value
 ---- | -----
 MOVING | &quot;MOVING&quot;
 STOPPED | &quot;STOPPED&quot;
+WORKING | &quot;WORKING&quot;
+
+
+<a name="MachineTypeEntityEnum"></a>
+## Enum: MachineTypeEntityEnum
+Name | Value
+---- | -----
+TRACTOR | &quot;TRACTOR&quot;
+COMBINE | &quot;COMBINE&quot;
+CAR | &quot;CAR&quot;
+TRACK | &quot;TRACK&quot;
+GRADER | &quot;GRADER&quot;
 
 
 

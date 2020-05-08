@@ -10,9 +10,11 @@ public class DeviceConfigurationEntity {
     @Column(name = "device_conf_id")
     private long id;
 
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "device_id")
+    @OneToOne(mappedBy = "deviceConfigurationEntity", fetch = FetchType.LAZY)
     private DeviceEntity deviceEntity;
+
+    @Column(name = "min_frequency")
+    private int minutFrequency;
 
     public long getId() {
         return id;

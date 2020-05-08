@@ -40,32 +40,74 @@ namespace IO.Swagger.Model
     public partial class EntityModelDeviceEntity :  IEquatable<EntityModelDeviceEntity>
     {
         /// <summary>
+        /// Gets or Sets DeviceStateEntity
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum DeviceStateEntityEnum
+        {
+            
+            /// <summary>
+            /// Enum STOP for "STOP"
+            /// </summary>
+            [EnumMember(Value = "STOP")]
+            STOP,
+            
+            /// <summary>
+            /// Enum RUNNING for "RUNNING"
+            /// </summary>
+            [EnumMember(Value = "RUNNING")]
+            RUNNING,
+            
+            /// <summary>
+            /// Enum WAITING for "WAITING"
+            /// </summary>
+            [EnumMember(Value = "WAITING")]
+            WAITING
+        }
+
+        /// <summary>
+        /// Gets or Sets DeviceStateEntity
+        /// </summary>
+        [DataMember(Name="deviceStateEntity", EmitDefaultValue=false)]
+        public DeviceStateEntityEnum? DeviceStateEntity { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="EntityModelDeviceEntity" /> class.
         /// </summary>
-        /// <param name="DeviceCode">DeviceCode.</param>
+        /// <param name="Created">Created.</param>
         /// <param name="DeviceConfigurationEntity">DeviceConfigurationEntity.</param>
+        /// <param name="DeviceDescription">DeviceDescription.</param>
+        /// <param name="DeviceStateEntity">DeviceStateEntity.</param>
         /// <param name="Id">Id.</param>
         /// <param name="Links">Links.</param>
         /// <param name="MachineEntity">MachineEntity.</param>
-        public EntityModelDeviceEntity(string DeviceCode = null, DeviceConfigurationEntity DeviceConfigurationEntity = null, long? Id = null, Links Links = null, MachineEntity MachineEntity = null)
+        /// <param name="SerialNumber">SerialNumber.</param>
+        public EntityModelDeviceEntity(DateTime? Created = null, DeviceConfigurationEntity DeviceConfigurationEntity = null, string DeviceDescription = null, DeviceStateEntityEnum? DeviceStateEntity = null, long? Id = null, Links Links = null, MachineEntity MachineEntity = null, string SerialNumber = null)
         {
-            this.DeviceCode = DeviceCode;
+            this.Created = Created;
             this.DeviceConfigurationEntity = DeviceConfigurationEntity;
+            this.DeviceDescription = DeviceDescription;
+            this.DeviceStateEntity = DeviceStateEntity;
             this.Id = Id;
             this.Links = Links;
             this.MachineEntity = MachineEntity;
+            this.SerialNumber = SerialNumber;
         }
         
         /// <summary>
-        /// Gets or Sets DeviceCode
+        /// Gets or Sets Created
         /// </summary>
-        [DataMember(Name="deviceCode", EmitDefaultValue=false)]
-        public string DeviceCode { get; set; }
+        [DataMember(Name="created", EmitDefaultValue=false)]
+        public DateTime? Created { get; set; }
         /// <summary>
         /// Gets or Sets DeviceConfigurationEntity
         /// </summary>
         [DataMember(Name="deviceConfigurationEntity", EmitDefaultValue=false)]
         public DeviceConfigurationEntity DeviceConfigurationEntity { get; set; }
+        /// <summary>
+        /// Gets or Sets DeviceDescription
+        /// </summary>
+        [DataMember(Name="deviceDescription", EmitDefaultValue=false)]
+        public string DeviceDescription { get; set; }
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
@@ -82,6 +124,11 @@ namespace IO.Swagger.Model
         [DataMember(Name="machineEntity", EmitDefaultValue=false)]
         public MachineEntity MachineEntity { get; set; }
         /// <summary>
+        /// Gets or Sets SerialNumber
+        /// </summary>
+        [DataMember(Name="serialNumber", EmitDefaultValue=false)]
+        public string SerialNumber { get; set; }
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -89,11 +136,14 @@ namespace IO.Swagger.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EntityModelDeviceEntity {\n");
-            sb.Append("  DeviceCode: ").Append(DeviceCode).Append("\n");
+            sb.Append("  Created: ").Append(Created).Append("\n");
             sb.Append("  DeviceConfigurationEntity: ").Append(DeviceConfigurationEntity).Append("\n");
+            sb.Append("  DeviceDescription: ").Append(DeviceDescription).Append("\n");
+            sb.Append("  DeviceStateEntity: ").Append(DeviceStateEntity).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Links: ").Append(Links).Append("\n");
             sb.Append("  MachineEntity: ").Append(MachineEntity).Append("\n");
+            sb.Append("  SerialNumber: ").Append(SerialNumber).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -131,14 +181,24 @@ namespace IO.Swagger.Model
 
             return 
                 (
-                    this.DeviceCode == other.DeviceCode ||
-                    this.DeviceCode != null &&
-                    this.DeviceCode.Equals(other.DeviceCode)
+                    this.Created == other.Created ||
+                    this.Created != null &&
+                    this.Created.Equals(other.Created)
                 ) && 
                 (
                     this.DeviceConfigurationEntity == other.DeviceConfigurationEntity ||
                     this.DeviceConfigurationEntity != null &&
                     this.DeviceConfigurationEntity.Equals(other.DeviceConfigurationEntity)
+                ) && 
+                (
+                    this.DeviceDescription == other.DeviceDescription ||
+                    this.DeviceDescription != null &&
+                    this.DeviceDescription.Equals(other.DeviceDescription)
+                ) && 
+                (
+                    this.DeviceStateEntity == other.DeviceStateEntity ||
+                    this.DeviceStateEntity != null &&
+                    this.DeviceStateEntity.Equals(other.DeviceStateEntity)
                 ) && 
                 (
                     this.Id == other.Id ||
@@ -154,6 +214,11 @@ namespace IO.Swagger.Model
                     this.MachineEntity == other.MachineEntity ||
                     this.MachineEntity != null &&
                     this.MachineEntity.Equals(other.MachineEntity)
+                ) && 
+                (
+                    this.SerialNumber == other.SerialNumber ||
+                    this.SerialNumber != null &&
+                    this.SerialNumber.Equals(other.SerialNumber)
                 );
         }
 
@@ -168,16 +233,22 @@ namespace IO.Swagger.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.DeviceCode != null)
-                    hash = hash * 59 + this.DeviceCode.GetHashCode();
+                if (this.Created != null)
+                    hash = hash * 59 + this.Created.GetHashCode();
                 if (this.DeviceConfigurationEntity != null)
                     hash = hash * 59 + this.DeviceConfigurationEntity.GetHashCode();
+                if (this.DeviceDescription != null)
+                    hash = hash * 59 + this.DeviceDescription.GetHashCode();
+                if (this.DeviceStateEntity != null)
+                    hash = hash * 59 + this.DeviceStateEntity.GetHashCode();
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
                 if (this.Links != null)
                     hash = hash * 59 + this.Links.GetHashCode();
                 if (this.MachineEntity != null)
                     hash = hash * 59 + this.MachineEntity.GetHashCode();
+                if (this.SerialNumber != null)
+                    hash = hash * 59 + this.SerialNumber.GetHashCode();
                 return hash;
             }
         }

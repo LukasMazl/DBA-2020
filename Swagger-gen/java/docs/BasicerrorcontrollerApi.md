@@ -4,20 +4,20 @@ All URIs are relative to *https://localhost:8080/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**errorUsingDELETE**](BasicerrorcontrollerApi.md#errorUsingDELETE) | **DELETE** /error | error
-[**errorUsingGET**](BasicerrorcontrollerApi.md#errorUsingGET) | **GET** /error | error
-[**errorUsingHEAD**](BasicerrorcontrollerApi.md#errorUsingHEAD) | **HEAD** /error | error
-[**errorUsingOPTIONS**](BasicerrorcontrollerApi.md#errorUsingOPTIONS) | **OPTIONS** /error | error
-[**errorUsingPATCH**](BasicerrorcontrollerApi.md#errorUsingPATCH) | **PATCH** /error | error
-[**errorUsingPOST**](BasicerrorcontrollerApi.md#errorUsingPOST) | **POST** /error | error
-[**errorUsingPUT**](BasicerrorcontrollerApi.md#errorUsingPUT) | **PUT** /error | error
+[**errorHtmlUsingDELETE**](BasicerrorcontrollerApi.md#errorHtmlUsingDELETE) | **DELETE** /error | errorHtml
+[**errorHtmlUsingGET**](BasicerrorcontrollerApi.md#errorHtmlUsingGET) | **GET** /error | errorHtml
+[**errorHtmlUsingHEAD**](BasicerrorcontrollerApi.md#errorHtmlUsingHEAD) | **HEAD** /error | errorHtml
+[**errorHtmlUsingOPTIONS**](BasicerrorcontrollerApi.md#errorHtmlUsingOPTIONS) | **OPTIONS** /error | errorHtml
+[**errorHtmlUsingPATCH**](BasicerrorcontrollerApi.md#errorHtmlUsingPATCH) | **PATCH** /error | errorHtml
+[**errorHtmlUsingPOST**](BasicerrorcontrollerApi.md#errorHtmlUsingPOST) | **POST** /error | errorHtml
+[**errorHtmlUsingPUT**](BasicerrorcontrollerApi.md#errorHtmlUsingPUT) | **PUT** /error | errorHtml
 
 
-<a name="errorUsingDELETE"></a>
-# **errorUsingDELETE**
-> Map&lt;String, Object&gt; errorUsingDELETE()
+<a name="errorHtmlUsingDELETE"></a>
+# **errorHtmlUsingDELETE**
+> ModelAndView errorHtmlUsingDELETE()
 
-error
+errorHtml
 
 ### Example
 ```java
@@ -28,10 +28,10 @@ error
 
 BasicerrorcontrollerApi apiInstance = new BasicerrorcontrollerApi();
 try {
-    Map<String, Object> result = apiInstance.errorUsingDELETE();
+    ModelAndView result = apiInstance.errorHtmlUsingDELETE();
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling BasicerrorcontrollerApi#errorUsingDELETE");
+    System.err.println("Exception when calling BasicerrorcontrollerApi#errorHtmlUsingDELETE");
     e.printStackTrace();
 }
 ```
@@ -41,7 +41,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Map&lt;String, Object&gt;**](Map.md)
+[**ModelAndView**](ModelAndView.md)
 
 ### Authorization
 
@@ -50,13 +50,13 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: *_/_*
+ - **Accept**: text/html
 
-<a name="errorUsingGET"></a>
-# **errorUsingGET**
-> Map&lt;String, Object&gt; errorUsingGET()
+<a name="errorHtmlUsingGET"></a>
+# **errorHtmlUsingGET**
+> ModelAndView errorHtmlUsingGET()
 
-error
+errorHtml
 
 ### Example
 ```java
@@ -67,10 +67,10 @@ error
 
 BasicerrorcontrollerApi apiInstance = new BasicerrorcontrollerApi();
 try {
-    Map<String, Object> result = apiInstance.errorUsingGET();
+    ModelAndView result = apiInstance.errorHtmlUsingGET();
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling BasicerrorcontrollerApi#errorUsingGET");
+    System.err.println("Exception when calling BasicerrorcontrollerApi#errorHtmlUsingGET");
     e.printStackTrace();
 }
 ```
@@ -80,7 +80,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Map&lt;String, Object&gt;**](Map.md)
+[**ModelAndView**](ModelAndView.md)
 
 ### Authorization
 
@@ -89,52 +89,13 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: *_/_*
+ - **Accept**: text/html
 
-<a name="errorUsingHEAD"></a>
-# **errorUsingHEAD**
-> Map&lt;String, Object&gt; errorUsingHEAD()
+<a name="errorHtmlUsingHEAD"></a>
+# **errorHtmlUsingHEAD**
+> ModelAndView errorHtmlUsingHEAD()
 
-error
-
-### Example
-```java
-// Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.BasicerrorcontrollerApi;
-
-
-BasicerrorcontrollerApi apiInstance = new BasicerrorcontrollerApi();
-try {
-    Map<String, Object> result = apiInstance.errorUsingHEAD();
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling BasicerrorcontrollerApi#errorUsingHEAD");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**Map&lt;String, Object&gt;**](Map.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: *_/_*
-
-<a name="errorUsingOPTIONS"></a>
-# **errorUsingOPTIONS**
-> Map&lt;String, Object&gt; errorUsingOPTIONS()
-
-error
+errorHtml
 
 ### Example
 ```java
@@ -145,10 +106,10 @@ error
 
 BasicerrorcontrollerApi apiInstance = new BasicerrorcontrollerApi();
 try {
-    Map<String, Object> result = apiInstance.errorUsingOPTIONS();
+    ModelAndView result = apiInstance.errorHtmlUsingHEAD();
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling BasicerrorcontrollerApi#errorUsingOPTIONS");
+    System.err.println("Exception when calling BasicerrorcontrollerApi#errorHtmlUsingHEAD");
     e.printStackTrace();
 }
 ```
@@ -158,7 +119,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Map&lt;String, Object&gt;**](Map.md)
+[**ModelAndView**](ModelAndView.md)
 
 ### Authorization
 
@@ -167,13 +128,13 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: *_/_*
+ - **Accept**: text/html
 
-<a name="errorUsingPATCH"></a>
-# **errorUsingPATCH**
-> Map&lt;String, Object&gt; errorUsingPATCH()
+<a name="errorHtmlUsingOPTIONS"></a>
+# **errorHtmlUsingOPTIONS**
+> ModelAndView errorHtmlUsingOPTIONS()
 
-error
+errorHtml
 
 ### Example
 ```java
@@ -184,10 +145,10 @@ error
 
 BasicerrorcontrollerApi apiInstance = new BasicerrorcontrollerApi();
 try {
-    Map<String, Object> result = apiInstance.errorUsingPATCH();
+    ModelAndView result = apiInstance.errorHtmlUsingOPTIONS();
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling BasicerrorcontrollerApi#errorUsingPATCH");
+    System.err.println("Exception when calling BasicerrorcontrollerApi#errorHtmlUsingOPTIONS");
     e.printStackTrace();
 }
 ```
@@ -197,7 +158,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Map&lt;String, Object&gt;**](Map.md)
+[**ModelAndView**](ModelAndView.md)
 
 ### Authorization
 
@@ -206,13 +167,13 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: *_/_*
+ - **Accept**: text/html
 
-<a name="errorUsingPOST"></a>
-# **errorUsingPOST**
-> Map&lt;String, Object&gt; errorUsingPOST()
+<a name="errorHtmlUsingPATCH"></a>
+# **errorHtmlUsingPATCH**
+> ModelAndView errorHtmlUsingPATCH()
 
-error
+errorHtml
 
 ### Example
 ```java
@@ -223,10 +184,10 @@ error
 
 BasicerrorcontrollerApi apiInstance = new BasicerrorcontrollerApi();
 try {
-    Map<String, Object> result = apiInstance.errorUsingPOST();
+    ModelAndView result = apiInstance.errorHtmlUsingPATCH();
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling BasicerrorcontrollerApi#errorUsingPOST");
+    System.err.println("Exception when calling BasicerrorcontrollerApi#errorHtmlUsingPATCH");
     e.printStackTrace();
 }
 ```
@@ -236,7 +197,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Map&lt;String, Object&gt;**](Map.md)
+[**ModelAndView**](ModelAndView.md)
 
 ### Authorization
 
@@ -245,13 +206,13 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: *_/_*
+ - **Accept**: text/html
 
-<a name="errorUsingPUT"></a>
-# **errorUsingPUT**
-> Map&lt;String, Object&gt; errorUsingPUT()
+<a name="errorHtmlUsingPOST"></a>
+# **errorHtmlUsingPOST**
+> ModelAndView errorHtmlUsingPOST()
 
-error
+errorHtml
 
 ### Example
 ```java
@@ -262,10 +223,10 @@ error
 
 BasicerrorcontrollerApi apiInstance = new BasicerrorcontrollerApi();
 try {
-    Map<String, Object> result = apiInstance.errorUsingPUT();
+    ModelAndView result = apiInstance.errorHtmlUsingPOST();
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling BasicerrorcontrollerApi#errorUsingPUT");
+    System.err.println("Exception when calling BasicerrorcontrollerApi#errorHtmlUsingPOST");
     e.printStackTrace();
 }
 ```
@@ -275,7 +236,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Map&lt;String, Object&gt;**](Map.md)
+[**ModelAndView**](ModelAndView.md)
 
 ### Authorization
 
@@ -284,5 +245,44 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: *_/_*
+ - **Accept**: text/html
+
+<a name="errorHtmlUsingPUT"></a>
+# **errorHtmlUsingPUT**
+> ModelAndView errorHtmlUsingPUT()
+
+errorHtml
+
+### Example
+```java
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.BasicerrorcontrollerApi;
+
+
+BasicerrorcontrollerApi apiInstance = new BasicerrorcontrollerApi();
+try {
+    ModelAndView result = apiInstance.errorHtmlUsingPUT();
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling BasicerrorcontrollerApi#errorHtmlUsingPUT");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ModelAndView**](ModelAndView.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/html
 

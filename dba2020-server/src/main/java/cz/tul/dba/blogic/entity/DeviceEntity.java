@@ -2,6 +2,7 @@ package cz.tul.dba.blogic.entity;
 
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name = "device")
@@ -15,11 +16,22 @@ public class DeviceEntity {
     @OneToOne(mappedBy = "deviceEntity", fetch = FetchType.LAZY)
     private MachineEntity machineEntity;
 
-    @OneToOne(mappedBy = "deviceEntity", fetch = FetchType.EAGER)
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "device_conf_id")
     private DeviceConfigurationEntity deviceConfigurationEntity;
 
-    @Column(name = "deviceCode", nullable = false)
-    private String deviceCode;
+    @Column(name = "serial_number", nullable = false)
+    private String serialNumber;
+
+    @Column(name = "description")
+    private String deviceDescription;
+
+    @Column(name = "state")
+    @Enumerated(EnumType.STRING)
+    private DeviceStateEntity deviceStateEntity;
+
+    @Column(name = "crated")
+    private Date created;
 
     public long getId() {
         return id;
@@ -45,11 +57,35 @@ public class DeviceEntity {
         this.deviceConfigurationEntity = deviceConfigurationEntity;
     }
 
-    public String getDeviceCode() {
-        return deviceCode;
+    public String getSerialNumber() {
+        return serialNumber;
     }
 
-    public void setDeviceCode(String deviceCode) {
-        this.deviceCode = deviceCode;
+    public void setSerialNumber(String serialNumber) {
+        this.serialNumber = serialNumber;
+    }
+
+    public String getDeviceDescription() {
+        return deviceDescription;
+    }
+
+    public void setDeviceDescription(String deviceDescription) {
+        this.deviceDescription = deviceDescription;
+    }
+
+    public DeviceStateEntity getDeviceStateEntity() {
+        return deviceStateEntity;
+    }
+
+    public void setDeviceStateEntity(DeviceStateEntity deviceStateEntity) {
+        this.deviceStateEntity = deviceStateEntity;
+    }
+
+    public Date getCreated() {
+        return created;
+    }
+
+    public void setCreated(Date created) {
+        this.created = created;
     }
 }

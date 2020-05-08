@@ -4,20 +4,20 @@ All URIs are relative to *https://localhost:8080/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ErrorUsingDELETE**](BasicerrorcontrollerApi.md#errorusingdelete) | **DELETE** /error | error
-[**ErrorUsingGET**](BasicerrorcontrollerApi.md#errorusingget) | **GET** /error | error
-[**ErrorUsingHEAD**](BasicerrorcontrollerApi.md#errorusinghead) | **HEAD** /error | error
-[**ErrorUsingOPTIONS**](BasicerrorcontrollerApi.md#errorusingoptions) | **OPTIONS** /error | error
-[**ErrorUsingPATCH**](BasicerrorcontrollerApi.md#errorusingpatch) | **PATCH** /error | error
-[**ErrorUsingPOST**](BasicerrorcontrollerApi.md#errorusingpost) | **POST** /error | error
-[**ErrorUsingPUT**](BasicerrorcontrollerApi.md#errorusingput) | **PUT** /error | error
+[**ErrorHtmlUsingDELETE**](BasicerrorcontrollerApi.md#errorhtmlusingdelete) | **DELETE** /error | errorHtml
+[**ErrorHtmlUsingGET**](BasicerrorcontrollerApi.md#errorhtmlusingget) | **GET** /error | errorHtml
+[**ErrorHtmlUsingHEAD**](BasicerrorcontrollerApi.md#errorhtmlusinghead) | **HEAD** /error | errorHtml
+[**ErrorHtmlUsingOPTIONS**](BasicerrorcontrollerApi.md#errorhtmlusingoptions) | **OPTIONS** /error | errorHtml
+[**ErrorHtmlUsingPATCH**](BasicerrorcontrollerApi.md#errorhtmlusingpatch) | **PATCH** /error | errorHtml
+[**ErrorHtmlUsingPOST**](BasicerrorcontrollerApi.md#errorhtmlusingpost) | **POST** /error | errorHtml
+[**ErrorHtmlUsingPUT**](BasicerrorcontrollerApi.md#errorhtmlusingput) | **PUT** /error | errorHtml
 
 
-<a name="errorusingdelete"></a>
-# **ErrorUsingDELETE**
-> Dictionary<string, Object> ErrorUsingDELETE ()
+<a name="errorhtmlusingdelete"></a>
+# **ErrorHtmlUsingDELETE**
+> ModelAndView ErrorHtmlUsingDELETE ()
 
-error
+errorHtml
 
 ### Example
 ```csharp
@@ -29,7 +29,7 @@ using IO.Swagger.Model;
 
 namespace Example
 {
-    public class ErrorUsingDELETEExample
+    public class ErrorHtmlUsingDELETEExample
     {
         public void main()
         {
@@ -38,13 +38,13 @@ namespace Example
 
             try
             {
-                // error
-                Dictionary&lt;string, Object&gt; result = apiInstance.ErrorUsingDELETE();
+                // errorHtml
+                ModelAndView result = apiInstance.ErrorHtmlUsingDELETE();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling BasicerrorcontrollerApi.ErrorUsingDELETE: " + e.Message );
+                Debug.Print("Exception when calling BasicerrorcontrollerApi.ErrorHtmlUsingDELETE: " + e.Message );
             }
         }
     }
@@ -56,7 +56,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**Dictionary<string, Object>**
+[**ModelAndView**](ModelAndView.md)
 
 ### Authorization
 
@@ -65,15 +65,15 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: *_/_*
+ - **Accept**: text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="errorusingget"></a>
-# **ErrorUsingGET**
-> Dictionary<string, Object> ErrorUsingGET ()
+<a name="errorhtmlusingget"></a>
+# **ErrorHtmlUsingGET**
+> ModelAndView ErrorHtmlUsingGET ()
 
-error
+errorHtml
 
 ### Example
 ```csharp
@@ -85,7 +85,7 @@ using IO.Swagger.Model;
 
 namespace Example
 {
-    public class ErrorUsingGETExample
+    public class ErrorHtmlUsingGETExample
     {
         public void main()
         {
@@ -94,13 +94,13 @@ namespace Example
 
             try
             {
-                // error
-                Dictionary&lt;string, Object&gt; result = apiInstance.ErrorUsingGET();
+                // errorHtml
+                ModelAndView result = apiInstance.ErrorHtmlUsingGET();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling BasicerrorcontrollerApi.ErrorUsingGET: " + e.Message );
+                Debug.Print("Exception when calling BasicerrorcontrollerApi.ErrorHtmlUsingGET: " + e.Message );
             }
         }
     }
@@ -112,7 +112,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**Dictionary<string, Object>**
+[**ModelAndView**](ModelAndView.md)
 
 ### Authorization
 
@@ -121,15 +121,15 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: *_/_*
+ - **Accept**: text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="errorusinghead"></a>
-# **ErrorUsingHEAD**
-> Dictionary<string, Object> ErrorUsingHEAD ()
+<a name="errorhtmlusinghead"></a>
+# **ErrorHtmlUsingHEAD**
+> ModelAndView ErrorHtmlUsingHEAD ()
 
-error
+errorHtml
 
 ### Example
 ```csharp
@@ -141,7 +141,7 @@ using IO.Swagger.Model;
 
 namespace Example
 {
-    public class ErrorUsingHEADExample
+    public class ErrorHtmlUsingHEADExample
     {
         public void main()
         {
@@ -150,13 +150,13 @@ namespace Example
 
             try
             {
-                // error
-                Dictionary&lt;string, Object&gt; result = apiInstance.ErrorUsingHEAD();
+                // errorHtml
+                ModelAndView result = apiInstance.ErrorHtmlUsingHEAD();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling BasicerrorcontrollerApi.ErrorUsingHEAD: " + e.Message );
+                Debug.Print("Exception when calling BasicerrorcontrollerApi.ErrorHtmlUsingHEAD: " + e.Message );
             }
         }
     }
@@ -168,7 +168,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**Dictionary<string, Object>**
+[**ModelAndView**](ModelAndView.md)
 
 ### Authorization
 
@@ -177,15 +177,15 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: *_/_*
+ - **Accept**: text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="errorusingoptions"></a>
-# **ErrorUsingOPTIONS**
-> Dictionary<string, Object> ErrorUsingOPTIONS ()
+<a name="errorhtmlusingoptions"></a>
+# **ErrorHtmlUsingOPTIONS**
+> ModelAndView ErrorHtmlUsingOPTIONS ()
 
-error
+errorHtml
 
 ### Example
 ```csharp
@@ -197,7 +197,7 @@ using IO.Swagger.Model;
 
 namespace Example
 {
-    public class ErrorUsingOPTIONSExample
+    public class ErrorHtmlUsingOPTIONSExample
     {
         public void main()
         {
@@ -206,13 +206,13 @@ namespace Example
 
             try
             {
-                // error
-                Dictionary&lt;string, Object&gt; result = apiInstance.ErrorUsingOPTIONS();
+                // errorHtml
+                ModelAndView result = apiInstance.ErrorHtmlUsingOPTIONS();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling BasicerrorcontrollerApi.ErrorUsingOPTIONS: " + e.Message );
+                Debug.Print("Exception when calling BasicerrorcontrollerApi.ErrorHtmlUsingOPTIONS: " + e.Message );
             }
         }
     }
@@ -224,7 +224,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**Dictionary<string, Object>**
+[**ModelAndView**](ModelAndView.md)
 
 ### Authorization
 
@@ -233,15 +233,15 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: *_/_*
+ - **Accept**: text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="errorusingpatch"></a>
-# **ErrorUsingPATCH**
-> Dictionary<string, Object> ErrorUsingPATCH ()
+<a name="errorhtmlusingpatch"></a>
+# **ErrorHtmlUsingPATCH**
+> ModelAndView ErrorHtmlUsingPATCH ()
 
-error
+errorHtml
 
 ### Example
 ```csharp
@@ -253,7 +253,7 @@ using IO.Swagger.Model;
 
 namespace Example
 {
-    public class ErrorUsingPATCHExample
+    public class ErrorHtmlUsingPATCHExample
     {
         public void main()
         {
@@ -262,13 +262,13 @@ namespace Example
 
             try
             {
-                // error
-                Dictionary&lt;string, Object&gt; result = apiInstance.ErrorUsingPATCH();
+                // errorHtml
+                ModelAndView result = apiInstance.ErrorHtmlUsingPATCH();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling BasicerrorcontrollerApi.ErrorUsingPATCH: " + e.Message );
+                Debug.Print("Exception when calling BasicerrorcontrollerApi.ErrorHtmlUsingPATCH: " + e.Message );
             }
         }
     }
@@ -280,7 +280,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**Dictionary<string, Object>**
+[**ModelAndView**](ModelAndView.md)
 
 ### Authorization
 
@@ -289,15 +289,15 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: *_/_*
+ - **Accept**: text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="errorusingpost"></a>
-# **ErrorUsingPOST**
-> Dictionary<string, Object> ErrorUsingPOST ()
+<a name="errorhtmlusingpost"></a>
+# **ErrorHtmlUsingPOST**
+> ModelAndView ErrorHtmlUsingPOST ()
 
-error
+errorHtml
 
 ### Example
 ```csharp
@@ -309,7 +309,7 @@ using IO.Swagger.Model;
 
 namespace Example
 {
-    public class ErrorUsingPOSTExample
+    public class ErrorHtmlUsingPOSTExample
     {
         public void main()
         {
@@ -318,13 +318,13 @@ namespace Example
 
             try
             {
-                // error
-                Dictionary&lt;string, Object&gt; result = apiInstance.ErrorUsingPOST();
+                // errorHtml
+                ModelAndView result = apiInstance.ErrorHtmlUsingPOST();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling BasicerrorcontrollerApi.ErrorUsingPOST: " + e.Message );
+                Debug.Print("Exception when calling BasicerrorcontrollerApi.ErrorHtmlUsingPOST: " + e.Message );
             }
         }
     }
@@ -336,7 +336,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**Dictionary<string, Object>**
+[**ModelAndView**](ModelAndView.md)
 
 ### Authorization
 
@@ -345,15 +345,15 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: *_/_*
+ - **Accept**: text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="errorusingput"></a>
-# **ErrorUsingPUT**
-> Dictionary<string, Object> ErrorUsingPUT ()
+<a name="errorhtmlusingput"></a>
+# **ErrorHtmlUsingPUT**
+> ModelAndView ErrorHtmlUsingPUT ()
 
-error
+errorHtml
 
 ### Example
 ```csharp
@@ -365,7 +365,7 @@ using IO.Swagger.Model;
 
 namespace Example
 {
-    public class ErrorUsingPUTExample
+    public class ErrorHtmlUsingPUTExample
     {
         public void main()
         {
@@ -374,13 +374,13 @@ namespace Example
 
             try
             {
-                // error
-                Dictionary&lt;string, Object&gt; result = apiInstance.ErrorUsingPUT();
+                // errorHtml
+                ModelAndView result = apiInstance.ErrorHtmlUsingPUT();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling BasicerrorcontrollerApi.ErrorUsingPUT: " + e.Message );
+                Debug.Print("Exception when calling BasicerrorcontrollerApi.ErrorHtmlUsingPUT: " + e.Message );
             }
         }
     }
@@ -392,7 +392,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**Dictionary<string, Object>**
+[**ModelAndView**](ModelAndView.md)
 
 ### Authorization
 
@@ -401,7 +401,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: *_/_*
+ - **Accept**: text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

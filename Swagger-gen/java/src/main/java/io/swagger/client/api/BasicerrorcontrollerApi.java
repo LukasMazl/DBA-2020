@@ -38,6 +38,7 @@ import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 
+import io.swagger.client.model.ModelAndView;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -64,8 +65,8 @@ public class BasicerrorcontrollerApi {
         this.apiClient = apiClient;
     }
 
-    /* Build call for errorUsingDELETE */
-    private com.squareup.okhttp.Call errorUsingDELETECall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    /* Build call for errorHtmlUsingDELETE */
+    private com.squareup.okhttp.Call errorHtmlUsingDELETECall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
 
@@ -79,7 +80,7 @@ public class BasicerrorcontrollerApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "*_/_*"
+            "text/html"
         };
         final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
@@ -107,36 +108,36 @@ public class BasicerrorcontrollerApi {
     }
 
     /**
-     * error
+     * errorHtml
      * 
-     * @return Map&lt;String, Object&gt;
+     * @return ModelAndView
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Map<String, Object> errorUsingDELETE() throws ApiException {
-        ApiResponse<Map<String, Object>> resp = errorUsingDELETEWithHttpInfo();
+    public ModelAndView errorHtmlUsingDELETE() throws ApiException {
+        ApiResponse<ModelAndView> resp = errorHtmlUsingDELETEWithHttpInfo();
         return resp.getData();
     }
 
     /**
-     * error
+     * errorHtml
      * 
-     * @return ApiResponse&lt;Map&lt;String, Object&gt;&gt;
+     * @return ApiResponse&lt;ModelAndView&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Map<String, Object>> errorUsingDELETEWithHttpInfo() throws ApiException {
-        com.squareup.okhttp.Call call = errorUsingDELETECall(null, null);
-        Type localVarReturnType = new TypeToken<Map<String, Object>>(){}.getType();
+    public ApiResponse<ModelAndView> errorHtmlUsingDELETEWithHttpInfo() throws ApiException {
+        com.squareup.okhttp.Call call = errorHtmlUsingDELETECall(null, null);
+        Type localVarReturnType = new TypeToken<ModelAndView>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
     /**
-     * error (asynchronously)
+     * errorHtml (asynchronously)
      * 
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call errorUsingDELETEAsync(final ApiCallback<Map<String, Object>> callback) throws ApiException {
+    public com.squareup.okhttp.Call errorHtmlUsingDELETEAsync(final ApiCallback<ModelAndView> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -157,13 +158,13 @@ public class BasicerrorcontrollerApi {
             };
         }
 
-        com.squareup.okhttp.Call call = errorUsingDELETECall(progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<Map<String, Object>>(){}.getType();
+        com.squareup.okhttp.Call call = errorHtmlUsingDELETECall(progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<ModelAndView>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
-    /* Build call for errorUsingGET */
-    private com.squareup.okhttp.Call errorUsingGETCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    /* Build call for errorHtmlUsingGET */
+    private com.squareup.okhttp.Call errorHtmlUsingGETCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
 
@@ -177,7 +178,7 @@ public class BasicerrorcontrollerApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "*_/_*"
+            "text/html"
         };
         final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
@@ -205,36 +206,36 @@ public class BasicerrorcontrollerApi {
     }
 
     /**
-     * error
+     * errorHtml
      * 
-     * @return Map&lt;String, Object&gt;
+     * @return ModelAndView
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Map<String, Object> errorUsingGET() throws ApiException {
-        ApiResponse<Map<String, Object>> resp = errorUsingGETWithHttpInfo();
+    public ModelAndView errorHtmlUsingGET() throws ApiException {
+        ApiResponse<ModelAndView> resp = errorHtmlUsingGETWithHttpInfo();
         return resp.getData();
     }
 
     /**
-     * error
+     * errorHtml
      * 
-     * @return ApiResponse&lt;Map&lt;String, Object&gt;&gt;
+     * @return ApiResponse&lt;ModelAndView&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Map<String, Object>> errorUsingGETWithHttpInfo() throws ApiException {
-        com.squareup.okhttp.Call call = errorUsingGETCall(null, null);
-        Type localVarReturnType = new TypeToken<Map<String, Object>>(){}.getType();
+    public ApiResponse<ModelAndView> errorHtmlUsingGETWithHttpInfo() throws ApiException {
+        com.squareup.okhttp.Call call = errorHtmlUsingGETCall(null, null);
+        Type localVarReturnType = new TypeToken<ModelAndView>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
     /**
-     * error (asynchronously)
+     * errorHtml (asynchronously)
      * 
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call errorUsingGETAsync(final ApiCallback<Map<String, Object>> callback) throws ApiException {
+    public com.squareup.okhttp.Call errorHtmlUsingGETAsync(final ApiCallback<ModelAndView> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -255,13 +256,13 @@ public class BasicerrorcontrollerApi {
             };
         }
 
-        com.squareup.okhttp.Call call = errorUsingGETCall(progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<Map<String, Object>>(){}.getType();
+        com.squareup.okhttp.Call call = errorHtmlUsingGETCall(progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<ModelAndView>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
-    /* Build call for errorUsingHEAD */
-    private com.squareup.okhttp.Call errorUsingHEADCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    /* Build call for errorHtmlUsingHEAD */
+    private com.squareup.okhttp.Call errorHtmlUsingHEADCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
 
@@ -275,7 +276,7 @@ public class BasicerrorcontrollerApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "*_/_*"
+            "text/html"
         };
         final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
@@ -303,36 +304,36 @@ public class BasicerrorcontrollerApi {
     }
 
     /**
-     * error
+     * errorHtml
      * 
-     * @return Map&lt;String, Object&gt;
+     * @return ModelAndView
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Map<String, Object> errorUsingHEAD() throws ApiException {
-        ApiResponse<Map<String, Object>> resp = errorUsingHEADWithHttpInfo();
+    public ModelAndView errorHtmlUsingHEAD() throws ApiException {
+        ApiResponse<ModelAndView> resp = errorHtmlUsingHEADWithHttpInfo();
         return resp.getData();
     }
 
     /**
-     * error
+     * errorHtml
      * 
-     * @return ApiResponse&lt;Map&lt;String, Object&gt;&gt;
+     * @return ApiResponse&lt;ModelAndView&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Map<String, Object>> errorUsingHEADWithHttpInfo() throws ApiException {
-        com.squareup.okhttp.Call call = errorUsingHEADCall(null, null);
-        Type localVarReturnType = new TypeToken<Map<String, Object>>(){}.getType();
+    public ApiResponse<ModelAndView> errorHtmlUsingHEADWithHttpInfo() throws ApiException {
+        com.squareup.okhttp.Call call = errorHtmlUsingHEADCall(null, null);
+        Type localVarReturnType = new TypeToken<ModelAndView>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
     /**
-     * error (asynchronously)
+     * errorHtml (asynchronously)
      * 
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call errorUsingHEADAsync(final ApiCallback<Map<String, Object>> callback) throws ApiException {
+    public com.squareup.okhttp.Call errorHtmlUsingHEADAsync(final ApiCallback<ModelAndView> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -353,13 +354,13 @@ public class BasicerrorcontrollerApi {
             };
         }
 
-        com.squareup.okhttp.Call call = errorUsingHEADCall(progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<Map<String, Object>>(){}.getType();
+        com.squareup.okhttp.Call call = errorHtmlUsingHEADCall(progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<ModelAndView>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
-    /* Build call for errorUsingOPTIONS */
-    private com.squareup.okhttp.Call errorUsingOPTIONSCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    /* Build call for errorHtmlUsingOPTIONS */
+    private com.squareup.okhttp.Call errorHtmlUsingOPTIONSCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
 
@@ -373,7 +374,7 @@ public class BasicerrorcontrollerApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "*_/_*"
+            "text/html"
         };
         final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
@@ -401,36 +402,36 @@ public class BasicerrorcontrollerApi {
     }
 
     /**
-     * error
+     * errorHtml
      * 
-     * @return Map&lt;String, Object&gt;
+     * @return ModelAndView
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Map<String, Object> errorUsingOPTIONS() throws ApiException {
-        ApiResponse<Map<String, Object>> resp = errorUsingOPTIONSWithHttpInfo();
+    public ModelAndView errorHtmlUsingOPTIONS() throws ApiException {
+        ApiResponse<ModelAndView> resp = errorHtmlUsingOPTIONSWithHttpInfo();
         return resp.getData();
     }
 
     /**
-     * error
+     * errorHtml
      * 
-     * @return ApiResponse&lt;Map&lt;String, Object&gt;&gt;
+     * @return ApiResponse&lt;ModelAndView&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Map<String, Object>> errorUsingOPTIONSWithHttpInfo() throws ApiException {
-        com.squareup.okhttp.Call call = errorUsingOPTIONSCall(null, null);
-        Type localVarReturnType = new TypeToken<Map<String, Object>>(){}.getType();
+    public ApiResponse<ModelAndView> errorHtmlUsingOPTIONSWithHttpInfo() throws ApiException {
+        com.squareup.okhttp.Call call = errorHtmlUsingOPTIONSCall(null, null);
+        Type localVarReturnType = new TypeToken<ModelAndView>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
     /**
-     * error (asynchronously)
+     * errorHtml (asynchronously)
      * 
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call errorUsingOPTIONSAsync(final ApiCallback<Map<String, Object>> callback) throws ApiException {
+    public com.squareup.okhttp.Call errorHtmlUsingOPTIONSAsync(final ApiCallback<ModelAndView> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -451,13 +452,13 @@ public class BasicerrorcontrollerApi {
             };
         }
 
-        com.squareup.okhttp.Call call = errorUsingOPTIONSCall(progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<Map<String, Object>>(){}.getType();
+        com.squareup.okhttp.Call call = errorHtmlUsingOPTIONSCall(progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<ModelAndView>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
-    /* Build call for errorUsingPATCH */
-    private com.squareup.okhttp.Call errorUsingPATCHCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    /* Build call for errorHtmlUsingPATCH */
+    private com.squareup.okhttp.Call errorHtmlUsingPATCHCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
 
@@ -471,7 +472,7 @@ public class BasicerrorcontrollerApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "*_/_*"
+            "text/html"
         };
         final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
@@ -499,36 +500,36 @@ public class BasicerrorcontrollerApi {
     }
 
     /**
-     * error
+     * errorHtml
      * 
-     * @return Map&lt;String, Object&gt;
+     * @return ModelAndView
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Map<String, Object> errorUsingPATCH() throws ApiException {
-        ApiResponse<Map<String, Object>> resp = errorUsingPATCHWithHttpInfo();
+    public ModelAndView errorHtmlUsingPATCH() throws ApiException {
+        ApiResponse<ModelAndView> resp = errorHtmlUsingPATCHWithHttpInfo();
         return resp.getData();
     }
 
     /**
-     * error
+     * errorHtml
      * 
-     * @return ApiResponse&lt;Map&lt;String, Object&gt;&gt;
+     * @return ApiResponse&lt;ModelAndView&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Map<String, Object>> errorUsingPATCHWithHttpInfo() throws ApiException {
-        com.squareup.okhttp.Call call = errorUsingPATCHCall(null, null);
-        Type localVarReturnType = new TypeToken<Map<String, Object>>(){}.getType();
+    public ApiResponse<ModelAndView> errorHtmlUsingPATCHWithHttpInfo() throws ApiException {
+        com.squareup.okhttp.Call call = errorHtmlUsingPATCHCall(null, null);
+        Type localVarReturnType = new TypeToken<ModelAndView>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
     /**
-     * error (asynchronously)
+     * errorHtml (asynchronously)
      * 
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call errorUsingPATCHAsync(final ApiCallback<Map<String, Object>> callback) throws ApiException {
+    public com.squareup.okhttp.Call errorHtmlUsingPATCHAsync(final ApiCallback<ModelAndView> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -549,13 +550,13 @@ public class BasicerrorcontrollerApi {
             };
         }
 
-        com.squareup.okhttp.Call call = errorUsingPATCHCall(progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<Map<String, Object>>(){}.getType();
+        com.squareup.okhttp.Call call = errorHtmlUsingPATCHCall(progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<ModelAndView>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
-    /* Build call for errorUsingPOST */
-    private com.squareup.okhttp.Call errorUsingPOSTCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    /* Build call for errorHtmlUsingPOST */
+    private com.squareup.okhttp.Call errorHtmlUsingPOSTCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
 
@@ -569,7 +570,7 @@ public class BasicerrorcontrollerApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "*_/_*"
+            "text/html"
         };
         final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
@@ -597,36 +598,36 @@ public class BasicerrorcontrollerApi {
     }
 
     /**
-     * error
+     * errorHtml
      * 
-     * @return Map&lt;String, Object&gt;
+     * @return ModelAndView
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Map<String, Object> errorUsingPOST() throws ApiException {
-        ApiResponse<Map<String, Object>> resp = errorUsingPOSTWithHttpInfo();
+    public ModelAndView errorHtmlUsingPOST() throws ApiException {
+        ApiResponse<ModelAndView> resp = errorHtmlUsingPOSTWithHttpInfo();
         return resp.getData();
     }
 
     /**
-     * error
+     * errorHtml
      * 
-     * @return ApiResponse&lt;Map&lt;String, Object&gt;&gt;
+     * @return ApiResponse&lt;ModelAndView&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Map<String, Object>> errorUsingPOSTWithHttpInfo() throws ApiException {
-        com.squareup.okhttp.Call call = errorUsingPOSTCall(null, null);
-        Type localVarReturnType = new TypeToken<Map<String, Object>>(){}.getType();
+    public ApiResponse<ModelAndView> errorHtmlUsingPOSTWithHttpInfo() throws ApiException {
+        com.squareup.okhttp.Call call = errorHtmlUsingPOSTCall(null, null);
+        Type localVarReturnType = new TypeToken<ModelAndView>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
     /**
-     * error (asynchronously)
+     * errorHtml (asynchronously)
      * 
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call errorUsingPOSTAsync(final ApiCallback<Map<String, Object>> callback) throws ApiException {
+    public com.squareup.okhttp.Call errorHtmlUsingPOSTAsync(final ApiCallback<ModelAndView> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -647,13 +648,13 @@ public class BasicerrorcontrollerApi {
             };
         }
 
-        com.squareup.okhttp.Call call = errorUsingPOSTCall(progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<Map<String, Object>>(){}.getType();
+        com.squareup.okhttp.Call call = errorHtmlUsingPOSTCall(progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<ModelAndView>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
-    /* Build call for errorUsingPUT */
-    private com.squareup.okhttp.Call errorUsingPUTCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    /* Build call for errorHtmlUsingPUT */
+    private com.squareup.okhttp.Call errorHtmlUsingPUTCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
 
@@ -667,7 +668,7 @@ public class BasicerrorcontrollerApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "*_/_*"
+            "text/html"
         };
         final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
@@ -695,36 +696,36 @@ public class BasicerrorcontrollerApi {
     }
 
     /**
-     * error
+     * errorHtml
      * 
-     * @return Map&lt;String, Object&gt;
+     * @return ModelAndView
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Map<String, Object> errorUsingPUT() throws ApiException {
-        ApiResponse<Map<String, Object>> resp = errorUsingPUTWithHttpInfo();
+    public ModelAndView errorHtmlUsingPUT() throws ApiException {
+        ApiResponse<ModelAndView> resp = errorHtmlUsingPUTWithHttpInfo();
         return resp.getData();
     }
 
     /**
-     * error
+     * errorHtml
      * 
-     * @return ApiResponse&lt;Map&lt;String, Object&gt;&gt;
+     * @return ApiResponse&lt;ModelAndView&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Map<String, Object>> errorUsingPUTWithHttpInfo() throws ApiException {
-        com.squareup.okhttp.Call call = errorUsingPUTCall(null, null);
-        Type localVarReturnType = new TypeToken<Map<String, Object>>(){}.getType();
+    public ApiResponse<ModelAndView> errorHtmlUsingPUTWithHttpInfo() throws ApiException {
+        com.squareup.okhttp.Call call = errorHtmlUsingPUTCall(null, null);
+        Type localVarReturnType = new TypeToken<ModelAndView>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
     /**
-     * error (asynchronously)
+     * errorHtml (asynchronously)
      * 
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call errorUsingPUTAsync(final ApiCallback<Map<String, Object>> callback) throws ApiException {
+    public com.squareup.okhttp.Call errorHtmlUsingPUTAsync(final ApiCallback<ModelAndView> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -745,8 +746,8 @@ public class BasicerrorcontrollerApi {
             };
         }
 
-        com.squareup.okhttp.Call call = errorUsingPUTCall(progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<Map<String, Object>>(){}.getType();
+        com.squareup.okhttp.Call call = errorHtmlUsingPUTCall(progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<ModelAndView>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

@@ -38,7 +38,7 @@ import java.util.List;
 /**
  * CollectionModelMachineEntity
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-08T15:19:24.422+02:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-08T17:34:45.159+02:00")
 public class CollectionModelMachineEntity   {
   @SerializedName("content")
   private List<MachineEntity> content = new ArrayList<MachineEntity>();

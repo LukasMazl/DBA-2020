@@ -30,13 +30,20 @@ import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.client.model.DeviceEntity;
+import org.joda.time.DateTime;
 
 
 /**
  * MachineEntity
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-08T15:19:24.422+02:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-08T17:34:45.159+02:00")
 public class MachineEntity   {
+  @SerializedName("created")
+  private DateTime created = null;
+
+  @SerializedName("description")
+  private String description = null;
+
   @SerializedName("deviceEntity")
   private DeviceEntity deviceEntity = null;
 
@@ -51,7 +58,10 @@ public class MachineEntity   {
     MOVING("MOVING"),
     
     @SerializedName("STOPPED")
-    STOPPED("STOPPED");
+    STOPPED("STOPPED"),
+    
+    @SerializedName("WORKING")
+    WORKING("WORKING");
 
     private String value;
 
@@ -68,8 +78,81 @@ public class MachineEntity   {
   @SerializedName("machineEntityState")
   private MachineEntityStateEnum machineEntityState = null;
 
+  /**
+   * Gets or Sets machineTypeEntity
+   */
+  public enum MachineTypeEntityEnum {
+    @SerializedName("TRACTOR")
+    TRACTOR("TRACTOR"),
+    
+    @SerializedName("COMBINE")
+    COMBINE("COMBINE"),
+    
+    @SerializedName("CAR")
+    CAR("CAR"),
+    
+    @SerializedName("TRACK")
+    TRACK("TRACK"),
+    
+    @SerializedName("GRADER")
+    GRADER("GRADER");
+
+    private String value;
+
+    MachineTypeEntityEnum(String value) {
+      this.value = value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+  }
+
+  @SerializedName("machineTypeEntity")
+  private MachineTypeEntityEnum machineTypeEntity = null;
+
+  @SerializedName("manufacturer")
+  private String manufacturer = null;
+
   @SerializedName("vin")
   private String vin = null;
+
+  public MachineEntity created(DateTime created) {
+    this.created = created;
+    return this;
+  }
+
+   /**
+   * Get created
+   * @return created
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public DateTime getCreated() {
+    return created;
+  }
+
+  public void setCreated(DateTime created) {
+    this.created = created;
+  }
+
+  public MachineEntity description(String description) {
+    this.description = description;
+    return this;
+  }
+
+   /**
+   * Get description
+   * @return description
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getDescription() {
+    return description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
 
   public MachineEntity deviceEntity(DeviceEntity deviceEntity) {
     this.deviceEntity = deviceEntity;
@@ -125,6 +208,42 @@ public class MachineEntity   {
     this.machineEntityState = machineEntityState;
   }
 
+  public MachineEntity machineTypeEntity(MachineTypeEntityEnum machineTypeEntity) {
+    this.machineTypeEntity = machineTypeEntity;
+    return this;
+  }
+
+   /**
+   * Get machineTypeEntity
+   * @return machineTypeEntity
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public MachineTypeEntityEnum getMachineTypeEntity() {
+    return machineTypeEntity;
+  }
+
+  public void setMachineTypeEntity(MachineTypeEntityEnum machineTypeEntity) {
+    this.machineTypeEntity = machineTypeEntity;
+  }
+
+  public MachineEntity manufacturer(String manufacturer) {
+    this.manufacturer = manufacturer;
+    return this;
+  }
+
+   /**
+   * Get manufacturer
+   * @return manufacturer
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getManufacturer() {
+    return manufacturer;
+  }
+
+  public void setManufacturer(String manufacturer) {
+    this.manufacturer = manufacturer;
+  }
+
   public MachineEntity vin(String vin) {
     this.vin = vin;
     return this;
@@ -153,15 +272,19 @@ public class MachineEntity   {
       return false;
     }
     MachineEntity machineEntity = (MachineEntity) o;
-    return Objects.equals(this.deviceEntity, machineEntity.deviceEntity) &&
+    return Objects.equals(this.created, machineEntity.created) &&
+        Objects.equals(this.description, machineEntity.description) &&
+        Objects.equals(this.deviceEntity, machineEntity.deviceEntity) &&
         Objects.equals(this.id, machineEntity.id) &&
         Objects.equals(this.machineEntityState, machineEntity.machineEntityState) &&
+        Objects.equals(this.machineTypeEntity, machineEntity.machineTypeEntity) &&
+        Objects.equals(this.manufacturer, machineEntity.manufacturer) &&
         Objects.equals(this.vin, machineEntity.vin);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(deviceEntity, id, machineEntityState, vin);
+    return Objects.hash(created, description, deviceEntity, id, machineEntityState, machineTypeEntity, manufacturer, vin);
   }
 
   @Override
@@ -169,9 +292,13 @@ public class MachineEntity   {
     StringBuilder sb = new StringBuilder();
     sb.append("class MachineEntity {\n");
     
+    sb.append("    created: ").append(toIndentedString(created)).append("\n");
+    sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    deviceEntity: ").append(toIndentedString(deviceEntity)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    machineEntityState: ").append(toIndentedString(machineEntityState)).append("\n");
+    sb.append("    machineTypeEntity: ").append(toIndentedString(machineTypeEntity)).append("\n");
+    sb.append("    manufacturer: ").append(toIndentedString(manufacturer)).append("\n");
     sb.append("    vin: ").append(toIndentedString(vin)).append("\n");
     sb.append("}");
     return sb.toString();

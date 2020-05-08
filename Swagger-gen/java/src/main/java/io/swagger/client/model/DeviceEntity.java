@@ -31,18 +31,50 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.client.model.DeviceConfigurationEntity;
 import io.swagger.client.model.MachineEntity;
+import org.joda.time.DateTime;
 
 
 /**
  * DeviceEntity
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-08T15:19:24.422+02:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-08T17:34:45.159+02:00")
 public class DeviceEntity   {
-  @SerializedName("deviceCode")
-  private String deviceCode = null;
+  @SerializedName("created")
+  private DateTime created = null;
 
   @SerializedName("deviceConfigurationEntity")
   private DeviceConfigurationEntity deviceConfigurationEntity = null;
+
+  @SerializedName("deviceDescription")
+  private String deviceDescription = null;
+
+  /**
+   * Gets or Sets deviceStateEntity
+   */
+  public enum DeviceStateEntityEnum {
+    @SerializedName("STOP")
+    STOP("STOP"),
+    
+    @SerializedName("RUNNING")
+    RUNNING("RUNNING"),
+    
+    @SerializedName("WAITING")
+    WAITING("WAITING");
+
+    private String value;
+
+    DeviceStateEntityEnum(String value) {
+      this.value = value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+  }
+
+  @SerializedName("deviceStateEntity")
+  private DeviceStateEntityEnum deviceStateEntity = null;
 
   @SerializedName("id")
   private Long id = null;
@@ -50,22 +82,25 @@ public class DeviceEntity   {
   @SerializedName("machineEntity")
   private MachineEntity machineEntity = null;
 
-  public DeviceEntity deviceCode(String deviceCode) {
-    this.deviceCode = deviceCode;
+  @SerializedName("serialNumber")
+  private String serialNumber = null;
+
+  public DeviceEntity created(DateTime created) {
+    this.created = created;
     return this;
   }
 
    /**
-   * Get deviceCode
-   * @return deviceCode
+   * Get created
+   * @return created
   **/
   @ApiModelProperty(example = "null", value = "")
-  public String getDeviceCode() {
-    return deviceCode;
+  public DateTime getCreated() {
+    return created;
   }
 
-  public void setDeviceCode(String deviceCode) {
-    this.deviceCode = deviceCode;
+  public void setCreated(DateTime created) {
+    this.created = created;
   }
 
   public DeviceEntity deviceConfigurationEntity(DeviceConfigurationEntity deviceConfigurationEntity) {
@@ -84,6 +119,42 @@ public class DeviceEntity   {
 
   public void setDeviceConfigurationEntity(DeviceConfigurationEntity deviceConfigurationEntity) {
     this.deviceConfigurationEntity = deviceConfigurationEntity;
+  }
+
+  public DeviceEntity deviceDescription(String deviceDescription) {
+    this.deviceDescription = deviceDescription;
+    return this;
+  }
+
+   /**
+   * Get deviceDescription
+   * @return deviceDescription
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getDeviceDescription() {
+    return deviceDescription;
+  }
+
+  public void setDeviceDescription(String deviceDescription) {
+    this.deviceDescription = deviceDescription;
+  }
+
+  public DeviceEntity deviceStateEntity(DeviceStateEntityEnum deviceStateEntity) {
+    this.deviceStateEntity = deviceStateEntity;
+    return this;
+  }
+
+   /**
+   * Get deviceStateEntity
+   * @return deviceStateEntity
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public DeviceStateEntityEnum getDeviceStateEntity() {
+    return deviceStateEntity;
+  }
+
+  public void setDeviceStateEntity(DeviceStateEntityEnum deviceStateEntity) {
+    this.deviceStateEntity = deviceStateEntity;
   }
 
   public DeviceEntity id(Long id) {
@@ -122,6 +193,24 @@ public class DeviceEntity   {
     this.machineEntity = machineEntity;
   }
 
+  public DeviceEntity serialNumber(String serialNumber) {
+    this.serialNumber = serialNumber;
+    return this;
+  }
+
+   /**
+   * Get serialNumber
+   * @return serialNumber
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getSerialNumber() {
+    return serialNumber;
+  }
+
+  public void setSerialNumber(String serialNumber) {
+    this.serialNumber = serialNumber;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -132,15 +221,18 @@ public class DeviceEntity   {
       return false;
     }
     DeviceEntity deviceEntity = (DeviceEntity) o;
-    return Objects.equals(this.deviceCode, deviceEntity.deviceCode) &&
+    return Objects.equals(this.created, deviceEntity.created) &&
         Objects.equals(this.deviceConfigurationEntity, deviceEntity.deviceConfigurationEntity) &&
+        Objects.equals(this.deviceDescription, deviceEntity.deviceDescription) &&
+        Objects.equals(this.deviceStateEntity, deviceEntity.deviceStateEntity) &&
         Objects.equals(this.id, deviceEntity.id) &&
-        Objects.equals(this.machineEntity, deviceEntity.machineEntity);
+        Objects.equals(this.machineEntity, deviceEntity.machineEntity) &&
+        Objects.equals(this.serialNumber, deviceEntity.serialNumber);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(deviceCode, deviceConfigurationEntity, id, machineEntity);
+    return Objects.hash(created, deviceConfigurationEntity, deviceDescription, deviceStateEntity, id, machineEntity, serialNumber);
   }
 
   @Override
@@ -148,10 +240,13 @@ public class DeviceEntity   {
     StringBuilder sb = new StringBuilder();
     sb.append("class DeviceEntity {\n");
     
-    sb.append("    deviceCode: ").append(toIndentedString(deviceCode)).append("\n");
+    sb.append("    created: ").append(toIndentedString(created)).append("\n");
     sb.append("    deviceConfigurationEntity: ").append(toIndentedString(deviceConfigurationEntity)).append("\n");
+    sb.append("    deviceDescription: ").append(toIndentedString(deviceDescription)).append("\n");
+    sb.append("    deviceStateEntity: ").append(toIndentedString(deviceStateEntity)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    machineEntity: ").append(toIndentedString(machineEntity)).append("\n");
+    sb.append("    serialNumber: ").append(toIndentedString(serialNumber)).append("\n");
     sb.append("}");
     return sb.toString();
   }
