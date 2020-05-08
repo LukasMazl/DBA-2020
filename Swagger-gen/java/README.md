@@ -72,10 +72,10 @@ public class BasicerrorcontrollerApiExample {
         
         BasicerrorcontrollerApi apiInstance = new BasicerrorcontrollerApi();
         try {
-            ModelAndView result = apiInstance.errorHtmlUsingDELETE();
+            Map<String, Object> result = apiInstance.errorUsingDELETE();
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling BasicerrorcontrollerApi#errorHtmlUsingDELETE");
+            System.err.println("Exception when calling BasicerrorcontrollerApi#errorUsingDELETE");
             e.printStackTrace();
         }
     }
@@ -89,13 +89,13 @@ All URIs are relative to *https://localhost:8080/*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*BasicerrorcontrollerApi* | [**errorHtmlUsingDELETE**](docs/BasicerrorcontrollerApi.md#errorHtmlUsingDELETE) | **DELETE** /error | errorHtml
-*BasicerrorcontrollerApi* | [**errorHtmlUsingGET**](docs/BasicerrorcontrollerApi.md#errorHtmlUsingGET) | **GET** /error | errorHtml
-*BasicerrorcontrollerApi* | [**errorHtmlUsingHEAD**](docs/BasicerrorcontrollerApi.md#errorHtmlUsingHEAD) | **HEAD** /error | errorHtml
-*BasicerrorcontrollerApi* | [**errorHtmlUsingOPTIONS**](docs/BasicerrorcontrollerApi.md#errorHtmlUsingOPTIONS) | **OPTIONS** /error | errorHtml
-*BasicerrorcontrollerApi* | [**errorHtmlUsingPATCH**](docs/BasicerrorcontrollerApi.md#errorHtmlUsingPATCH) | **PATCH** /error | errorHtml
-*BasicerrorcontrollerApi* | [**errorHtmlUsingPOST**](docs/BasicerrorcontrollerApi.md#errorHtmlUsingPOST) | **POST** /error | errorHtml
-*BasicerrorcontrollerApi* | [**errorHtmlUsingPUT**](docs/BasicerrorcontrollerApi.md#errorHtmlUsingPUT) | **PUT** /error | errorHtml
+*BasicerrorcontrollerApi* | [**errorUsingDELETE**](docs/BasicerrorcontrollerApi.md#errorUsingDELETE) | **DELETE** /error | error
+*BasicerrorcontrollerApi* | [**errorUsingGET**](docs/BasicerrorcontrollerApi.md#errorUsingGET) | **GET** /error | error
+*BasicerrorcontrollerApi* | [**errorUsingHEAD**](docs/BasicerrorcontrollerApi.md#errorUsingHEAD) | **HEAD** /error | error
+*BasicerrorcontrollerApi* | [**errorUsingOPTIONS**](docs/BasicerrorcontrollerApi.md#errorUsingOPTIONS) | **OPTIONS** /error | error
+*BasicerrorcontrollerApi* | [**errorUsingPATCH**](docs/BasicerrorcontrollerApi.md#errorUsingPATCH) | **PATCH** /error | error
+*BasicerrorcontrollerApi* | [**errorUsingPOST**](docs/BasicerrorcontrollerApi.md#errorUsingPOST) | **POST** /error | error
+*BasicerrorcontrollerApi* | [**errorUsingPUT**](docs/BasicerrorcontrollerApi.md#errorUsingPUT) | **PUT** /error | error
 *DeviceEntityEntityApi* | [**deleteDeviceEntityUsingDELETE**](docs/DeviceEntityEntityApi.md#deleteDeviceEntityUsingDELETE) | **DELETE** /deviceEntities/{id} | deleteDeviceEntity
 *DeviceEntityEntityApi* | [**deviceEntityMachineEntityUsingDELETE**](docs/DeviceEntityEntityApi.md#deviceEntityMachineEntityUsingDELETE) | **DELETE** /deviceEntities/{id}/machineEntity | deviceEntityMachineEntity
 *DeviceEntityEntityApi* | [**deviceEntityMachineEntityUsingGET**](docs/DeviceEntityEntityApi.md#deviceEntityMachineEntityUsingGET) | **GET** /deviceEntities/{id}/machineEntity | deviceEntityMachineEntity

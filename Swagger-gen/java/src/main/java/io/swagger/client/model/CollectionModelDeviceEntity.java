@@ -38,7 +38,7 @@ import java.util.List;
 /**
  * CollectionModelDeviceEntity
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-08T17:34:45.159+02:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-08T21:24:51.847+02:00")
 public class CollectionModelDeviceEntity   {
   @SerializedName("content")
   private List<DeviceEntity> content = new ArrayList<DeviceEntity>();

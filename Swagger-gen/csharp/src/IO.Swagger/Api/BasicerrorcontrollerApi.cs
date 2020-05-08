@@ -26,7 +26,6 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
 using IO.Swagger.Client;
-using IO.Swagger.Model;
 
 namespace IO.Swagger.Api
 {
@@ -37,273 +36,273 @@ namespace IO.Swagger.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// errorHtml
+        /// error
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ModelAndView</returns>
-        ModelAndView ErrorHtmlUsingDELETE ();
+        /// <returns>Dictionary&lt;string, Object&gt;</returns>
+        Dictionary<string, Object> ErrorUsingDELETE ();
 
         /// <summary>
-        /// errorHtml
+        /// error
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of ModelAndView</returns>
-        ApiResponse<ModelAndView> ErrorHtmlUsingDELETEWithHttpInfo ();
+        /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
+        ApiResponse<Dictionary<string, Object>> ErrorUsingDELETEWithHttpInfo ();
         /// <summary>
-        /// errorHtml
+        /// error
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ModelAndView</returns>
-        ModelAndView ErrorHtmlUsingGET ();
+        /// <returns>Dictionary&lt;string, Object&gt;</returns>
+        Dictionary<string, Object> ErrorUsingGET ();
 
         /// <summary>
-        /// errorHtml
+        /// error
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of ModelAndView</returns>
-        ApiResponse<ModelAndView> ErrorHtmlUsingGETWithHttpInfo ();
+        /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
+        ApiResponse<Dictionary<string, Object>> ErrorUsingGETWithHttpInfo ();
         /// <summary>
-        /// errorHtml
+        /// error
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ModelAndView</returns>
-        ModelAndView ErrorHtmlUsingHEAD ();
+        /// <returns>Dictionary&lt;string, Object&gt;</returns>
+        Dictionary<string, Object> ErrorUsingHEAD ();
 
         /// <summary>
-        /// errorHtml
+        /// error
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of ModelAndView</returns>
-        ApiResponse<ModelAndView> ErrorHtmlUsingHEADWithHttpInfo ();
+        /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
+        ApiResponse<Dictionary<string, Object>> ErrorUsingHEADWithHttpInfo ();
         /// <summary>
-        /// errorHtml
+        /// error
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ModelAndView</returns>
-        ModelAndView ErrorHtmlUsingOPTIONS ();
+        /// <returns>Dictionary&lt;string, Object&gt;</returns>
+        Dictionary<string, Object> ErrorUsingOPTIONS ();
 
         /// <summary>
-        /// errorHtml
+        /// error
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of ModelAndView</returns>
-        ApiResponse<ModelAndView> ErrorHtmlUsingOPTIONSWithHttpInfo ();
+        /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
+        ApiResponse<Dictionary<string, Object>> ErrorUsingOPTIONSWithHttpInfo ();
         /// <summary>
-        /// errorHtml
+        /// error
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ModelAndView</returns>
-        ModelAndView ErrorHtmlUsingPATCH ();
+        /// <returns>Dictionary&lt;string, Object&gt;</returns>
+        Dictionary<string, Object> ErrorUsingPATCH ();
 
         /// <summary>
-        /// errorHtml
+        /// error
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of ModelAndView</returns>
-        ApiResponse<ModelAndView> ErrorHtmlUsingPATCHWithHttpInfo ();
+        /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
+        ApiResponse<Dictionary<string, Object>> ErrorUsingPATCHWithHttpInfo ();
         /// <summary>
-        /// errorHtml
+        /// error
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ModelAndView</returns>
-        ModelAndView ErrorHtmlUsingPOST ();
+        /// <returns>Dictionary&lt;string, Object&gt;</returns>
+        Dictionary<string, Object> ErrorUsingPOST ();
 
         /// <summary>
-        /// errorHtml
+        /// error
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of ModelAndView</returns>
-        ApiResponse<ModelAndView> ErrorHtmlUsingPOSTWithHttpInfo ();
+        /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
+        ApiResponse<Dictionary<string, Object>> ErrorUsingPOSTWithHttpInfo ();
         /// <summary>
-        /// errorHtml
+        /// error
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ModelAndView</returns>
-        ModelAndView ErrorHtmlUsingPUT ();
+        /// <returns>Dictionary&lt;string, Object&gt;</returns>
+        Dictionary<string, Object> ErrorUsingPUT ();
 
         /// <summary>
-        /// errorHtml
+        /// error
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of ModelAndView</returns>
-        ApiResponse<ModelAndView> ErrorHtmlUsingPUTWithHttpInfo ();
+        /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
+        ApiResponse<Dictionary<string, Object>> ErrorUsingPUTWithHttpInfo ();
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// errorHtml
+        /// error
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ModelAndView</returns>
-        System.Threading.Tasks.Task<ModelAndView> ErrorHtmlUsingDELETEAsync ();
+        /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
+        System.Threading.Tasks.Task<Dictionary<string, Object>> ErrorUsingDELETEAsync ();
 
         /// <summary>
-        /// errorHtml
+        /// error
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (ModelAndView)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ModelAndView>> ErrorHtmlUsingDELETEAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> ErrorUsingDELETEAsyncWithHttpInfo ();
         /// <summary>
-        /// errorHtml
+        /// error
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ModelAndView</returns>
-        System.Threading.Tasks.Task<ModelAndView> ErrorHtmlUsingGETAsync ();
+        /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
+        System.Threading.Tasks.Task<Dictionary<string, Object>> ErrorUsingGETAsync ();
 
         /// <summary>
-        /// errorHtml
+        /// error
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (ModelAndView)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ModelAndView>> ErrorHtmlUsingGETAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> ErrorUsingGETAsyncWithHttpInfo ();
         /// <summary>
-        /// errorHtml
+        /// error
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ModelAndView</returns>
-        System.Threading.Tasks.Task<ModelAndView> ErrorHtmlUsingHEADAsync ();
+        /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
+        System.Threading.Tasks.Task<Dictionary<string, Object>> ErrorUsingHEADAsync ();
 
         /// <summary>
-        /// errorHtml
+        /// error
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (ModelAndView)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ModelAndView>> ErrorHtmlUsingHEADAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> ErrorUsingHEADAsyncWithHttpInfo ();
         /// <summary>
-        /// errorHtml
+        /// error
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ModelAndView</returns>
-        System.Threading.Tasks.Task<ModelAndView> ErrorHtmlUsingOPTIONSAsync ();
+        /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
+        System.Threading.Tasks.Task<Dictionary<string, Object>> ErrorUsingOPTIONSAsync ();
 
         /// <summary>
-        /// errorHtml
+        /// error
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (ModelAndView)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ModelAndView>> ErrorHtmlUsingOPTIONSAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> ErrorUsingOPTIONSAsyncWithHttpInfo ();
         /// <summary>
-        /// errorHtml
+        /// error
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ModelAndView</returns>
-        System.Threading.Tasks.Task<ModelAndView> ErrorHtmlUsingPATCHAsync ();
+        /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
+        System.Threading.Tasks.Task<Dictionary<string, Object>> ErrorUsingPATCHAsync ();
 
         /// <summary>
-        /// errorHtml
+        /// error
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (ModelAndView)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ModelAndView>> ErrorHtmlUsingPATCHAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> ErrorUsingPATCHAsyncWithHttpInfo ();
         /// <summary>
-        /// errorHtml
+        /// error
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ModelAndView</returns>
-        System.Threading.Tasks.Task<ModelAndView> ErrorHtmlUsingPOSTAsync ();
+        /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
+        System.Threading.Tasks.Task<Dictionary<string, Object>> ErrorUsingPOSTAsync ();
 
         /// <summary>
-        /// errorHtml
+        /// error
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (ModelAndView)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ModelAndView>> ErrorHtmlUsingPOSTAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> ErrorUsingPOSTAsyncWithHttpInfo ();
         /// <summary>
-        /// errorHtml
+        /// error
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ModelAndView</returns>
-        System.Threading.Tasks.Task<ModelAndView> ErrorHtmlUsingPUTAsync ();
+        /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
+        System.Threading.Tasks.Task<Dictionary<string, Object>> ErrorUsingPUTAsync ();
 
         /// <summary>
-        /// errorHtml
+        /// error
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (ModelAndView)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ModelAndView>> ErrorHtmlUsingPUTAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> ErrorUsingPUTAsyncWithHttpInfo ();
         #endregion Asynchronous Operations
     }
 
@@ -417,22 +416,22 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// errorHtml 
+        /// error 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ModelAndView</returns>
-        public ModelAndView ErrorHtmlUsingDELETE ()
+        /// <returns>Dictionary&lt;string, Object&gt;</returns>
+        public Dictionary<string, Object> ErrorUsingDELETE ()
         {
-             ApiResponse<ModelAndView> localVarResponse = ErrorHtmlUsingDELETEWithHttpInfo();
+             ApiResponse<Dictionary<string, Object>> localVarResponse = ErrorUsingDELETEWithHttpInfo();
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// errorHtml 
+        /// error 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of ModelAndView</returns>
-        public ApiResponse< ModelAndView > ErrorHtmlUsingDELETEWithHttpInfo ()
+        /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
+        public ApiResponse< Dictionary<string, Object> > ErrorUsingDELETEWithHttpInfo ()
         {
 
             var localVarPath = "/error";
@@ -450,7 +449,7 @@ namespace IO.Swagger.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "text/html"
+                "*_/_*"
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -470,34 +469,34 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ErrorHtmlUsingDELETE", localVarResponse);
+                Exception exception = ExceptionFactory("ErrorUsingDELETE", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ModelAndView>(localVarStatusCode,
+            return new ApiResponse<Dictionary<string, Object>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ModelAndView) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ModelAndView)));
+                (Dictionary<string, Object>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Dictionary<string, Object>)));
             
         }
 
         /// <summary>
-        /// errorHtml 
+        /// error 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ModelAndView</returns>
-        public async System.Threading.Tasks.Task<ModelAndView> ErrorHtmlUsingDELETEAsync ()
+        /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
+        public async System.Threading.Tasks.Task<Dictionary<string, Object>> ErrorUsingDELETEAsync ()
         {
-             ApiResponse<ModelAndView> localVarResponse = await ErrorHtmlUsingDELETEAsyncWithHttpInfo();
+             ApiResponse<Dictionary<string, Object>> localVarResponse = await ErrorUsingDELETEAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// errorHtml 
+        /// error 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (ModelAndView)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ModelAndView>> ErrorHtmlUsingDELETEAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> ErrorUsingDELETEAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/error";
@@ -515,7 +514,7 @@ namespace IO.Swagger.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "text/html"
+                "*_/_*"
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -535,33 +534,33 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ErrorHtmlUsingDELETE", localVarResponse);
+                Exception exception = ExceptionFactory("ErrorUsingDELETE", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ModelAndView>(localVarStatusCode,
+            return new ApiResponse<Dictionary<string, Object>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ModelAndView) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ModelAndView)));
+                (Dictionary<string, Object>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Dictionary<string, Object>)));
             
         }
 
         /// <summary>
-        /// errorHtml 
+        /// error 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ModelAndView</returns>
-        public ModelAndView ErrorHtmlUsingGET ()
+        /// <returns>Dictionary&lt;string, Object&gt;</returns>
+        public Dictionary<string, Object> ErrorUsingGET ()
         {
-             ApiResponse<ModelAndView> localVarResponse = ErrorHtmlUsingGETWithHttpInfo();
+             ApiResponse<Dictionary<string, Object>> localVarResponse = ErrorUsingGETWithHttpInfo();
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// errorHtml 
+        /// error 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of ModelAndView</returns>
-        public ApiResponse< ModelAndView > ErrorHtmlUsingGETWithHttpInfo ()
+        /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
+        public ApiResponse< Dictionary<string, Object> > ErrorUsingGETWithHttpInfo ()
         {
 
             var localVarPath = "/error";
@@ -579,7 +578,7 @@ namespace IO.Swagger.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "text/html"
+                "*_/_*"
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -599,34 +598,34 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ErrorHtmlUsingGET", localVarResponse);
+                Exception exception = ExceptionFactory("ErrorUsingGET", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ModelAndView>(localVarStatusCode,
+            return new ApiResponse<Dictionary<string, Object>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ModelAndView) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ModelAndView)));
+                (Dictionary<string, Object>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Dictionary<string, Object>)));
             
         }
 
         /// <summary>
-        /// errorHtml 
+        /// error 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ModelAndView</returns>
-        public async System.Threading.Tasks.Task<ModelAndView> ErrorHtmlUsingGETAsync ()
+        /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
+        public async System.Threading.Tasks.Task<Dictionary<string, Object>> ErrorUsingGETAsync ()
         {
-             ApiResponse<ModelAndView> localVarResponse = await ErrorHtmlUsingGETAsyncWithHttpInfo();
+             ApiResponse<Dictionary<string, Object>> localVarResponse = await ErrorUsingGETAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// errorHtml 
+        /// error 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (ModelAndView)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ModelAndView>> ErrorHtmlUsingGETAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> ErrorUsingGETAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/error";
@@ -644,7 +643,7 @@ namespace IO.Swagger.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "text/html"
+                "*_/_*"
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -664,33 +663,33 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ErrorHtmlUsingGET", localVarResponse);
+                Exception exception = ExceptionFactory("ErrorUsingGET", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ModelAndView>(localVarStatusCode,
+            return new ApiResponse<Dictionary<string, Object>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ModelAndView) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ModelAndView)));
+                (Dictionary<string, Object>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Dictionary<string, Object>)));
             
         }
 
         /// <summary>
-        /// errorHtml 
+        /// error 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ModelAndView</returns>
-        public ModelAndView ErrorHtmlUsingHEAD ()
+        /// <returns>Dictionary&lt;string, Object&gt;</returns>
+        public Dictionary<string, Object> ErrorUsingHEAD ()
         {
-             ApiResponse<ModelAndView> localVarResponse = ErrorHtmlUsingHEADWithHttpInfo();
+             ApiResponse<Dictionary<string, Object>> localVarResponse = ErrorUsingHEADWithHttpInfo();
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// errorHtml 
+        /// error 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of ModelAndView</returns>
-        public ApiResponse< ModelAndView > ErrorHtmlUsingHEADWithHttpInfo ()
+        /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
+        public ApiResponse< Dictionary<string, Object> > ErrorUsingHEADWithHttpInfo ()
         {
 
             var localVarPath = "/error";
@@ -709,7 +708,7 @@ namespace IO.Swagger.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "text/html"
+                "*_/_*"
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -729,34 +728,34 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ErrorHtmlUsingHEAD", localVarResponse);
+                Exception exception = ExceptionFactory("ErrorUsingHEAD", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ModelAndView>(localVarStatusCode,
+            return new ApiResponse<Dictionary<string, Object>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ModelAndView) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ModelAndView)));
+                (Dictionary<string, Object>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Dictionary<string, Object>)));
             
         }
 
         /// <summary>
-        /// errorHtml 
+        /// error 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ModelAndView</returns>
-        public async System.Threading.Tasks.Task<ModelAndView> ErrorHtmlUsingHEADAsync ()
+        /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
+        public async System.Threading.Tasks.Task<Dictionary<string, Object>> ErrorUsingHEADAsync ()
         {
-             ApiResponse<ModelAndView> localVarResponse = await ErrorHtmlUsingHEADAsyncWithHttpInfo();
+             ApiResponse<Dictionary<string, Object>> localVarResponse = await ErrorUsingHEADAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// errorHtml 
+        /// error 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (ModelAndView)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ModelAndView>> ErrorHtmlUsingHEADAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> ErrorUsingHEADAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/error";
@@ -775,7 +774,7 @@ namespace IO.Swagger.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "text/html"
+                "*_/_*"
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -795,33 +794,33 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ErrorHtmlUsingHEAD", localVarResponse);
+                Exception exception = ExceptionFactory("ErrorUsingHEAD", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ModelAndView>(localVarStatusCode,
+            return new ApiResponse<Dictionary<string, Object>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ModelAndView) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ModelAndView)));
+                (Dictionary<string, Object>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Dictionary<string, Object>)));
             
         }
 
         /// <summary>
-        /// errorHtml 
+        /// error 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ModelAndView</returns>
-        public ModelAndView ErrorHtmlUsingOPTIONS ()
+        /// <returns>Dictionary&lt;string, Object&gt;</returns>
+        public Dictionary<string, Object> ErrorUsingOPTIONS ()
         {
-             ApiResponse<ModelAndView> localVarResponse = ErrorHtmlUsingOPTIONSWithHttpInfo();
+             ApiResponse<Dictionary<string, Object>> localVarResponse = ErrorUsingOPTIONSWithHttpInfo();
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// errorHtml 
+        /// error 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of ModelAndView</returns>
-        public ApiResponse< ModelAndView > ErrorHtmlUsingOPTIONSWithHttpInfo ()
+        /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
+        public ApiResponse< Dictionary<string, Object> > ErrorUsingOPTIONSWithHttpInfo ()
         {
 
             var localVarPath = "/error";
@@ -840,7 +839,7 @@ namespace IO.Swagger.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "text/html"
+                "*_/_*"
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -860,34 +859,34 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ErrorHtmlUsingOPTIONS", localVarResponse);
+                Exception exception = ExceptionFactory("ErrorUsingOPTIONS", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ModelAndView>(localVarStatusCode,
+            return new ApiResponse<Dictionary<string, Object>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ModelAndView) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ModelAndView)));
+                (Dictionary<string, Object>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Dictionary<string, Object>)));
             
         }
 
         /// <summary>
-        /// errorHtml 
+        /// error 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ModelAndView</returns>
-        public async System.Threading.Tasks.Task<ModelAndView> ErrorHtmlUsingOPTIONSAsync ()
+        /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
+        public async System.Threading.Tasks.Task<Dictionary<string, Object>> ErrorUsingOPTIONSAsync ()
         {
-             ApiResponse<ModelAndView> localVarResponse = await ErrorHtmlUsingOPTIONSAsyncWithHttpInfo();
+             ApiResponse<Dictionary<string, Object>> localVarResponse = await ErrorUsingOPTIONSAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// errorHtml 
+        /// error 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (ModelAndView)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ModelAndView>> ErrorHtmlUsingOPTIONSAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> ErrorUsingOPTIONSAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/error";
@@ -906,7 +905,7 @@ namespace IO.Swagger.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "text/html"
+                "*_/_*"
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -926,33 +925,33 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ErrorHtmlUsingOPTIONS", localVarResponse);
+                Exception exception = ExceptionFactory("ErrorUsingOPTIONS", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ModelAndView>(localVarStatusCode,
+            return new ApiResponse<Dictionary<string, Object>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ModelAndView) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ModelAndView)));
+                (Dictionary<string, Object>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Dictionary<string, Object>)));
             
         }
 
         /// <summary>
-        /// errorHtml 
+        /// error 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ModelAndView</returns>
-        public ModelAndView ErrorHtmlUsingPATCH ()
+        /// <returns>Dictionary&lt;string, Object&gt;</returns>
+        public Dictionary<string, Object> ErrorUsingPATCH ()
         {
-             ApiResponse<ModelAndView> localVarResponse = ErrorHtmlUsingPATCHWithHttpInfo();
+             ApiResponse<Dictionary<string, Object>> localVarResponse = ErrorUsingPATCHWithHttpInfo();
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// errorHtml 
+        /// error 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of ModelAndView</returns>
-        public ApiResponse< ModelAndView > ErrorHtmlUsingPATCHWithHttpInfo ()
+        /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
+        public ApiResponse< Dictionary<string, Object> > ErrorUsingPATCHWithHttpInfo ()
         {
 
             var localVarPath = "/error";
@@ -971,7 +970,7 @@ namespace IO.Swagger.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "text/html"
+                "*_/_*"
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -991,34 +990,34 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ErrorHtmlUsingPATCH", localVarResponse);
+                Exception exception = ExceptionFactory("ErrorUsingPATCH", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ModelAndView>(localVarStatusCode,
+            return new ApiResponse<Dictionary<string, Object>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ModelAndView) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ModelAndView)));
+                (Dictionary<string, Object>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Dictionary<string, Object>)));
             
         }
 
         /// <summary>
-        /// errorHtml 
+        /// error 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ModelAndView</returns>
-        public async System.Threading.Tasks.Task<ModelAndView> ErrorHtmlUsingPATCHAsync ()
+        /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
+        public async System.Threading.Tasks.Task<Dictionary<string, Object>> ErrorUsingPATCHAsync ()
         {
-             ApiResponse<ModelAndView> localVarResponse = await ErrorHtmlUsingPATCHAsyncWithHttpInfo();
+             ApiResponse<Dictionary<string, Object>> localVarResponse = await ErrorUsingPATCHAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// errorHtml 
+        /// error 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (ModelAndView)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ModelAndView>> ErrorHtmlUsingPATCHAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> ErrorUsingPATCHAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/error";
@@ -1037,7 +1036,7 @@ namespace IO.Swagger.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "text/html"
+                "*_/_*"
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1057,33 +1056,33 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ErrorHtmlUsingPATCH", localVarResponse);
+                Exception exception = ExceptionFactory("ErrorUsingPATCH", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ModelAndView>(localVarStatusCode,
+            return new ApiResponse<Dictionary<string, Object>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ModelAndView) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ModelAndView)));
+                (Dictionary<string, Object>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Dictionary<string, Object>)));
             
         }
 
         /// <summary>
-        /// errorHtml 
+        /// error 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ModelAndView</returns>
-        public ModelAndView ErrorHtmlUsingPOST ()
+        /// <returns>Dictionary&lt;string, Object&gt;</returns>
+        public Dictionary<string, Object> ErrorUsingPOST ()
         {
-             ApiResponse<ModelAndView> localVarResponse = ErrorHtmlUsingPOSTWithHttpInfo();
+             ApiResponse<Dictionary<string, Object>> localVarResponse = ErrorUsingPOSTWithHttpInfo();
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// errorHtml 
+        /// error 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of ModelAndView</returns>
-        public ApiResponse< ModelAndView > ErrorHtmlUsingPOSTWithHttpInfo ()
+        /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
+        public ApiResponse< Dictionary<string, Object> > ErrorUsingPOSTWithHttpInfo ()
         {
 
             var localVarPath = "/error";
@@ -1102,7 +1101,7 @@ namespace IO.Swagger.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "text/html"
+                "*_/_*"
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1122,34 +1121,34 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ErrorHtmlUsingPOST", localVarResponse);
+                Exception exception = ExceptionFactory("ErrorUsingPOST", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ModelAndView>(localVarStatusCode,
+            return new ApiResponse<Dictionary<string, Object>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ModelAndView) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ModelAndView)));
+                (Dictionary<string, Object>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Dictionary<string, Object>)));
             
         }
 
         /// <summary>
-        /// errorHtml 
+        /// error 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ModelAndView</returns>
-        public async System.Threading.Tasks.Task<ModelAndView> ErrorHtmlUsingPOSTAsync ()
+        /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
+        public async System.Threading.Tasks.Task<Dictionary<string, Object>> ErrorUsingPOSTAsync ()
         {
-             ApiResponse<ModelAndView> localVarResponse = await ErrorHtmlUsingPOSTAsyncWithHttpInfo();
+             ApiResponse<Dictionary<string, Object>> localVarResponse = await ErrorUsingPOSTAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// errorHtml 
+        /// error 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (ModelAndView)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ModelAndView>> ErrorHtmlUsingPOSTAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> ErrorUsingPOSTAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/error";
@@ -1168,7 +1167,7 @@ namespace IO.Swagger.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "text/html"
+                "*_/_*"
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1188,33 +1187,33 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ErrorHtmlUsingPOST", localVarResponse);
+                Exception exception = ExceptionFactory("ErrorUsingPOST", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ModelAndView>(localVarStatusCode,
+            return new ApiResponse<Dictionary<string, Object>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ModelAndView) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ModelAndView)));
+                (Dictionary<string, Object>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Dictionary<string, Object>)));
             
         }
 
         /// <summary>
-        /// errorHtml 
+        /// error 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ModelAndView</returns>
-        public ModelAndView ErrorHtmlUsingPUT ()
+        /// <returns>Dictionary&lt;string, Object&gt;</returns>
+        public Dictionary<string, Object> ErrorUsingPUT ()
         {
-             ApiResponse<ModelAndView> localVarResponse = ErrorHtmlUsingPUTWithHttpInfo();
+             ApiResponse<Dictionary<string, Object>> localVarResponse = ErrorUsingPUTWithHttpInfo();
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// errorHtml 
+        /// error 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of ModelAndView</returns>
-        public ApiResponse< ModelAndView > ErrorHtmlUsingPUTWithHttpInfo ()
+        /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
+        public ApiResponse< Dictionary<string, Object> > ErrorUsingPUTWithHttpInfo ()
         {
 
             var localVarPath = "/error";
@@ -1233,7 +1232,7 @@ namespace IO.Swagger.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "text/html"
+                "*_/_*"
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1253,34 +1252,34 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ErrorHtmlUsingPUT", localVarResponse);
+                Exception exception = ExceptionFactory("ErrorUsingPUT", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ModelAndView>(localVarStatusCode,
+            return new ApiResponse<Dictionary<string, Object>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ModelAndView) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ModelAndView)));
+                (Dictionary<string, Object>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Dictionary<string, Object>)));
             
         }
 
         /// <summary>
-        /// errorHtml 
+        /// error 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ModelAndView</returns>
-        public async System.Threading.Tasks.Task<ModelAndView> ErrorHtmlUsingPUTAsync ()
+        /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
+        public async System.Threading.Tasks.Task<Dictionary<string, Object>> ErrorUsingPUTAsync ()
         {
-             ApiResponse<ModelAndView> localVarResponse = await ErrorHtmlUsingPUTAsyncWithHttpInfo();
+             ApiResponse<Dictionary<string, Object>> localVarResponse = await ErrorUsingPUTAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// errorHtml 
+        /// error 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (ModelAndView)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ModelAndView>> ErrorHtmlUsingPUTAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> ErrorUsingPUTAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/error";
@@ -1299,7 +1298,7 @@ namespace IO.Swagger.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "text/html"
+                "*_/_*"
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1319,13 +1318,13 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ErrorHtmlUsingPUT", localVarResponse);
+                Exception exception = ExceptionFactory("ErrorUsingPUT", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ModelAndView>(localVarStatusCode,
+            return new ApiResponse<Dictionary<string, Object>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ModelAndView) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ModelAndView)));
+                (Dictionary<string, Object>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Dictionary<string, Object>)));
             
         }
 
