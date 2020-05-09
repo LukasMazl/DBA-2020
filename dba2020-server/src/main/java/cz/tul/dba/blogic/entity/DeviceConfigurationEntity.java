@@ -13,8 +13,8 @@ public class DeviceConfigurationEntity {
     @OneToOne(mappedBy = "deviceConfigurationEntity", fetch = FetchType.LAZY)
     private DeviceEntity deviceEntity;
 
-    @Column(name = "min_frequency")
-    private int minutFrequency;
+    @Column(name = "second_latency")
+    private int secondLatency;
 
     public long getId() {
         return id;
@@ -30,5 +30,13 @@ public class DeviceConfigurationEntity {
 
     public void setDeviceEntity(DeviceEntity deviceEntity) {
         this.deviceEntity = deviceEntity;
+    }
+
+    public int getSecondLatency() {
+        return secondLatency;
+    }
+
+    public void setSecondLatency(int secondLatency) {
+        this.secondLatency = secondLatency;
     }
 }
