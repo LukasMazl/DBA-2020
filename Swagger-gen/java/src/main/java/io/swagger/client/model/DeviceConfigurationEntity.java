@@ -35,13 +35,16 @@ import io.swagger.client.model.DeviceEntity;
 /**
  * DeviceConfigurationEntity
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-08T21:24:51.847+02:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-09T15:46:54.324+02:00")
 public class DeviceConfigurationEntity   {
   @SerializedName("deviceEntity")
   private DeviceEntity deviceEntity = null;
 
   @SerializedName("id")
   private Long id = null;
+
+  @SerializedName("secondLatency")
+  private Integer secondLatency = null;
 
   public DeviceConfigurationEntity deviceEntity(DeviceEntity deviceEntity) {
     this.deviceEntity = deviceEntity;
@@ -79,6 +82,24 @@ public class DeviceConfigurationEntity   {
     this.id = id;
   }
 
+  public DeviceConfigurationEntity secondLatency(Integer secondLatency) {
+    this.secondLatency = secondLatency;
+    return this;
+  }
+
+   /**
+   * Get secondLatency
+   * @return secondLatency
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public Integer getSecondLatency() {
+    return secondLatency;
+  }
+
+  public void setSecondLatency(Integer secondLatency) {
+    this.secondLatency = secondLatency;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -90,12 +111,13 @@ public class DeviceConfigurationEntity   {
     }
     DeviceConfigurationEntity deviceConfigurationEntity = (DeviceConfigurationEntity) o;
     return Objects.equals(this.deviceEntity, deviceConfigurationEntity.deviceEntity) &&
-        Objects.equals(this.id, deviceConfigurationEntity.id);
+        Objects.equals(this.id, deviceConfigurationEntity.id) &&
+        Objects.equals(this.secondLatency, deviceConfigurationEntity.secondLatency);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(deviceEntity, id);
+    return Objects.hash(deviceEntity, id, secondLatency);
   }
 
   @Override
@@ -105,6 +127,7 @@ public class DeviceConfigurationEntity   {
     
     sb.append("    deviceEntity: ").append(toIndentedString(deviceEntity)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    secondLatency: ").append(toIndentedString(secondLatency)).append("\n");
     sb.append("}");
     return sb.toString();
   }

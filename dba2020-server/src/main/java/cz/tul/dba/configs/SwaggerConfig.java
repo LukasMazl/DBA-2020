@@ -19,7 +19,7 @@ import java.util.function.Predicate;
 @Configuration
 @EnableSwagger2WebMvc
 @EnableWebMvc
-@Import(SpringDataRestConfiguration.class)
+//@Import(SpringDataRestConfiguration.class)
 public class SwaggerConfig {
 
     @Bean

@@ -96,46 +96,35 @@ Class | Method | HTTP request | Description
 *BasicerrorcontrollerApi* | [**errorUsingPATCH**](docs/BasicerrorcontrollerApi.md#errorUsingPATCH) | **PATCH** /error | error
 *BasicerrorcontrollerApi* | [**errorUsingPOST**](docs/BasicerrorcontrollerApi.md#errorUsingPOST) | **POST** /error | error
 *BasicerrorcontrollerApi* | [**errorUsingPUT**](docs/BasicerrorcontrollerApi.md#errorUsingPUT) | **PUT** /error | error
-*DeviceEntityEntityApi* | [**deleteDeviceEntityUsingDELETE**](docs/DeviceEntityEntityApi.md#deleteDeviceEntityUsingDELETE) | **DELETE** /deviceEntities/{id} | deleteDeviceEntity
-*DeviceEntityEntityApi* | [**deviceEntityMachineEntityUsingDELETE**](docs/DeviceEntityEntityApi.md#deviceEntityMachineEntityUsingDELETE) | **DELETE** /deviceEntities/{id}/machineEntity | deviceEntityMachineEntity
-*DeviceEntityEntityApi* | [**deviceEntityMachineEntityUsingGET**](docs/DeviceEntityEntityApi.md#deviceEntityMachineEntityUsingGET) | **GET** /deviceEntities/{id}/machineEntity | deviceEntityMachineEntity
-*DeviceEntityEntityApi* | [**deviceEntityMachineEntityUsingPATCH**](docs/DeviceEntityEntityApi.md#deviceEntityMachineEntityUsingPATCH) | **PATCH** /deviceEntities/{id}/machineEntity | deviceEntityMachineEntity
-*DeviceEntityEntityApi* | [**deviceEntityMachineEntityUsingPOST**](docs/DeviceEntityEntityApi.md#deviceEntityMachineEntityUsingPOST) | **POST** /deviceEntities/{id}/machineEntity | deviceEntityMachineEntity
-*DeviceEntityEntityApi* | [**deviceEntityMachineEntityUsingPUT**](docs/DeviceEntityEntityApi.md#deviceEntityMachineEntityUsingPUT) | **PUT** /deviceEntities/{id}/machineEntity | deviceEntityMachineEntity
-*DeviceEntityEntityApi* | [**findAllByMachineEntityIsNullDeviceEntityUsingGET**](docs/DeviceEntityEntityApi.md#findAllByMachineEntityIsNullDeviceEntityUsingGET) | **GET** /deviceEntities/search/findAllByMachineEntityIsNull | findAllByMachineEntityIsNullDeviceEntity
-*DeviceEntityEntityApi* | [**findAllDeviceEntityUsingGET**](docs/DeviceEntityEntityApi.md#findAllDeviceEntityUsingGET) | **GET** /deviceEntities | findAllDeviceEntity
-*DeviceEntityEntityApi* | [**findByIdDeviceEntityUsingGET**](docs/DeviceEntityEntityApi.md#findByIdDeviceEntityUsingGET) | **GET** /deviceEntities/{id} | findByIdDeviceEntity
-*DeviceEntityEntityApi* | [**saveDeviceEntityUsingPATCH**](docs/DeviceEntityEntityApi.md#saveDeviceEntityUsingPATCH) | **PATCH** /deviceEntities/{id} | saveDeviceEntity
-*DeviceEntityEntityApi* | [**saveDeviceEntityUsingPOST**](docs/DeviceEntityEntityApi.md#saveDeviceEntityUsingPOST) | **POST** /deviceEntities | saveDeviceEntity
-*DeviceEntityEntityApi* | [**saveDeviceEntityUsingPUT**](docs/DeviceEntityEntityApi.md#saveDeviceEntityUsingPUT) | **PUT** /deviceEntities/{id} | saveDeviceEntity
-*MachineEntityEntityApi* | [**deleteMachineEntityUsingDELETE**](docs/MachineEntityEntityApi.md#deleteMachineEntityUsingDELETE) | **DELETE** /machineEntities/{id} | deleteMachineEntity
-*MachineEntityEntityApi* | [**findAllMachineEntityUsingGET**](docs/MachineEntityEntityApi.md#findAllMachineEntityUsingGET) | **GET** /machineEntities | findAllMachineEntity
-*MachineEntityEntityApi* | [**findByIdMachineEntityUsingGET**](docs/MachineEntityEntityApi.md#findByIdMachineEntityUsingGET) | **GET** /machineEntities/{id} | findByIdMachineEntity
-*MachineEntityEntityApi* | [**findByVinMachineEntityUsingGET**](docs/MachineEntityEntityApi.md#findByVinMachineEntityUsingGET) | **GET** /machineEntities/search/findByVin | findByVinMachineEntity
-*MachineEntityEntityApi* | [**machineEntityDeviceEntityUsingDELETE**](docs/MachineEntityEntityApi.md#machineEntityDeviceEntityUsingDELETE) | **DELETE** /machineEntities/{id}/deviceEntity | machineEntityDeviceEntity
-*MachineEntityEntityApi* | [**machineEntityDeviceEntityUsingGET**](docs/MachineEntityEntityApi.md#machineEntityDeviceEntityUsingGET) | **GET** /machineEntities/{id}/deviceEntity | machineEntityDeviceEntity
-*MachineEntityEntityApi* | [**machineEntityDeviceEntityUsingPATCH**](docs/MachineEntityEntityApi.md#machineEntityDeviceEntityUsingPATCH) | **PATCH** /machineEntities/{id}/deviceEntity | machineEntityDeviceEntity
-*MachineEntityEntityApi* | [**machineEntityDeviceEntityUsingPOST**](docs/MachineEntityEntityApi.md#machineEntityDeviceEntityUsingPOST) | **POST** /machineEntities/{id}/deviceEntity | machineEntityDeviceEntity
-*MachineEntityEntityApi* | [**machineEntityDeviceEntityUsingPUT**](docs/MachineEntityEntityApi.md#machineEntityDeviceEntityUsingPUT) | **PUT** /machineEntities/{id}/deviceEntity | machineEntityDeviceEntity
-*MachineEntityEntityApi* | [**saveMachineEntityUsingPATCH**](docs/MachineEntityEntityApi.md#saveMachineEntityUsingPATCH) | **PATCH** /machineEntities/{id} | saveMachineEntity
-*MachineEntityEntityApi* | [**saveMachineEntityUsingPOST**](docs/MachineEntityEntityApi.md#saveMachineEntityUsingPOST) | **POST** /machineEntities | saveMachineEntity
-*MachineEntityEntityApi* | [**saveMachineEntityUsingPUT**](docs/MachineEntityEntityApi.md#saveMachineEntityUsingPUT) | **PUT** /machineEntities/{id} | saveMachineEntity
-*ProfilecontrollerApi* | [**listAllFormsOfMetadataUsingGET**](docs/ProfilecontrollerApi.md#listAllFormsOfMetadataUsingGET) | **GET** /profile | listAllFormsOfMetadata
-*ProfilecontrollerApi* | [**profileOptionsUsingOPTIONS**](docs/ProfilecontrollerApi.md#profileOptionsUsingOPTIONS) | **OPTIONS** /profile | profileOptions
+*IotdevicecontrollerApi* | [**createDeviceUsingPOST**](docs/IotdevicecontrollerApi.md#createDeviceUsingPOST) | **POST** /api/v1/device/create | createDevice
+*IotdevicecontrollerApi* | [**deleteDeviceUsingPOST**](docs/IotdevicecontrollerApi.md#deleteDeviceUsingPOST) | **POST** /api/v1/device/delete/{serialNumber} | deleteDevice
+*IotdevicecontrollerApi* | [**getAllFreeDeviceUsingPOST**](docs/IotdevicecontrollerApi.md#getAllFreeDeviceUsingPOST) | **POST** /api/v1/device/allFree | getAllFreeDevice
+*IotdevicecontrollerApi* | [**getDeviceConfigurationUsingPOST**](docs/IotdevicecontrollerApi.md#getDeviceConfigurationUsingPOST) | **POST** /api/v1/device/configuration/{serialNumber} | getDeviceConfiguration
+*IotdevicecontrollerApi* | [**recordNewStateUsingPOST**](docs/IotdevicecontrollerApi.md#recordNewStateUsingPOST) | **POST** /api/v1/device/record | recordNewState
+*IotdevicecontrollerApi* | [**setDeviceConfigurationUsingPOST**](docs/IotdevicecontrollerApi.md#setDeviceConfigurationUsingPOST) | **POST** /api/v1/device/configuration/set/{serialNumber} | setDeviceConfiguration
+*IotdevicecontrollerApi* | [**takeDeviceUsingPOST**](docs/IotdevicecontrollerApi.md#takeDeviceUsingPOST) | **POST** /api/v1/device/setTaken | takeDevice
+*IotdevicecontrollerApi* | [**updateDeviceUsingPOST**](docs/IotdevicecontrollerApi.md#updateDeviceUsingPOST) | **POST** /api/v1/device/update/{serialNumber} | updateDevice
 
 
 ## Documentation for Models
 
- - [CollectionModelDeviceEntity](docs/CollectionModelDeviceEntity.md)
- - [CollectionModelMachineEntity](docs/CollectionModelMachineEntity.md)
+ - [AllFreeDeviceDTO](docs/AllFreeDeviceDTO.md)
+ - [CreateDeviceDTO](docs/CreateDeviceDTO.md)
+ - [CreateDeviceResponse](docs/CreateDeviceResponse.md)
+ - [DeleteDeviceResponse](docs/DeleteDeviceResponse.md)
+ - [DeviceConfigurationDTO](docs/DeviceConfigurationDTO.md)
  - [DeviceConfigurationEntity](docs/DeviceConfigurationEntity.md)
+ - [DeviceConfigurationResponse](docs/DeviceConfigurationResponse.md)
  - [DeviceEntity](docs/DeviceEntity.md)
- - [EntityModelDeviceEntity](docs/EntityModelDeviceEntity.md)
- - [EntityModelMachineEntity](docs/EntityModelMachineEntity.md)
- - [Links](docs/Links.md)
  - [MachineEntity](docs/MachineEntity.md)
  - [ModelAndView](docs/ModelAndView.md)
- - [RepresentationModelobject](docs/RepresentationModelobject.md)
+ - [NewDeviceConfigurationDTO](docs/NewDeviceConfigurationDTO.md)
+ - [RecordMachineStateDTO](docs/RecordMachineStateDTO.md)
+ - [RecordNewStateResponse](docs/RecordNewStateResponse.md)
+ - [TakeDeviceDTO](docs/TakeDeviceDTO.md)
+ - [TakeDeviceResponse](docs/TakeDeviceResponse.md)
+ - [UpdateDeviceDTO](docs/UpdateDeviceDTO.md)
+ - [UpdateDeviceResponse](docs/UpdateDeviceResponse.md)
  - [View](docs/View.md)
 
 

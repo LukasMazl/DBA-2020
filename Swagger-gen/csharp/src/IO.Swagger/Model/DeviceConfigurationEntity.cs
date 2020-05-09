@@ -44,10 +44,12 @@ namespace IO.Swagger.Model
         /// </summary>
         /// <param name="DeviceEntity">DeviceEntity.</param>
         /// <param name="Id">Id.</param>
-        public DeviceConfigurationEntity(DeviceEntity DeviceEntity = null, long? Id = null)
+        /// <param name="SecondLatency">SecondLatency.</param>
+        public DeviceConfigurationEntity(DeviceEntity DeviceEntity = null, long? Id = null, int? SecondLatency = null)
         {
             this.DeviceEntity = DeviceEntity;
             this.Id = Id;
+            this.SecondLatency = SecondLatency;
         }
         
         /// <summary>
@@ -61,6 +63,11 @@ namespace IO.Swagger.Model
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
         /// <summary>
+        /// Gets or Sets SecondLatency
+        /// </summary>
+        [DataMember(Name="secondLatency", EmitDefaultValue=false)]
+        public int? SecondLatency { get; set; }
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -70,6 +77,7 @@ namespace IO.Swagger.Model
             sb.Append("class DeviceConfigurationEntity {\n");
             sb.Append("  DeviceEntity: ").Append(DeviceEntity).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  SecondLatency: ").Append(SecondLatency).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -115,6 +123,11 @@ namespace IO.Swagger.Model
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
+                ) && 
+                (
+                    this.SecondLatency == other.SecondLatency ||
+                    this.SecondLatency != null &&
+                    this.SecondLatency.Equals(other.SecondLatency)
                 );
         }
 
@@ -133,6 +146,8 @@ namespace IO.Swagger.Model
                     hash = hash * 59 + this.DeviceEntity.GetHashCode();
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                if (this.SecondLatency != null)
+                    hash = hash * 59 + this.SecondLatency.GetHashCode();
                 return hash;
             }
         }

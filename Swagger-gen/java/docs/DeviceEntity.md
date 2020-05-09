@@ -20,6 +20,8 @@ Name | Value
 STOP | &quot;STOP&quot;
 RUNNING | &quot;RUNNING&quot;
 WAITING | &quot;WAITING&quot;
+DELETED | &quot;DELETED&quot;
+NEW | &quot;NEW&quot;
 
 
 

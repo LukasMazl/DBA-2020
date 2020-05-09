@@ -92,6 +92,14 @@ namespace IO.Swagger.Test
         {
             // TODO unit test for the property 'Id'
         }
+        /// <summary>
+        /// Test the property 'SecondLatency'
+        /// </summary>
+        [Test]
+        public void SecondLatencyTest()
+        {
+            // TODO unit test for the property 'SecondLatency'
+        }
 
     }
 

@@ -20,17 +20,17 @@ public class DeviceEntity {
     @JoinColumn(name = "device_conf_id")
     private DeviceConfigurationEntity deviceConfigurationEntity;
 
-    @Column(name = "serial_number", nullable = false)
+    @Column(name = "serial_number", nullable = false, unique = true)
     private String serialNumber;
 
     @Column(name = "description")
     private String deviceDescription;
 
-    @Column(name = "state")
+    @Column(name = "state", nullable = false)
     @Enumerated(EnumType.STRING)
     private DeviceStateEntity deviceStateEntity;
 
-    @Column(name = "crated")
+    @Column(name = "crated", nullable = false)
     private Date created;
 
     public long getId() {

@@ -62,7 +62,19 @@ namespace IO.Swagger.Model
             /// Enum WAITING for "WAITING"
             /// </summary>
             [EnumMember(Value = "WAITING")]
-            WAITING
+            WAITING,
+            
+            /// <summary>
+            /// Enum DELETED for "DELETED"
+            /// </summary>
+            [EnumMember(Value = "DELETED")]
+            DELETED,
+            
+            /// <summary>
+            /// Enum NEW for "NEW"
+            /// </summary>
+            [EnumMember(Value = "NEW")]
+            NEW
         }
 
         /// <summary>

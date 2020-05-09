@@ -1,10 +1,11 @@
 package cz.tul.dba.blogic.repository;
 
 import cz.tul.dba.blogic.entity.DeviceEntity;
+import cz.tul.dba.blogic.entity.DeviceStateEntity;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.Set;
+import java.util.List;
 
 @Repository
 public interface DeviceRepository extends CrudRepository<DeviceEntity, Long> {
@@ -21,5 +22,14 @@ public interface DeviceRepository extends CrudRepository<DeviceEntity, Long> {
      *
      * @return set of Device Entity
      */
-    Set<DeviceEntity> findAllByMachineEntityIsNull();
+    List<DeviceEntity> findAllByMachineEntityIsNullAndDeviceStateEntityNot(DeviceStateEntity deviceStateEntity);
+
+    /**
+     * Returns Device Entity found by serialNumber
+     * @param serialNumber
+     * @return device entity
+     */
+    DeviceEntity findBySerialNumberAndDeviceStateEntityNot(String serialNumber, DeviceStateEntity deviceStateEntity);
+
+    DeviceEntity findBySerialNumber(String serialNumber);
 }
