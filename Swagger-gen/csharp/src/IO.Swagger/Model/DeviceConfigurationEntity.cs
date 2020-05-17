@@ -44,11 +44,15 @@ namespace IO.Swagger.Model
         /// </summary>
         /// <param name="DeviceEntity">DeviceEntity.</param>
         /// <param name="Id">Id.</param>
+        /// <param name="MaxDistance">MaxDistance.</param>
+        /// <param name="MaxSpeed">MaxSpeed.</param>
         /// <param name="SecondLatency">SecondLatency.</param>
-        public DeviceConfigurationEntity(DeviceEntity DeviceEntity = null, long? Id = null, int? SecondLatency = null)
+        public DeviceConfigurationEntity(DeviceEntity DeviceEntity = null, long? Id = null, int? MaxDistance = null, int? MaxSpeed = null, int? SecondLatency = null)
         {
             this.DeviceEntity = DeviceEntity;
             this.Id = Id;
+            this.MaxDistance = MaxDistance;
+            this.MaxSpeed = MaxSpeed;
             this.SecondLatency = SecondLatency;
         }
         
@@ -62,6 +66,16 @@ namespace IO.Swagger.Model
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
+        /// <summary>
+        /// Gets or Sets MaxDistance
+        /// </summary>
+        [DataMember(Name="maxDistance", EmitDefaultValue=false)]
+        public int? MaxDistance { get; set; }
+        /// <summary>
+        /// Gets or Sets MaxSpeed
+        /// </summary>
+        [DataMember(Name="maxSpeed", EmitDefaultValue=false)]
+        public int? MaxSpeed { get; set; }
         /// <summary>
         /// Gets or Sets SecondLatency
         /// </summary>
@@ -77,6 +91,8 @@ namespace IO.Swagger.Model
             sb.Append("class DeviceConfigurationEntity {\n");
             sb.Append("  DeviceEntity: ").Append(DeviceEntity).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  MaxDistance: ").Append(MaxDistance).Append("\n");
+            sb.Append("  MaxSpeed: ").Append(MaxSpeed).Append("\n");
             sb.Append("  SecondLatency: ").Append(SecondLatency).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -125,6 +141,16 @@ namespace IO.Swagger.Model
                     this.Id.Equals(other.Id)
                 ) && 
                 (
+                    this.MaxDistance == other.MaxDistance ||
+                    this.MaxDistance != null &&
+                    this.MaxDistance.Equals(other.MaxDistance)
+                ) && 
+                (
+                    this.MaxSpeed == other.MaxSpeed ||
+                    this.MaxSpeed != null &&
+                    this.MaxSpeed.Equals(other.MaxSpeed)
+                ) && 
+                (
                     this.SecondLatency == other.SecondLatency ||
                     this.SecondLatency != null &&
                     this.SecondLatency.Equals(other.SecondLatency)
@@ -146,6 +172,10 @@ namespace IO.Swagger.Model
                     hash = hash * 59 + this.DeviceEntity.GetHashCode();
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                if (this.MaxDistance != null)
+                    hash = hash * 59 + this.MaxDistance.GetHashCode();
+                if (this.MaxSpeed != null)
+                    hash = hash * 59 + this.MaxSpeed.GetHashCode();
                 if (this.SecondLatency != null)
                     hash = hash * 59 + this.SecondLatency.GetHashCode();
                 return hash;

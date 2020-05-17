@@ -35,13 +35,19 @@ import io.swagger.client.model.DeviceEntity;
 /**
  * DeviceConfigurationEntity
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-09T15:46:54.324+02:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-18T00:33:27.761+02:00")
 public class DeviceConfigurationEntity   {
   @SerializedName("deviceEntity")
   private DeviceEntity deviceEntity = null;
 
   @SerializedName("id")
   private Long id = null;
+
+  @SerializedName("maxDistance")
+  private Integer maxDistance = null;
+
+  @SerializedName("maxSpeed")
+  private Integer maxSpeed = null;
 
   @SerializedName("secondLatency")
   private Integer secondLatency = null;
@@ -82,6 +88,42 @@ public class DeviceConfigurationEntity   {
     this.id = id;
   }
 
+  public DeviceConfigurationEntity maxDistance(Integer maxDistance) {
+    this.maxDistance = maxDistance;
+    return this;
+  }
+
+   /**
+   * Get maxDistance
+   * @return maxDistance
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public Integer getMaxDistance() {
+    return maxDistance;
+  }
+
+  public void setMaxDistance(Integer maxDistance) {
+    this.maxDistance = maxDistance;
+  }
+
+  public DeviceConfigurationEntity maxSpeed(Integer maxSpeed) {
+    this.maxSpeed = maxSpeed;
+    return this;
+  }
+
+   /**
+   * Get maxSpeed
+   * @return maxSpeed
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public Integer getMaxSpeed() {
+    return maxSpeed;
+  }
+
+  public void setMaxSpeed(Integer maxSpeed) {
+    this.maxSpeed = maxSpeed;
+  }
+
   public DeviceConfigurationEntity secondLatency(Integer secondLatency) {
     this.secondLatency = secondLatency;
     return this;
@@ -112,12 +154,14 @@ public class DeviceConfigurationEntity   {
     DeviceConfigurationEntity deviceConfigurationEntity = (DeviceConfigurationEntity) o;
     return Objects.equals(this.deviceEntity, deviceConfigurationEntity.deviceEntity) &&
         Objects.equals(this.id, deviceConfigurationEntity.id) &&
+        Objects.equals(this.maxDistance, deviceConfigurationEntity.maxDistance) &&
+        Objects.equals(this.maxSpeed, deviceConfigurationEntity.maxSpeed) &&
         Objects.equals(this.secondLatency, deviceConfigurationEntity.secondLatency);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(deviceEntity, id, secondLatency);
+    return Objects.hash(deviceEntity, id, maxDistance, maxSpeed, secondLatency);
   }
 
   @Override
@@ -127,6 +171,8 @@ public class DeviceConfigurationEntity   {
     
     sb.append("    deviceEntity: ").append(toIndentedString(deviceEntity)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    maxDistance: ").append(toIndentedString(maxDistance)).append("\n");
+    sb.append("    maxSpeed: ").append(toIndentedString(maxSpeed)).append("\n");
     sb.append("    secondLatency: ").append(toIndentedString(secondLatency)).append("\n");
     sb.append("}");
     return sb.toString();

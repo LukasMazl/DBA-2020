@@ -37,7 +37,7 @@ import org.joda.time.DateTime;
 /**
  * DeviceEntity
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-09T15:46:54.324+02:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-18T00:33:27.761+02:00")
 public class DeviceEntity   {
   @SerializedName("created")
   private DateTime created = null;

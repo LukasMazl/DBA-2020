@@ -36,7 +36,7 @@ import org.joda.time.DateTime;
 /**
  * MachineEntity
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-09T15:46:54.324+02:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-18T00:33:27.761+02:00")
 public class MachineEntity   {
   @SerializedName("created")
   private DateTime created = null;
@@ -61,7 +61,10 @@ public class MachineEntity   {
     STOPPED("STOPPED"),
     
     @SerializedName("WORKING")
-    WORKING("WORKING");
+    WORKING("WORKING"),
+    
+    @SerializedName("REMOVED")
+    REMOVED("REMOVED");
 
     private String value;
 

@@ -104,18 +104,31 @@ Class | Method | HTTP request | Description
 *IotdevicecontrollerApi* | [**setDeviceConfigurationUsingPOST**](docs/IotdevicecontrollerApi.md#setDeviceConfigurationUsingPOST) | **POST** /api/v1/device/configuration/set/{serialNumber} | setDeviceConfiguration
 *IotdevicecontrollerApi* | [**takeDeviceUsingPOST**](docs/IotdevicecontrollerApi.md#takeDeviceUsingPOST) | **POST** /api/v1/device/setTaken | takeDevice
 *IotdevicecontrollerApi* | [**updateDeviceUsingPOST**](docs/IotdevicecontrollerApi.md#updateDeviceUsingPOST) | **POST** /api/v1/device/update/{serialNumber} | updateDevice
+*MachinecontrollerApi* | [**createMachineUsingPOST**](docs/MachinecontrollerApi.md#createMachineUsingPOST) | **POST** /api/v1/machine/create | createMachine
+*MachinecontrollerApi* | [**deleteMachineUsingPOST**](docs/MachinecontrollerApi.md#deleteMachineUsingPOST) | **POST** /api/v1/machine/delete | deleteMachine
+*MachinecontrollerApi* | [**updateMachineUsingPOST**](docs/MachinecontrollerApi.md#updateMachineUsingPOST) | **POST** /api/v1/machine/update/{vin-code} | updateMachine
+*ReaddatacontrollerApi* | [**getAllMachinesUsingPOST**](docs/ReaddatacontrollerApi.md#getAllMachinesUsingPOST) | **POST** /api/v1/data/getAllMachines | getAllMachines
+*ReaddatacontrollerApi* | [**getRecordsForMachineUsingPOST**](docs/ReaddatacontrollerApi.md#getRecordsForMachineUsingPOST) | **POST** /api/v1/data/machine/{vin} | getRecordsForMachine
 
 
 ## Documentation for Models
 
  - [AllFreeDeviceDTO](docs/AllFreeDeviceDTO.md)
+ - [AllMachineDTO](docs/AllMachineDTO.md)
  - [CreateDeviceDTO](docs/CreateDeviceDTO.md)
  - [CreateDeviceResponse](docs/CreateDeviceResponse.md)
+ - [CreateMachineDTO](docs/CreateMachineDTO.md)
+ - [CreateMachineResponse](docs/CreateMachineResponse.md)
  - [DeleteDeviceResponse](docs/DeleteDeviceResponse.md)
+ - [DeleteMachineDTO](docs/DeleteMachineDTO.md)
+ - [DeteleMachineResponse](docs/DeteleMachineResponse.md)
  - [DeviceConfigurationDTO](docs/DeviceConfigurationDTO.md)
  - [DeviceConfigurationEntity](docs/DeviceConfigurationEntity.md)
  - [DeviceConfigurationResponse](docs/DeviceConfigurationResponse.md)
  - [DeviceEntity](docs/DeviceEntity.md)
+ - [MachineDTO](docs/MachineDTO.md)
+ - [MachineDataRecordDTO](docs/MachineDataRecordDTO.md)
+ - [MachineDataRecordsDTO](docs/MachineDataRecordsDTO.md)
  - [MachineEntity](docs/MachineEntity.md)
  - [ModelAndView](docs/ModelAndView.md)
  - [NewDeviceConfigurationDTO](docs/NewDeviceConfigurationDTO.md)
@@ -125,6 +138,7 @@ Class | Method | HTTP request | Description
  - [TakeDeviceResponse](docs/TakeDeviceResponse.md)
  - [UpdateDeviceDTO](docs/UpdateDeviceDTO.md)
  - [UpdateDeviceResponse](docs/UpdateDeviceResponse.md)
+ - [UpdateMachineResponse](docs/UpdateMachineResponse.md)
  - [View](docs/View.md)
 
 

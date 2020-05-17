@@ -21,6 +21,7 @@ Name | Value
 MOVING | &quot;MOVING&quot;
 STOPPED | &quot;STOPPED&quot;
 WORKING | &quot;WORKING&quot;
+REMOVED | &quot;REMOVED&quot;
 
 
 <a name="MachineTypeEntityEnum"></a>

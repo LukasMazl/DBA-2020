@@ -62,7 +62,13 @@ namespace IO.Swagger.Model
             /// Enum WORKING for "WORKING"
             /// </summary>
             [EnumMember(Value = "WORKING")]
-            WORKING
+            WORKING,
+            
+            /// <summary>
+            /// Enum REMOVED for "REMOVED"
+            /// </summary>
+            [EnumMember(Value = "REMOVED")]
+            REMOVED
         }
 
         /// <summary>

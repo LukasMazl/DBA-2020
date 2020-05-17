@@ -93,6 +93,22 @@ namespace IO.Swagger.Test
             // TODO unit test for the property 'Id'
         }
         /// <summary>
+        /// Test the property 'MaxDistance'
+        /// </summary>
+        [Test]
+        public void MaxDistanceTest()
+        {
+            // TODO unit test for the property 'MaxDistance'
+        }
+        /// <summary>
+        /// Test the property 'MaxSpeed'
+        /// </summary>
+        [Test]
+        public void MaxSpeedTest()
+        {
+            // TODO unit test for the property 'MaxSpeed'
+        }
+        /// <summary>
         /// Test the property 'SecondLatency'
         /// </summary>
         [Test]
