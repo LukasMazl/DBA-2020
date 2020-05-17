@@ -30,7 +30,7 @@ public class DeviceEntity {
     @Enumerated(EnumType.STRING)
     private DeviceStateEntity deviceStateEntity;
 
-    @Column(name = "crated", nullable = false)
+    @Column(name = "created", nullable = false)
     private Date created;
 
     public long getId() {

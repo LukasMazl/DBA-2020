@@ -5,12 +5,15 @@ import cz.tul.dba.blogic.entity.DeviceEntity;
 import cz.tul.dba.blogic.service.device.DeviceService;
 import cz.tul.dba.dto.in.*;
 import cz.tul.dba.dto.out.*;
+import cz.tul.dba.dto.out.responce.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+
+//TODO Odebrani zarizeni + vytvoření machine pokud neexistuje
 /**
  * 1) Získání všech volných jednotek
  * 2) Zabraní si volné jednotny
@@ -36,6 +39,7 @@ public class IOTDeviceController {
         allFreeDevice.setDeviceEntityList(deviceEntityList);
         return allFreeDevice;
     }
+
 
 
     @RequestMapping(path = "/api/v1/device/setTaken", method = RequestMethod.POST,

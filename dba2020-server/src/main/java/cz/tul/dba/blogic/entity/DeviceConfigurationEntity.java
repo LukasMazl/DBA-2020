@@ -16,6 +16,12 @@ public class DeviceConfigurationEntity {
     @Column(name = "second_latency")
     private int secondLatency;
 
+    @Column(name = "max_spped")
+    private int maxSpeed;
+
+    @Column(name = "max_distance")
+    private int maxDistance;
+
     public long getId() {
         return id;
     }
@@ -38,5 +44,21 @@ public class DeviceConfigurationEntity {
 
     public void setSecondLatency(int secondLatency) {
         this.secondLatency = secondLatency;
+    }
+
+    public int getMaxSpeed() {
+        return maxSpeed;
+    }
+
+    public void setMaxSpeed(int maxSpeed) {
+        this.maxSpeed = maxSpeed;
+    }
+
+    public int getMaxDistance() {
+        return maxDistance;
+    }
+
+    public void setMaxDistance(int maxDistance) {
+        this.maxDistance = maxDistance;
     }
 }

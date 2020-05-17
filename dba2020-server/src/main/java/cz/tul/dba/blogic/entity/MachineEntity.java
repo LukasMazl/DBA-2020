@@ -20,6 +20,7 @@ public class MachineEntity {
     private MachineEntityState machineEntityState;
 
     @Column(name = "type", nullable = false)
+    @Enumerated(EnumType.STRING)
     private MachineTypeEntity machineTypeEntity;
 
     @Column(name = "vin", nullable = false, unique = true)

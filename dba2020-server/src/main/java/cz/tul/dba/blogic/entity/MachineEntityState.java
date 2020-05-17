@@ -2,5 +2,5 @@ package cz.tul.dba.blogic.entity;
 
 
 public enum MachineEntityState {
-    MOVING, STOPPED, WORKING
+    MOVING, STOPPED, WORKING, REMOVED
 }
