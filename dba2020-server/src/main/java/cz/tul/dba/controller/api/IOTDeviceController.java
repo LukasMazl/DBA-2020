@@ -8,12 +8,14 @@ import cz.tul.dba.dto.out.*;
 import cz.tul.dba.dto.out.responce.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 
 //TODO Odebrani zarizeni + vytvoření machine pokud neexistuje
+
 /**
  * 1) Získání všech volných jednotek
  * 2) Zabraní si volné jednotny
@@ -25,10 +27,12 @@ import java.util.List;
 public class IOTDeviceController {
 
     private DeviceService deviceService;
+    private SimpMessagingTemplate messageSender;
 
     @Autowired
-    public IOTDeviceController(DeviceService deviceService) {
+    public IOTDeviceController(DeviceService deviceService, SimpMessagingTemplate messageSender) {
         this.deviceService = deviceService;
+        this.messageSender = messageSender;
     }
 
     @RequestMapping(path = "/api/v1/device/allFree", method = RequestMethod.POST,
@@ -39,7 +43,6 @@ public class IOTDeviceController {
         allFreeDevice.setDeviceEntityList(deviceEntityList);
         return allFreeDevice;
     }
-
 
 
     @RequestMapping(path = "/api/v1/device/setTaken", method = RequestMethod.POST,
@@ -57,6 +60,7 @@ public class IOTDeviceController {
         boolean isOk = deviceService.saveMachineState(recordMachineStateDTO);
         RecordNewStateResponse recordNewStateResponse = new RecordNewStateResponse();
         recordNewStateResponse.setOk(isOk);
+        messageSender.convertAndSend("/topics/newRecord", recordMachineStateDTO);
         return recordNewStateResponse;
     }
 
