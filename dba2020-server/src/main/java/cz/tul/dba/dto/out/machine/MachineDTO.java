@@ -12,7 +12,7 @@ public class MachineDTO {
     private String description;
     private String vin;
     private String manufacturer;
-    private Date created;
+    private String created;
     private MachineTypeEntity machineTypeEntity;
     private MachineEntityState machineEntityState;
 
@@ -58,11 +58,11 @@ public class MachineDTO {
         this.manufacturer = manufacturer;
     }
 
-    public Date getCreated() {
+    public String getCreated() {
         return created;
     }
 
-    public void setCreated(Date created) {
+    public void setCreated(String created) {
         this.created = created;
     }
 

@@ -97,7 +97,7 @@ public class MachineServiceBean implements MachineService {
             online = machineStateHelper.isDeviceOnline(5, machineEntity.getDeviceEntity());
         }
         machineDTO.setOnline(online);
-        machineDTO.setCreated(machineEntity.getCreated());
+        machineDTO.setCreated(machineEntity.getCreated().toString());
         machineDTO.setId(machineEntity.getId());
         machineDTO.setVin(machineEntity.getVin());
         machineDTO.setMachineEntityState(machineEntity.getMachineEntityState());
