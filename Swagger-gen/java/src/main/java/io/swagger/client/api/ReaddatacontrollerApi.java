@@ -38,8 +38,10 @@ import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 
+import io.swagger.client.model.AllDeviceDTO;
 import io.swagger.client.model.AllMachineDTO;
 import io.swagger.client.model.MachineDataRecordsDTO;
+import io.swagger.client.model.GetRecordsForMachineDTO;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -66,6 +68,104 @@ public class ReaddatacontrollerApi {
         this.apiClient = apiClient;
     }
 
+    /* Build call for getAllDeviceUsingPOST */
+    private com.squareup.okhttp.Call getAllDeviceUsingPOSTCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+        
+
+        // create path and map variables
+        String localVarPath = "/api/v1/data/getAllDevices".replaceAll("\\{format\\}","json");
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    /**
+     * getAllDevice
+     * 
+     * @return AllDeviceDTO
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public AllDeviceDTO getAllDeviceUsingPOST() throws ApiException {
+        ApiResponse<AllDeviceDTO> resp = getAllDeviceUsingPOSTWithHttpInfo();
+        return resp.getData();
+    }
+
+    /**
+     * getAllDevice
+     * 
+     * @return ApiResponse&lt;AllDeviceDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<AllDeviceDTO> getAllDeviceUsingPOSTWithHttpInfo() throws ApiException {
+        com.squareup.okhttp.Call call = getAllDeviceUsingPOSTCall(null, null);
+        Type localVarReturnType = new TypeToken<AllDeviceDTO>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * getAllDevice (asynchronously)
+     * 
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call getAllDeviceUsingPOSTAsync(final ApiCallback<AllDeviceDTO> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = getAllDeviceUsingPOSTCall(progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<AllDeviceDTO>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
     /* Build call for getAllMachinesUsingPOST */
     private com.squareup.okhttp.Call getAllMachinesUsingPOSTCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
@@ -81,7 +181,7 @@ public class ReaddatacontrollerApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "*_/_*"
+            "application/json"
         };
         final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
@@ -165,27 +265,26 @@ public class ReaddatacontrollerApi {
         return call;
     }
     /* Build call for getRecordsForMachineUsingPOST */
-    private com.squareup.okhttp.Call getRecordsForMachineUsingPOSTCall(List<String> columnValueList, Integer pages, String vin, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = null;
+    private com.squareup.okhttp.Call getRecordsForMachineUsingPOSTCall(GetRecordsForMachineDTO getRecordsForMachineDTO, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = getRecordsForMachineDTO;
+        
+        // verify the required parameter 'getRecordsForMachineDTO' is set
+        if (getRecordsForMachineDTO == null) {
+            throw new ApiException("Missing the required parameter 'getRecordsForMachineDTO' when calling getRecordsForMachineUsingPOST(Async)");
+        }
         
 
         // create path and map variables
-        String localVarPath = "/api/v1/data/machine/{vin}".replaceAll("\\{format\\}","json");
+        String localVarPath = "/api/v1/data/machine".replaceAll("\\{format\\}","json");
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        if (columnValueList != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("multi", "columnValueList", columnValueList));
-        if (pages != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "pages", pages));
-        if (vin != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "vin", vin));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "*_/_*"
+            "application/json"
         };
         final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
@@ -215,28 +314,24 @@ public class ReaddatacontrollerApi {
     /**
      * getRecordsForMachine
      * 
-     * @param columnValueList  (optional)
-     * @param pages  (optional)
-     * @param vin  (optional)
+     * @param getRecordsForMachineDTO getRecordsForMachineDTO (required)
      * @return MachineDataRecordsDTO
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public MachineDataRecordsDTO getRecordsForMachineUsingPOST(List<String> columnValueList, Integer pages, String vin) throws ApiException {
-        ApiResponse<MachineDataRecordsDTO> resp = getRecordsForMachineUsingPOSTWithHttpInfo(columnValueList, pages, vin);
+    public MachineDataRecordsDTO getRecordsForMachineUsingPOST(GetRecordsForMachineDTO getRecordsForMachineDTO) throws ApiException {
+        ApiResponse<MachineDataRecordsDTO> resp = getRecordsForMachineUsingPOSTWithHttpInfo(getRecordsForMachineDTO);
         return resp.getData();
     }
 
     /**
      * getRecordsForMachine
      * 
-     * @param columnValueList  (optional)
-     * @param pages  (optional)
-     * @param vin  (optional)
+     * @param getRecordsForMachineDTO getRecordsForMachineDTO (required)
      * @return ApiResponse&lt;MachineDataRecordsDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<MachineDataRecordsDTO> getRecordsForMachineUsingPOSTWithHttpInfo(List<String> columnValueList, Integer pages, String vin) throws ApiException {
-        com.squareup.okhttp.Call call = getRecordsForMachineUsingPOSTCall(columnValueList, pages, vin, null, null);
+    public ApiResponse<MachineDataRecordsDTO> getRecordsForMachineUsingPOSTWithHttpInfo(GetRecordsForMachineDTO getRecordsForMachineDTO) throws ApiException {
+        com.squareup.okhttp.Call call = getRecordsForMachineUsingPOSTCall(getRecordsForMachineDTO, null, null);
         Type localVarReturnType = new TypeToken<MachineDataRecordsDTO>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -244,14 +339,12 @@ public class ReaddatacontrollerApi {
     /**
      * getRecordsForMachine (asynchronously)
      * 
-     * @param columnValueList  (optional)
-     * @param pages  (optional)
-     * @param vin  (optional)
+     * @param getRecordsForMachineDTO getRecordsForMachineDTO (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getRecordsForMachineUsingPOSTAsync(List<String> columnValueList, Integer pages, String vin, final ApiCallback<MachineDataRecordsDTO> callback) throws ApiException {
+    public com.squareup.okhttp.Call getRecordsForMachineUsingPOSTAsync(GetRecordsForMachineDTO getRecordsForMachineDTO, final ApiCallback<MachineDataRecordsDTO> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -272,7 +365,7 @@ public class ReaddatacontrollerApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getRecordsForMachineUsingPOSTCall(columnValueList, pages, vin, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getRecordsForMachineUsingPOSTCall(getRecordsForMachineDTO, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<MachineDataRecordsDTO>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

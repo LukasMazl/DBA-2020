@@ -43,6 +43,7 @@ import io.swagger.client.model.CreateMachineDTO;
 import io.swagger.client.model.DeteleMachineResponse;
 import io.swagger.client.model.DeleteMachineDTO;
 import io.swagger.client.model.UpdateMachineResponse;
+import io.swagger.client.model.UpdateMachineDTO;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -282,8 +283,13 @@ public class MachinecontrollerApi {
         return call;
     }
     /* Build call for updateMachineUsingPOST */
-    private com.squareup.okhttp.Call updateMachineUsingPOSTCall(String vinCode, String deviceDescription, String deviceStateEntity, String serialNumber, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = null;
+    private com.squareup.okhttp.Call updateMachineUsingPOSTCall(UpdateMachineDTO updateMachineDTO, String vinCode, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = updateMachineDTO;
+        
+        // verify the required parameter 'updateMachineDTO' is set
+        if (updateMachineDTO == null) {
+            throw new ApiException("Missing the required parameter 'updateMachineDTO' when calling updateMachineUsingPOST(Async)");
+        }
         
         // verify the required parameter 'vinCode' is set
         if (vinCode == null) {
@@ -296,12 +302,6 @@ public class MachinecontrollerApi {
         .replaceAll("\\{" + "vin-code" + "\\}", apiClient.escapeString(vinCode.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        if (deviceDescription != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "deviceDescription", deviceDescription));
-        if (deviceStateEntity != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "deviceStateEntity", deviceStateEntity));
-        if (serialNumber != null)
-        localVarQueryParams.addAll(apiClient.parameterToPairs("", "serialNumber", serialNumber));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -338,30 +338,26 @@ public class MachinecontrollerApi {
     /**
      * updateMachine
      * 
+     * @param updateMachineDTO updateMachineDTO (required)
      * @param vinCode vin-code (required)
-     * @param deviceDescription  (optional)
-     * @param deviceStateEntity  (optional)
-     * @param serialNumber  (optional)
      * @return UpdateMachineResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public UpdateMachineResponse updateMachineUsingPOST(String vinCode, String deviceDescription, String deviceStateEntity, String serialNumber) throws ApiException {
-        ApiResponse<UpdateMachineResponse> resp = updateMachineUsingPOSTWithHttpInfo(vinCode, deviceDescription, deviceStateEntity, serialNumber);
+    public UpdateMachineResponse updateMachineUsingPOST(UpdateMachineDTO updateMachineDTO, String vinCode) throws ApiException {
+        ApiResponse<UpdateMachineResponse> resp = updateMachineUsingPOSTWithHttpInfo(updateMachineDTO, vinCode);
         return resp.getData();
     }
 
     /**
      * updateMachine
      * 
+     * @param updateMachineDTO updateMachineDTO (required)
      * @param vinCode vin-code (required)
-     * @param deviceDescription  (optional)
-     * @param deviceStateEntity  (optional)
-     * @param serialNumber  (optional)
      * @return ApiResponse&lt;UpdateMachineResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<UpdateMachineResponse> updateMachineUsingPOSTWithHttpInfo(String vinCode, String deviceDescription, String deviceStateEntity, String serialNumber) throws ApiException {
-        com.squareup.okhttp.Call call = updateMachineUsingPOSTCall(vinCode, deviceDescription, deviceStateEntity, serialNumber, null, null);
+    public ApiResponse<UpdateMachineResponse> updateMachineUsingPOSTWithHttpInfo(UpdateMachineDTO updateMachineDTO, String vinCode) throws ApiException {
+        com.squareup.okhttp.Call call = updateMachineUsingPOSTCall(updateMachineDTO, vinCode, null, null);
         Type localVarReturnType = new TypeToken<UpdateMachineResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -369,15 +365,13 @@ public class MachinecontrollerApi {
     /**
      * updateMachine (asynchronously)
      * 
+     * @param updateMachineDTO updateMachineDTO (required)
      * @param vinCode vin-code (required)
-     * @param deviceDescription  (optional)
-     * @param deviceStateEntity  (optional)
-     * @param serialNumber  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call updateMachineUsingPOSTAsync(String vinCode, String deviceDescription, String deviceStateEntity, String serialNumber, final ApiCallback<UpdateMachineResponse> callback) throws ApiException {
+    public com.squareup.okhttp.Call updateMachineUsingPOSTAsync(UpdateMachineDTO updateMachineDTO, String vinCode, final ApiCallback<UpdateMachineResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -398,7 +392,7 @@ public class MachinecontrollerApi {
             };
         }
 
-        com.squareup.okhttp.Call call = updateMachineUsingPOSTCall(vinCode, deviceDescription, deviceStateEntity, serialNumber, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = updateMachineUsingPOSTCall(updateMachineDTO, vinCode, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<UpdateMachineResponse>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

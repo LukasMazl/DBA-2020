@@ -97,7 +97,7 @@ No authorization required
 
 <a name="updateMachineUsingPOST"></a>
 # **updateMachineUsingPOST**
-> UpdateMachineResponse updateMachineUsingPOST(vinCode, deviceDescription, deviceStateEntity, serialNumber)
+> UpdateMachineResponse updateMachineUsingPOST(updateMachineDTO, vinCode)
 
 updateMachine
 
@@ -109,12 +109,10 @@ updateMachine
 
 
 MachinecontrollerApi apiInstance = new MachinecontrollerApi();
+UpdateMachineDTO updateMachineDTO = new UpdateMachineDTO(); // UpdateMachineDTO | updateMachineDTO
 String vinCode = "vinCode_example"; // String | vin-code
-String deviceDescription = "deviceDescription_example"; // String | 
-String deviceStateEntity = "deviceStateEntity_example"; // String | 
-String serialNumber = "serialNumber_example"; // String | 
 try {
-    UpdateMachineResponse result = apiInstance.updateMachineUsingPOST(vinCode, deviceDescription, deviceStateEntity, serialNumber);
+    UpdateMachineResponse result = apiInstance.updateMachineUsingPOST(updateMachineDTO, vinCode);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling MachinecontrollerApi#updateMachineUsingPOST");
@@ -126,10 +124,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **updateMachineDTO** | [**UpdateMachineDTO**](UpdateMachineDTO.md)| updateMachineDTO |
  **vinCode** | **String**| vin-code |
- **deviceDescription** | **String**|  | [optional]
- **deviceStateEntity** | **String**|  | [optional] [enum: STOP, RUNNING, WAITING, DELETED, NEW]
- **serialNumber** | **String**|  | [optional]
 
 ### Return type
 

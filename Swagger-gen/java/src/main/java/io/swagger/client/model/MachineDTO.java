@@ -29,16 +29,15 @@ import java.util.Objects;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.joda.time.DateTime;
 
 
 /**
  * MachineDTO
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-18T00:33:27.761+02:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-19T23:38:25.855+02:00")
 public class MachineDTO   {
   @SerializedName("created")
-  private DateTime created = null;
+  private String created = null;
 
   @SerializedName("description")
   private String description = null;
@@ -120,7 +119,7 @@ public class MachineDTO   {
   @SerializedName("vin")
   private String vin = null;
 
-  public MachineDTO created(DateTime created) {
+  public MachineDTO created(String created) {
     this.created = created;
     return this;
   }
@@ -130,11 +129,11 @@ public class MachineDTO   {
    * @return created
   **/
   @ApiModelProperty(example = "null", value = "")
-  public DateTime getCreated() {
+  public String getCreated() {
     return created;
   }
 
-  public void setCreated(DateTime created) {
+  public void setCreated(String created) {
     this.created = created;
   }
 

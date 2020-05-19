@@ -35,10 +35,13 @@ import io.swagger.client.model.DeviceConfigurationDTO;
 /**
  * MachineDataRecordDTO
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-18T00:33:27.761+02:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-19T23:38:25.855+02:00")
 public class MachineDataRecordDTO   {
   @SerializedName("action")
   private String action = null;
+
+  @SerializedName("create")
+  private String create = null;
 
   @SerializedName("deviceConfigurationDTO")
   private DeviceConfigurationDTO deviceConfigurationDTO = null;
@@ -92,6 +95,24 @@ public class MachineDataRecordDTO   {
 
   public void setAction(String action) {
     this.action = action;
+  }
+
+  public MachineDataRecordDTO create(String create) {
+    this.create = create;
+    return this;
+  }
+
+   /**
+   * Get create
+   * @return create
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getCreate() {
+    return create;
+  }
+
+  public void setCreate(String create) {
+    this.create = create;
   }
 
   public MachineDataRecordDTO deviceConfigurationDTO(DeviceConfigurationDTO deviceConfigurationDTO) {
@@ -321,6 +342,7 @@ public class MachineDataRecordDTO   {
     }
     MachineDataRecordDTO machineDataRecordDTO = (MachineDataRecordDTO) o;
     return Objects.equals(this.action, machineDataRecordDTO.action) &&
+        Objects.equals(this.create, machineDataRecordDTO.create) &&
         Objects.equals(this.deviceConfigurationDTO, machineDataRecordDTO.deviceConfigurationDTO) &&
         Objects.equals(this.gpsX, machineDataRecordDTO.gpsX) &&
         Objects.equals(this.gpsY, machineDataRecordDTO.gpsY) &&
@@ -337,7 +359,7 @@ public class MachineDataRecordDTO   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(action, deviceConfigurationDTO, gpsX, gpsY, humidity, restOfFuel, serialNumber, speedX, speedY, speedZ, streesBattery, tensometer, vin);
+    return Objects.hash(action, create, deviceConfigurationDTO, gpsX, gpsY, humidity, restOfFuel, serialNumber, speedX, speedY, speedZ, streesBattery, tensometer, vin);
   }
 
   @Override
@@ -346,6 +368,7 @@ public class MachineDataRecordDTO   {
     sb.append("class MachineDataRecordDTO {\n");
     
     sb.append("    action: ").append(toIndentedString(action)).append("\n");
+    sb.append("    create: ").append(toIndentedString(create)).append("\n");
     sb.append("    deviceConfigurationDTO: ").append(toIndentedString(deviceConfigurationDTO)).append("\n");
     sb.append("    gpsX: ").append(toIndentedString(gpsX)).append("\n");
     sb.append("    gpsY: ").append(toIndentedString(gpsY)).append("\n");

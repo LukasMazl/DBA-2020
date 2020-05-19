@@ -77,6 +77,17 @@ namespace IO.Swagger.Test
 
         
         /// <summary>
+        /// Test GetAllDeviceUsingPOST
+        /// </summary>
+        [Test]
+        public void GetAllDeviceUsingPOSTTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.GetAllDeviceUsingPOST();
+            //Assert.IsInstanceOf<AllDeviceDTO> (response, "response is AllDeviceDTO");
+        }
+        
+        /// <summary>
         /// Test GetAllMachinesUsingPOST
         /// </summary>
         [Test]
@@ -94,10 +105,8 @@ namespace IO.Swagger.Test
         public void GetRecordsForMachineUsingPOSTTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //List<string> columnValueList = null;
-            //int? pages = null;
-            //string vin = null;
-            //var response = instance.GetRecordsForMachineUsingPOST(columnValueList, pages, vin);
+            //GetRecordsForMachineDTO getRecordsForMachineDTO = null;
+            //var response = instance.GetRecordsForMachineUsingPOST(getRecordsForMachineDTO);
             //Assert.IsInstanceOf<MachineDataRecordsDTO> (response, "response is MachineDataRecordsDTO");
         }
         

@@ -2,6 +2,8 @@ package cz.tul.dba.blogic.service.device;
 
 import cz.tul.dba.blogic.entity.DeviceConfigurationEntity;
 import cz.tul.dba.blogic.entity.DeviceEntity;
+import cz.tul.dba.dto.out.AllDeviceDTO;
+import cz.tul.dba.dto.out.OnlineDeviceDTO;
 
 import java.util.List;
 
@@ -59,15 +61,32 @@ public interface DeviceService {
 
     /**
      * Transfer device to delete state
+     *
      * @return
      */
     boolean deleteDevice(String serialNumber);
 
     /**
      * Updates persistent entity
+     *
      * @param serialNumber
      * @param device
      * @return
      */
     boolean updateDevice(String serialNumber, Device device);
+
+
+    /**
+     * Returns online devices
+     *
+     * @return
+     */
+    List<OnlineDeviceDTO> getOnlineDevices();
+
+    /**
+     * Returns all free devices for view on the client side
+     *
+     * @return
+     */
+    AllDeviceDTO getAllDevices();
 }

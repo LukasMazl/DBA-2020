@@ -1,13 +1,9 @@
 package cz.tul.dba.dto.in;
 
-import cz.tul.dba.blogic.service.machine.ColumnValue;
-
-import java.util.List;
-
 public class GetRecordsForMachineDTO {
     private String vin;
-    private List<ColumnValue> columnValueList;
-    private Integer pages;
+    private Integer page;
+    private Integer pageSize;
 
     public String getVin() {
         return vin;
@@ -17,19 +13,19 @@ public class GetRecordsForMachineDTO {
         this.vin = vin;
     }
 
-    public List<ColumnValue> getColumnValueList() {
-        return columnValueList;
+    public Integer getPage() {
+        return page;
     }
 
-    public void setColumnValueList(List<ColumnValue> columnValueList) {
-        this.columnValueList = columnValueList;
+    public void setPage(Integer page) {
+        this.page = page;
     }
 
-    public Integer getPages() {
-        return pages;
+    public Integer getPageSize() {
+        return pageSize;
     }
 
-    public void setPages(Integer pages) {
-        this.pages = pages;
+    public void setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
     }
 }

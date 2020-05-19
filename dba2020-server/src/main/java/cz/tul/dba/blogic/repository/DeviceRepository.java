@@ -32,4 +32,6 @@ public interface DeviceRepository extends CrudRepository<DeviceEntity, Long> {
     DeviceEntity findBySerialNumberAndDeviceStateEntityNot(String serialNumber, DeviceStateEntity deviceStateEntity);
 
     DeviceEntity findBySerialNumber(String serialNumber);
+
+    List<DeviceEntity> findAllByDeviceStateEntityIsNot(DeviceStateEntity deviceStateEntity);
 }

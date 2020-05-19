@@ -4,9 +4,49 @@ All URIs are relative to *https://localhost:8080/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**getAllDeviceUsingPOST**](ReaddatacontrollerApi.md#getAllDeviceUsingPOST) | **POST** /api/v1/data/getAllDevices | getAllDevice
 [**getAllMachinesUsingPOST**](ReaddatacontrollerApi.md#getAllMachinesUsingPOST) | **POST** /api/v1/data/getAllMachines | getAllMachines
-[**getRecordsForMachineUsingPOST**](ReaddatacontrollerApi.md#getRecordsForMachineUsingPOST) | **POST** /api/v1/data/machine/{vin} | getRecordsForMachine
+[**getRecordsForMachineUsingPOST**](ReaddatacontrollerApi.md#getRecordsForMachineUsingPOST) | **POST** /api/v1/data/machine | getRecordsForMachine
 
+
+<a name="getAllDeviceUsingPOST"></a>
+# **getAllDeviceUsingPOST**
+> AllDeviceDTO getAllDeviceUsingPOST()
+
+getAllDevice
+
+### Example
+```java
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ReaddatacontrollerApi;
+
+
+ReaddatacontrollerApi apiInstance = new ReaddatacontrollerApi();
+try {
+    AllDeviceDTO result = apiInstance.getAllDeviceUsingPOST();
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ReaddatacontrollerApi#getAllDeviceUsingPOST");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**AllDeviceDTO**](AllDeviceDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 <a name="getAllMachinesUsingPOST"></a>
 # **getAllMachinesUsingPOST**
@@ -45,11 +85,11 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: *_/_*
+ - **Accept**: application/json
 
 <a name="getRecordsForMachineUsingPOST"></a>
 # **getRecordsForMachineUsingPOST**
-> MachineDataRecordsDTO getRecordsForMachineUsingPOST(columnValueList, pages, vin)
+> MachineDataRecordsDTO getRecordsForMachineUsingPOST(getRecordsForMachineDTO)
 
 getRecordsForMachine
 
@@ -61,11 +101,9 @@ getRecordsForMachine
 
 
 ReaddatacontrollerApi apiInstance = new ReaddatacontrollerApi();
-List<String> columnValueList = Arrays.asList("columnValueList_example"); // List<String> | 
-Integer pages = 56; // Integer | 
-String vin = "vin_example"; // String | 
+GetRecordsForMachineDTO getRecordsForMachineDTO = new GetRecordsForMachineDTO(); // GetRecordsForMachineDTO | getRecordsForMachineDTO
 try {
-    MachineDataRecordsDTO result = apiInstance.getRecordsForMachineUsingPOST(columnValueList, pages, vin);
+    MachineDataRecordsDTO result = apiInstance.getRecordsForMachineUsingPOST(getRecordsForMachineDTO);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ReaddatacontrollerApi#getRecordsForMachineUsingPOST");
@@ -77,9 +115,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **columnValueList** | [**List&lt;String&gt;**](String.md)|  | [optional] [enum: SPEED, POSSITION, TENZOMETR, ACTION, BATTERY_STRESS, REST_OF_FUEL, HUMIDITY]
- **pages** | **Integer**|  | [optional]
- **vin** | **String**|  | [optional]
+ **getRecordsForMachineDTO** | [**GetRecordsForMachineDTO**](GetRecordsForMachineDTO.md)| getRecordsForMachineDTO |
 
 ### Return type
 
@@ -92,5 +128,5 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: *_/_*
+ - **Accept**: application/json
 

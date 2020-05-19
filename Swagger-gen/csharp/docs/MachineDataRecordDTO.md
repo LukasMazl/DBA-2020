@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Action** | **string** |  | [optional] 
+**Create** | **string** |  | [optional] 
 **DeviceConfigurationDTO** | [**DeviceConfigurationDTO**](DeviceConfigurationDTO.md) |  | [optional] 
 **GpsX** | **double?** |  | [optional] 
 **GpsY** | **double?** |  | [optional] 

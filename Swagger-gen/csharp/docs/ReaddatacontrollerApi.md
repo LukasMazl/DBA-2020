@@ -4,9 +4,66 @@ All URIs are relative to *https://localhost:8080/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**GetAllDeviceUsingPOST**](ReaddatacontrollerApi.md#getalldeviceusingpost) | **POST** /api/v1/data/getAllDevices | getAllDevice
 [**GetAllMachinesUsingPOST**](ReaddatacontrollerApi.md#getallmachinesusingpost) | **POST** /api/v1/data/getAllMachines | getAllMachines
-[**GetRecordsForMachineUsingPOST**](ReaddatacontrollerApi.md#getrecordsformachineusingpost) | **POST** /api/v1/data/machine/{vin} | getRecordsForMachine
+[**GetRecordsForMachineUsingPOST**](ReaddatacontrollerApi.md#getrecordsformachineusingpost) | **POST** /api/v1/data/machine | getRecordsForMachine
 
+
+<a name="getalldeviceusingpost"></a>
+# **GetAllDeviceUsingPOST**
+> AllDeviceDTO GetAllDeviceUsingPOST ()
+
+getAllDevice
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class GetAllDeviceUsingPOSTExample
+    {
+        public void main()
+        {
+            
+            var apiInstance = new ReaddatacontrollerApi();
+
+            try
+            {
+                // getAllDevice
+                AllDeviceDTO result = apiInstance.GetAllDeviceUsingPOST();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ReaddatacontrollerApi.GetAllDeviceUsingPOST: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**AllDeviceDTO**](AllDeviceDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getallmachinesusingpost"></a>
 # **GetAllMachinesUsingPOST**
@@ -60,13 +117,13 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: *_/_*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getrecordsformachineusingpost"></a>
 # **GetRecordsForMachineUsingPOST**
-> MachineDataRecordsDTO GetRecordsForMachineUsingPOST (List<string> columnValueList = null, int? pages = null, string vin = null)
+> MachineDataRecordsDTO GetRecordsForMachineUsingPOST (GetRecordsForMachineDTO getRecordsForMachineDTO)
 
 getRecordsForMachine
 
@@ -86,14 +143,12 @@ namespace Example
         {
             
             var apiInstance = new ReaddatacontrollerApi();
-            var columnValueList = new List<string>(); // List<string> |  (optional) 
-            var pages = 56;  // int? |  (optional) 
-            var vin = vin_example;  // string |  (optional) 
+            var getRecordsForMachineDTO = new GetRecordsForMachineDTO(); // GetRecordsForMachineDTO | getRecordsForMachineDTO
 
             try
             {
                 // getRecordsForMachine
-                MachineDataRecordsDTO result = apiInstance.GetRecordsForMachineUsingPOST(columnValueList, pages, vin);
+                MachineDataRecordsDTO result = apiInstance.GetRecordsForMachineUsingPOST(getRecordsForMachineDTO);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -109,9 +164,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **columnValueList** | [**List<string>**](string.md)|  | [optional] 
- **pages** | **int?**|  | [optional] 
- **vin** | **string**|  | [optional] 
+ **getRecordsForMachineDTO** | [**GetRecordsForMachineDTO**](GetRecordsForMachineDTO.md)| getRecordsForMachineDTO | 
 
 ### Return type
 
@@ -124,7 +177,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: *_/_*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

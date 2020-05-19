@@ -37,6 +37,25 @@ namespace IO.Swagger.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// getAllDevice
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>AllDeviceDTO</returns>
+        AllDeviceDTO GetAllDeviceUsingPOST ();
+
+        /// <summary>
+        /// getAllDevice
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of AllDeviceDTO</returns>
+        ApiResponse<AllDeviceDTO> GetAllDeviceUsingPOSTWithHttpInfo ();
+        /// <summary>
         /// getAllMachines
         /// </summary>
         /// <remarks>
@@ -62,11 +81,9 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="columnValueList"> (optional)</param>
-        /// <param name="pages"> (optional)</param>
-        /// <param name="vin"> (optional)</param>
+        /// <param name="getRecordsForMachineDTO">getRecordsForMachineDTO</param>
         /// <returns>MachineDataRecordsDTO</returns>
-        MachineDataRecordsDTO GetRecordsForMachineUsingPOST (List<string> columnValueList = null, int? pages = null, string vin = null);
+        MachineDataRecordsDTO GetRecordsForMachineUsingPOST (GetRecordsForMachineDTO getRecordsForMachineDTO);
 
         /// <summary>
         /// getRecordsForMachine
@@ -75,13 +92,30 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="columnValueList"> (optional)</param>
-        /// <param name="pages"> (optional)</param>
-        /// <param name="vin"> (optional)</param>
+        /// <param name="getRecordsForMachineDTO">getRecordsForMachineDTO</param>
         /// <returns>ApiResponse of MachineDataRecordsDTO</returns>
-        ApiResponse<MachineDataRecordsDTO> GetRecordsForMachineUsingPOSTWithHttpInfo (List<string> columnValueList = null, int? pages = null, string vin = null);
+        ApiResponse<MachineDataRecordsDTO> GetRecordsForMachineUsingPOSTWithHttpInfo (GetRecordsForMachineDTO getRecordsForMachineDTO);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// getAllDevice
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of AllDeviceDTO</returns>
+        System.Threading.Tasks.Task<AllDeviceDTO> GetAllDeviceUsingPOSTAsync ();
+
+        /// <summary>
+        /// getAllDevice
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (AllDeviceDTO)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AllDeviceDTO>> GetAllDeviceUsingPOSTAsyncWithHttpInfo ();
         /// <summary>
         /// getAllMachines
         /// </summary>
@@ -108,11 +142,9 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="columnValueList"> (optional)</param>
-        /// <param name="pages"> (optional)</param>
-        /// <param name="vin"> (optional)</param>
+        /// <param name="getRecordsForMachineDTO">getRecordsForMachineDTO</param>
         /// <returns>Task of MachineDataRecordsDTO</returns>
-        System.Threading.Tasks.Task<MachineDataRecordsDTO> GetRecordsForMachineUsingPOSTAsync (List<string> columnValueList = null, int? pages = null, string vin = null);
+        System.Threading.Tasks.Task<MachineDataRecordsDTO> GetRecordsForMachineUsingPOSTAsync (GetRecordsForMachineDTO getRecordsForMachineDTO);
 
         /// <summary>
         /// getRecordsForMachine
@@ -121,11 +153,9 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="columnValueList"> (optional)</param>
-        /// <param name="pages"> (optional)</param>
-        /// <param name="vin"> (optional)</param>
+        /// <param name="getRecordsForMachineDTO">getRecordsForMachineDTO</param>
         /// <returns>Task of ApiResponse (MachineDataRecordsDTO)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MachineDataRecordsDTO>> GetRecordsForMachineUsingPOSTAsyncWithHttpInfo (List<string> columnValueList = null, int? pages = null, string vin = null);
+        System.Threading.Tasks.Task<ApiResponse<MachineDataRecordsDTO>> GetRecordsForMachineUsingPOSTAsyncWithHttpInfo (GetRecordsForMachineDTO getRecordsForMachineDTO);
         #endregion Asynchronous Operations
     }
 
@@ -239,6 +269,137 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
+        /// getAllDevice 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>AllDeviceDTO</returns>
+        public AllDeviceDTO GetAllDeviceUsingPOST ()
+        {
+             ApiResponse<AllDeviceDTO> localVarResponse = GetAllDeviceUsingPOSTWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// getAllDevice 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of AllDeviceDTO</returns>
+        public ApiResponse< AllDeviceDTO > GetAllDeviceUsingPOSTWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v1/data/getAllDevices";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetAllDeviceUsingPOST", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<AllDeviceDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AllDeviceDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AllDeviceDTO)));
+            
+        }
+
+        /// <summary>
+        /// getAllDevice 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of AllDeviceDTO</returns>
+        public async System.Threading.Tasks.Task<AllDeviceDTO> GetAllDeviceUsingPOSTAsync ()
+        {
+             ApiResponse<AllDeviceDTO> localVarResponse = await GetAllDeviceUsingPOSTAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// getAllDevice 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (AllDeviceDTO)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AllDeviceDTO>> GetAllDeviceUsingPOSTAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v1/data/getAllDevices";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetAllDeviceUsingPOST", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<AllDeviceDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AllDeviceDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AllDeviceDTO)));
+            
+        }
+
+        /// <summary>
         /// getAllMachines 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
@@ -273,7 +434,7 @@ namespace IO.Swagger.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "*_/_*"
+                "application/json"
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -339,7 +500,7 @@ namespace IO.Swagger.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "*_/_*"
+                "application/json"
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -373,13 +534,11 @@ namespace IO.Swagger.Api
         /// getRecordsForMachine 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="columnValueList"> (optional)</param>
-        /// <param name="pages"> (optional)</param>
-        /// <param name="vin"> (optional)</param>
+        /// <param name="getRecordsForMachineDTO">getRecordsForMachineDTO</param>
         /// <returns>MachineDataRecordsDTO</returns>
-        public MachineDataRecordsDTO GetRecordsForMachineUsingPOST (List<string> columnValueList = null, int? pages = null, string vin = null)
+        public MachineDataRecordsDTO GetRecordsForMachineUsingPOST (GetRecordsForMachineDTO getRecordsForMachineDTO)
         {
-             ApiResponse<MachineDataRecordsDTO> localVarResponse = GetRecordsForMachineUsingPOSTWithHttpInfo(columnValueList, pages, vin);
+             ApiResponse<MachineDataRecordsDTO> localVarResponse = GetRecordsForMachineUsingPOSTWithHttpInfo(getRecordsForMachineDTO);
              return localVarResponse.Data;
         }
 
@@ -387,14 +546,15 @@ namespace IO.Swagger.Api
         /// getRecordsForMachine 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="columnValueList"> (optional)</param>
-        /// <param name="pages"> (optional)</param>
-        /// <param name="vin"> (optional)</param>
+        /// <param name="getRecordsForMachineDTO">getRecordsForMachineDTO</param>
         /// <returns>ApiResponse of MachineDataRecordsDTO</returns>
-        public ApiResponse< MachineDataRecordsDTO > GetRecordsForMachineUsingPOSTWithHttpInfo (List<string> columnValueList = null, int? pages = null, string vin = null)
+        public ApiResponse< MachineDataRecordsDTO > GetRecordsForMachineUsingPOSTWithHttpInfo (GetRecordsForMachineDTO getRecordsForMachineDTO)
         {
+            // verify the required parameter 'getRecordsForMachineDTO' is set
+            if (getRecordsForMachineDTO == null)
+                throw new ApiException(400, "Missing required parameter 'getRecordsForMachineDTO' when calling ReaddatacontrollerApi->GetRecordsForMachineUsingPOST");
 
-            var localVarPath = "/api/v1/data/machine/{vin}";
+            var localVarPath = "/api/v1/data/machine";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -410,7 +570,7 @@ namespace IO.Swagger.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "*_/_*"
+                "application/json"
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -419,9 +579,14 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (columnValueList != null) localVarQueryParams.Add("columnValueList", Configuration.ApiClient.ParameterToString(columnValueList)); // query parameter
-            if (pages != null) localVarQueryParams.Add("pages", Configuration.ApiClient.ParameterToString(pages)); // query parameter
-            if (vin != null) localVarQueryParams.Add("vin", Configuration.ApiClient.ParameterToString(vin)); // query parameter
+            if (getRecordsForMachineDTO != null && getRecordsForMachineDTO.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(getRecordsForMachineDTO); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = getRecordsForMachineDTO; // byte array
+            }
 
 
             // make the HTTP request
@@ -447,13 +612,11 @@ namespace IO.Swagger.Api
         /// getRecordsForMachine 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="columnValueList"> (optional)</param>
-        /// <param name="pages"> (optional)</param>
-        /// <param name="vin"> (optional)</param>
+        /// <param name="getRecordsForMachineDTO">getRecordsForMachineDTO</param>
         /// <returns>Task of MachineDataRecordsDTO</returns>
-        public async System.Threading.Tasks.Task<MachineDataRecordsDTO> GetRecordsForMachineUsingPOSTAsync (List<string> columnValueList = null, int? pages = null, string vin = null)
+        public async System.Threading.Tasks.Task<MachineDataRecordsDTO> GetRecordsForMachineUsingPOSTAsync (GetRecordsForMachineDTO getRecordsForMachineDTO)
         {
-             ApiResponse<MachineDataRecordsDTO> localVarResponse = await GetRecordsForMachineUsingPOSTAsyncWithHttpInfo(columnValueList, pages, vin);
+             ApiResponse<MachineDataRecordsDTO> localVarResponse = await GetRecordsForMachineUsingPOSTAsyncWithHttpInfo(getRecordsForMachineDTO);
              return localVarResponse.Data;
 
         }
@@ -462,14 +625,15 @@ namespace IO.Swagger.Api
         /// getRecordsForMachine 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="columnValueList"> (optional)</param>
-        /// <param name="pages"> (optional)</param>
-        /// <param name="vin"> (optional)</param>
+        /// <param name="getRecordsForMachineDTO">getRecordsForMachineDTO</param>
         /// <returns>Task of ApiResponse (MachineDataRecordsDTO)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<MachineDataRecordsDTO>> GetRecordsForMachineUsingPOSTAsyncWithHttpInfo (List<string> columnValueList = null, int? pages = null, string vin = null)
+        public async System.Threading.Tasks.Task<ApiResponse<MachineDataRecordsDTO>> GetRecordsForMachineUsingPOSTAsyncWithHttpInfo (GetRecordsForMachineDTO getRecordsForMachineDTO)
         {
+            // verify the required parameter 'getRecordsForMachineDTO' is set
+            if (getRecordsForMachineDTO == null)
+                throw new ApiException(400, "Missing required parameter 'getRecordsForMachineDTO' when calling ReaddatacontrollerApi->GetRecordsForMachineUsingPOST");
 
-            var localVarPath = "/api/v1/data/machine/{vin}";
+            var localVarPath = "/api/v1/data/machine";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -485,7 +649,7 @@ namespace IO.Swagger.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "*_/_*"
+                "application/json"
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -494,9 +658,14 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (columnValueList != null) localVarQueryParams.Add("columnValueList", Configuration.ApiClient.ParameterToString(columnValueList)); // query parameter
-            if (pages != null) localVarQueryParams.Add("pages", Configuration.ApiClient.ParameterToString(pages)); // query parameter
-            if (vin != null) localVarQueryParams.Add("vin", Configuration.ApiClient.ParameterToString(vin)); // query parameter
+            if (getRecordsForMachineDTO != null && getRecordsForMachineDTO.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(getRecordsForMachineDTO); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = getRecordsForMachineDTO; // byte array
+            }
 
 
             // make the HTTP request

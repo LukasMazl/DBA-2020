@@ -130,7 +130,7 @@ namespace IO.Swagger.Model
         /// <param name="Manufacturer">Manufacturer.</param>
         /// <param name="Online">Online.</param>
         /// <param name="Vin">Vin.</param>
-        public MachineDTO(DateTime? Created = null, string Description = null, long? Id = null, MachineEntityStateEnum? MachineEntityState = null, MachineTypeEntityEnum? MachineTypeEntity = null, string Manufacturer = null, bool? Online = null, string Vin = null)
+        public MachineDTO(string Created = null, string Description = null, long? Id = null, MachineEntityStateEnum? MachineEntityState = null, MachineTypeEntityEnum? MachineTypeEntity = null, string Manufacturer = null, bool? Online = null, string Vin = null)
         {
             this.Created = Created;
             this.Description = Description;
@@ -146,7 +146,7 @@ namespace IO.Swagger.Model
         /// Gets or Sets Created
         /// </summary>
         [DataMember(Name="created", EmitDefaultValue=false)]
-        public DateTime? Created { get; set; }
+        public string Created { get; set; }
         /// <summary>
         /// Gets or Sets Description
         /// </summary>

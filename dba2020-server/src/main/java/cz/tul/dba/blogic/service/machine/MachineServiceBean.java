@@ -1,14 +1,11 @@
 package cz.tul.dba.blogic.service.machine;
 
-import cz.tul.dba.blogic.entity.DeviceEntity;
 import cz.tul.dba.blogic.entity.MachineEntity;
 import cz.tul.dba.blogic.entity.MachineEntityState;
 import cz.tul.dba.blogic.helper.MachineStateHelper;
 import cz.tul.dba.blogic.repository.DeviceRepository;
 import cz.tul.dba.blogic.repository.MachineRepository;
 import cz.tul.dba.blogic.repository.MachineStateRepository;
-import cz.tul.dba.dto.DeviceDTO;
-import cz.tul.dba.dto.in.UpdateMachineDTO;
 import cz.tul.dba.dto.out.machine.AllMachineDTO;
 import cz.tul.dba.dto.out.machine.MachineDTO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,8 +45,20 @@ public class MachineServiceBean implements MachineService {
     }
 
     @Override
-    public boolean updateMachine(UpdateMachineDTO updateMachineDTO, String vinCode) {
-        return false;
+    public boolean updateMachine(Machine machine, String vinCode) {
+        MachineEntity machineEntity = machineRepository.findByVin(vinCode);
+        if (machineEntity == null) {
+            return false;
+        }
+
+        machineEntity.setVin(machine.getVin());
+        machineEntity.setMachineEntityState(machine.getMachineEntityState());
+        machineEntity.setManufacturer(machine.getManufacturer());
+        machineEntity.setMachineTypeEntity(machine.getMachineTypeEntity());
+        machineEntity.setDescription(machine.getDescription());
+
+        machineRepository.save(machineEntity);
+        return true;
     }
 
     @Override
@@ -62,20 +71,6 @@ public class MachineServiceBean implements MachineService {
         machineEntity.setMachineEntityState(MachineEntityState.REMOVED);
         machineRepository.save(machineEntity);
         return true;
-    }
-
-    @Override
-    public List<DeviceDTO> readAll() {
-        return null;
-    }
-
-    private DeviceDTO prepareDeviceDTO(DeviceEntity deviceEntity) {
-        DeviceDTO deviceDTO = new DeviceDTO();
-        deviceDTO.setSerialNumber(deviceEntity.getSerialNumber());
-        deviceDTO.setCreated(deviceEntity.getCreated());
-        deviceDTO.setDeviceDescription(deviceEntity.getDeviceDescription());
-        boolean isOnline = machineStateHelper.isDeviceOnline(5, deviceEntity);
-        return deviceDTO;
     }
 
     @Override
@@ -93,7 +88,7 @@ public class MachineServiceBean implements MachineService {
     private MachineDTO convertMachineEntityToDTO(MachineEntity machineEntity) {
         MachineDTO machineDTO = new MachineDTO();
         boolean online = false;
-        if(machineEntity.getDeviceEntity() != null) {
+        if (machineEntity.getDeviceEntity() != null) {
             online = machineStateHelper.isDeviceOnline(5, machineEntity.getDeviceEntity());
         }
         machineDTO.setOnline(online);

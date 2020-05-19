@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **action** | **String** |  |  [optional]
+**create** | **String** |  |  [optional]
 **deviceConfigurationDTO** | [**DeviceConfigurationDTO**](DeviceConfigurationDTO.md) |  |  [optional]
 **gpsX** | **Double** |  |  [optional]
 **gpsY** | **Double** |  |  [optional]

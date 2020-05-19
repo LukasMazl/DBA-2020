@@ -107,11 +107,9 @@ namespace IO.Swagger.Test
         public void UpdateMachineUsingPOSTTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //UpdateMachineDTO updateMachineDTO = null;
             //string vinCode = null;
-            //string deviceDescription = null;
-            //string deviceStateEntity = null;
-            //string serialNumber = null;
-            //var response = instance.UpdateMachineUsingPOST(vinCode, deviceDescription, deviceStateEntity, serialNumber);
+            //var response = instance.UpdateMachineUsingPOST(updateMachineDTO, vinCode);
             //Assert.IsInstanceOf<UpdateMachineResponse> (response, "response is UpdateMachineResponse");
         }
         

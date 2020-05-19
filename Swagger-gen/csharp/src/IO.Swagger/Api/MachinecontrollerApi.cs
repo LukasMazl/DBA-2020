@@ -85,12 +85,10 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="updateMachineDTO">updateMachineDTO</param>
         /// <param name="vinCode">vin-code</param>
-        /// <param name="deviceDescription"> (optional)</param>
-        /// <param name="deviceStateEntity"> (optional)</param>
-        /// <param name="serialNumber"> (optional)</param>
         /// <returns>UpdateMachineResponse</returns>
-        UpdateMachineResponse UpdateMachineUsingPOST (string vinCode, string deviceDescription = null, string deviceStateEntity = null, string serialNumber = null);
+        UpdateMachineResponse UpdateMachineUsingPOST (UpdateMachineDTO updateMachineDTO, string vinCode);
 
         /// <summary>
         /// updateMachine
@@ -99,12 +97,10 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="updateMachineDTO">updateMachineDTO</param>
         /// <param name="vinCode">vin-code</param>
-        /// <param name="deviceDescription"> (optional)</param>
-        /// <param name="deviceStateEntity"> (optional)</param>
-        /// <param name="serialNumber"> (optional)</param>
         /// <returns>ApiResponse of UpdateMachineResponse</returns>
-        ApiResponse<UpdateMachineResponse> UpdateMachineUsingPOSTWithHttpInfo (string vinCode, string deviceDescription = null, string deviceStateEntity = null, string serialNumber = null);
+        ApiResponse<UpdateMachineResponse> UpdateMachineUsingPOSTWithHttpInfo (UpdateMachineDTO updateMachineDTO, string vinCode);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -156,12 +152,10 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="updateMachineDTO">updateMachineDTO</param>
         /// <param name="vinCode">vin-code</param>
-        /// <param name="deviceDescription"> (optional)</param>
-        /// <param name="deviceStateEntity"> (optional)</param>
-        /// <param name="serialNumber"> (optional)</param>
         /// <returns>Task of UpdateMachineResponse</returns>
-        System.Threading.Tasks.Task<UpdateMachineResponse> UpdateMachineUsingPOSTAsync (string vinCode, string deviceDescription = null, string deviceStateEntity = null, string serialNumber = null);
+        System.Threading.Tasks.Task<UpdateMachineResponse> UpdateMachineUsingPOSTAsync (UpdateMachineDTO updateMachineDTO, string vinCode);
 
         /// <summary>
         /// updateMachine
@@ -170,12 +164,10 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="updateMachineDTO">updateMachineDTO</param>
         /// <param name="vinCode">vin-code</param>
-        /// <param name="deviceDescription"> (optional)</param>
-        /// <param name="deviceStateEntity"> (optional)</param>
-        /// <param name="serialNumber"> (optional)</param>
         /// <returns>Task of ApiResponse (UpdateMachineResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UpdateMachineResponse>> UpdateMachineUsingPOSTAsyncWithHttpInfo (string vinCode, string deviceDescription = null, string deviceStateEntity = null, string serialNumber = null);
+        System.Threading.Tasks.Task<ApiResponse<UpdateMachineResponse>> UpdateMachineUsingPOSTAsyncWithHttpInfo (UpdateMachineDTO updateMachineDTO, string vinCode);
         #endregion Asynchronous Operations
     }
 
@@ -606,14 +598,12 @@ namespace IO.Swagger.Api
         /// updateMachine 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="updateMachineDTO">updateMachineDTO</param>
         /// <param name="vinCode">vin-code</param>
-        /// <param name="deviceDescription"> (optional)</param>
-        /// <param name="deviceStateEntity"> (optional)</param>
-        /// <param name="serialNumber"> (optional)</param>
         /// <returns>UpdateMachineResponse</returns>
-        public UpdateMachineResponse UpdateMachineUsingPOST (string vinCode, string deviceDescription = null, string deviceStateEntity = null, string serialNumber = null)
+        public UpdateMachineResponse UpdateMachineUsingPOST (UpdateMachineDTO updateMachineDTO, string vinCode)
         {
-             ApiResponse<UpdateMachineResponse> localVarResponse = UpdateMachineUsingPOSTWithHttpInfo(vinCode, deviceDescription, deviceStateEntity, serialNumber);
+             ApiResponse<UpdateMachineResponse> localVarResponse = UpdateMachineUsingPOSTWithHttpInfo(updateMachineDTO, vinCode);
              return localVarResponse.Data;
         }
 
@@ -621,13 +611,14 @@ namespace IO.Swagger.Api
         /// updateMachine 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="updateMachineDTO">updateMachineDTO</param>
         /// <param name="vinCode">vin-code</param>
-        /// <param name="deviceDescription"> (optional)</param>
-        /// <param name="deviceStateEntity"> (optional)</param>
-        /// <param name="serialNumber"> (optional)</param>
         /// <returns>ApiResponse of UpdateMachineResponse</returns>
-        public ApiResponse< UpdateMachineResponse > UpdateMachineUsingPOSTWithHttpInfo (string vinCode, string deviceDescription = null, string deviceStateEntity = null, string serialNumber = null)
+        public ApiResponse< UpdateMachineResponse > UpdateMachineUsingPOSTWithHttpInfo (UpdateMachineDTO updateMachineDTO, string vinCode)
         {
+            // verify the required parameter 'updateMachineDTO' is set
+            if (updateMachineDTO == null)
+                throw new ApiException(400, "Missing required parameter 'updateMachineDTO' when calling MachinecontrollerApi->UpdateMachineUsingPOST");
             // verify the required parameter 'vinCode' is set
             if (vinCode == null)
                 throw new ApiException(400, "Missing required parameter 'vinCode' when calling MachinecontrollerApi->UpdateMachineUsingPOST");
@@ -658,9 +649,14 @@ namespace IO.Swagger.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (vinCode != null) localVarPathParams.Add("vin-code", Configuration.ApiClient.ParameterToString(vinCode)); // path parameter
-            if (deviceDescription != null) localVarQueryParams.Add("deviceDescription", Configuration.ApiClient.ParameterToString(deviceDescription)); // query parameter
-            if (deviceStateEntity != null) localVarQueryParams.Add("deviceStateEntity", Configuration.ApiClient.ParameterToString(deviceStateEntity)); // query parameter
-            if (serialNumber != null) localVarQueryParams.Add("serialNumber", Configuration.ApiClient.ParameterToString(serialNumber)); // query parameter
+            if (updateMachineDTO != null && updateMachineDTO.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(updateMachineDTO); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = updateMachineDTO; // byte array
+            }
 
 
             // make the HTTP request
@@ -686,14 +682,12 @@ namespace IO.Swagger.Api
         /// updateMachine 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="updateMachineDTO">updateMachineDTO</param>
         /// <param name="vinCode">vin-code</param>
-        /// <param name="deviceDescription"> (optional)</param>
-        /// <param name="deviceStateEntity"> (optional)</param>
-        /// <param name="serialNumber"> (optional)</param>
         /// <returns>Task of UpdateMachineResponse</returns>
-        public async System.Threading.Tasks.Task<UpdateMachineResponse> UpdateMachineUsingPOSTAsync (string vinCode, string deviceDescription = null, string deviceStateEntity = null, string serialNumber = null)
+        public async System.Threading.Tasks.Task<UpdateMachineResponse> UpdateMachineUsingPOSTAsync (UpdateMachineDTO updateMachineDTO, string vinCode)
         {
-             ApiResponse<UpdateMachineResponse> localVarResponse = await UpdateMachineUsingPOSTAsyncWithHttpInfo(vinCode, deviceDescription, deviceStateEntity, serialNumber);
+             ApiResponse<UpdateMachineResponse> localVarResponse = await UpdateMachineUsingPOSTAsyncWithHttpInfo(updateMachineDTO, vinCode);
              return localVarResponse.Data;
 
         }
@@ -702,13 +696,14 @@ namespace IO.Swagger.Api
         /// updateMachine 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="updateMachineDTO">updateMachineDTO</param>
         /// <param name="vinCode">vin-code</param>
-        /// <param name="deviceDescription"> (optional)</param>
-        /// <param name="deviceStateEntity"> (optional)</param>
-        /// <param name="serialNumber"> (optional)</param>
         /// <returns>Task of ApiResponse (UpdateMachineResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UpdateMachineResponse>> UpdateMachineUsingPOSTAsyncWithHttpInfo (string vinCode, string deviceDescription = null, string deviceStateEntity = null, string serialNumber = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UpdateMachineResponse>> UpdateMachineUsingPOSTAsyncWithHttpInfo (UpdateMachineDTO updateMachineDTO, string vinCode)
         {
+            // verify the required parameter 'updateMachineDTO' is set
+            if (updateMachineDTO == null)
+                throw new ApiException(400, "Missing required parameter 'updateMachineDTO' when calling MachinecontrollerApi->UpdateMachineUsingPOST");
             // verify the required parameter 'vinCode' is set
             if (vinCode == null)
                 throw new ApiException(400, "Missing required parameter 'vinCode' when calling MachinecontrollerApi->UpdateMachineUsingPOST");
@@ -739,9 +734,14 @@ namespace IO.Swagger.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (vinCode != null) localVarPathParams.Add("vin-code", Configuration.ApiClient.ParameterToString(vinCode)); // path parameter
-            if (deviceDescription != null) localVarQueryParams.Add("deviceDescription", Configuration.ApiClient.ParameterToString(deviceDescription)); // query parameter
-            if (deviceStateEntity != null) localVarQueryParams.Add("deviceStateEntity", Configuration.ApiClient.ParameterToString(deviceStateEntity)); // query parameter
-            if (serialNumber != null) localVarQueryParams.Add("serialNumber", Configuration.ApiClient.ParameterToString(serialNumber)); // query parameter
+            if (updateMachineDTO != null && updateMachineDTO.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(updateMachineDTO); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = updateMachineDTO; // byte array
+            }
 
 
             // make the HTTP request

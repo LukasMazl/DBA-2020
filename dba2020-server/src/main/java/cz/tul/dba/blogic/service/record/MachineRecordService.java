@@ -5,8 +5,6 @@ import cz.tul.dba.dto.out.machine.MachineDataRecordsDTO;
 
 public interface MachineRecordService {
 
-    boolean saveRecordToMachine();
-
     MachineDataRecordsDTO readAllRecords(GetRecordsForMachineDTO data);
 
 }

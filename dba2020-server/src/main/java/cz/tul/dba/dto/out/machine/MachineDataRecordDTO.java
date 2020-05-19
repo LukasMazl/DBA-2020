@@ -16,6 +16,7 @@ public class MachineDataRecordDTO {
     private Double streesBattery;
     private Double restOfFuel;
     private Double tensometer;
+    private String create;
 
     private DeviceConfigurationDTO deviceConfigurationDTO;
 
@@ -121,5 +122,13 @@ public class MachineDataRecordDTO {
 
     public void setDeviceConfigurationDTO(DeviceConfigurationDTO deviceConfigurationDTO) {
         this.deviceConfigurationDTO = deviceConfigurationDTO;
+    }
+
+    public String getCreate() {
+        return create;
+    }
+
+    public void setCreate(String create) {
+        this.create = create;
     }
 }

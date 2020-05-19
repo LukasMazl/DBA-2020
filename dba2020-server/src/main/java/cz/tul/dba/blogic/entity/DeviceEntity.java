@@ -16,7 +16,7 @@ public class DeviceEntity {
     @OneToOne(mappedBy = "deviceEntity", fetch = FetchType.LAZY)
     private MachineEntity machineEntity;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "device_conf_id")
     private DeviceConfigurationEntity deviceConfigurationEntity;
 

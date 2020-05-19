@@ -131,7 +131,7 @@ No authorization required
 
 <a name="updatemachineusingpost"></a>
 # **UpdateMachineUsingPOST**
-> UpdateMachineResponse UpdateMachineUsingPOST (string vinCode, string deviceDescription = null, string deviceStateEntity = null, string serialNumber = null)
+> UpdateMachineResponse UpdateMachineUsingPOST (UpdateMachineDTO updateMachineDTO, string vinCode)
 
 updateMachine
 
@@ -151,15 +151,13 @@ namespace Example
         {
             
             var apiInstance = new MachinecontrollerApi();
+            var updateMachineDTO = new UpdateMachineDTO(); // UpdateMachineDTO | updateMachineDTO
             var vinCode = vinCode_example;  // string | vin-code
-            var deviceDescription = deviceDescription_example;  // string |  (optional) 
-            var deviceStateEntity = deviceStateEntity_example;  // string |  (optional) 
-            var serialNumber = serialNumber_example;  // string |  (optional) 
 
             try
             {
                 // updateMachine
-                UpdateMachineResponse result = apiInstance.UpdateMachineUsingPOST(vinCode, deviceDescription, deviceStateEntity, serialNumber);
+                UpdateMachineResponse result = apiInstance.UpdateMachineUsingPOST(updateMachineDTO, vinCode);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -175,10 +173,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **updateMachineDTO** | [**UpdateMachineDTO**](UpdateMachineDTO.md)| updateMachineDTO | 
  **vinCode** | **string**| vin-code | 
- **deviceDescription** | **string**|  | [optional] 
- **deviceStateEntity** | **string**|  | [optional] 
- **serialNumber** | **string**|  | [optional] 
 
 ### Return type
 

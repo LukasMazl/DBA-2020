@@ -43,6 +43,7 @@ namespace IO.Swagger.Model
         /// Initializes a new instance of the <see cref="MachineDataRecordDTO" /> class.
         /// </summary>
         /// <param name="Action">Action.</param>
+        /// <param name="Create">Create.</param>
         /// <param name="DeviceConfigurationDTO">DeviceConfigurationDTO.</param>
         /// <param name="GpsX">GpsX.</param>
         /// <param name="GpsY">GpsY.</param>
@@ -55,9 +56,10 @@ namespace IO.Swagger.Model
         /// <param name="StreesBattery">StreesBattery.</param>
         /// <param name="Tensometer">Tensometer.</param>
         /// <param name="Vin">Vin.</param>
-        public MachineDataRecordDTO(string Action = null, DeviceConfigurationDTO DeviceConfigurationDTO = null, double? GpsX = null, double? GpsY = null, double? Humidity = null, double? RestOfFuel = null, string SerialNumber = null, double? SpeedX = null, double? SpeedY = null, double? SpeedZ = null, double? StreesBattery = null, double? Tensometer = null, string Vin = null)
+        public MachineDataRecordDTO(string Action = null, string Create = null, DeviceConfigurationDTO DeviceConfigurationDTO = null, double? GpsX = null, double? GpsY = null, double? Humidity = null, double? RestOfFuel = null, string SerialNumber = null, double? SpeedX = null, double? SpeedY = null, double? SpeedZ = null, double? StreesBattery = null, double? Tensometer = null, string Vin = null)
         {
             this.Action = Action;
+            this.Create = Create;
             this.DeviceConfigurationDTO = DeviceConfigurationDTO;
             this.GpsX = GpsX;
             this.GpsY = GpsY;
@@ -77,6 +79,11 @@ namespace IO.Swagger.Model
         /// </summary>
         [DataMember(Name="action", EmitDefaultValue=false)]
         public string Action { get; set; }
+        /// <summary>
+        /// Gets or Sets Create
+        /// </summary>
+        [DataMember(Name="create", EmitDefaultValue=false)]
+        public string Create { get; set; }
         /// <summary>
         /// Gets or Sets DeviceConfigurationDTO
         /// </summary>
@@ -146,6 +153,7 @@ namespace IO.Swagger.Model
             var sb = new StringBuilder();
             sb.Append("class MachineDataRecordDTO {\n");
             sb.Append("  Action: ").Append(Action).Append("\n");
+            sb.Append("  Create: ").Append(Create).Append("\n");
             sb.Append("  DeviceConfigurationDTO: ").Append(DeviceConfigurationDTO).Append("\n");
             sb.Append("  GpsX: ").Append(GpsX).Append("\n");
             sb.Append("  GpsY: ").Append(GpsY).Append("\n");
@@ -198,6 +206,11 @@ namespace IO.Swagger.Model
                     this.Action == other.Action ||
                     this.Action != null &&
                     this.Action.Equals(other.Action)
+                ) && 
+                (
+                    this.Create == other.Create ||
+                    this.Create != null &&
+                    this.Create.Equals(other.Create)
                 ) && 
                 (
                     this.DeviceConfigurationDTO == other.DeviceConfigurationDTO ||
@@ -274,6 +287,8 @@ namespace IO.Swagger.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Action != null)
                     hash = hash * 59 + this.Action.GetHashCode();
+                if (this.Create != null)
+                    hash = hash * 59 + this.Create.GetHashCode();
                 if (this.DeviceConfigurationDTO != null)
                     hash = hash * 59 + this.DeviceConfigurationDTO.GetHashCode();
                 if (this.GpsX != null)

@@ -3,15 +3,18 @@ package cz.tul.dba.blogic.service.device;
 import cz.tul.dba.blogic.entity.*;
 import cz.tul.dba.blogic.exception.DeviceNotFoundException;
 import cz.tul.dba.blogic.exception.MachineNotFoundException;
+import cz.tul.dba.blogic.helper.DeviceHelper;
 import cz.tul.dba.blogic.repository.DeviceConfigurationRepository;
 import cz.tul.dba.blogic.repository.DeviceRepository;
 import cz.tul.dba.blogic.repository.MachineRepository;
 import cz.tul.dba.blogic.repository.MachineStateRepository;
+import cz.tul.dba.dto.DeviceDTO;
+import cz.tul.dba.dto.out.AllDeviceDTO;
+import cz.tul.dba.dto.out.OnlineDeviceDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 @Service
 public class DeviceServiceBean implements DeviceService {
@@ -20,14 +23,17 @@ public class DeviceServiceBean implements DeviceService {
     private DeviceConfigurationRepository deviceConfigurationRepository;
     private MachineRepository machineRepository;
     private MachineStateRepository machineStateRepository;
+    private DeviceHelper deviceHelper;
 
     @Autowired
     public DeviceServiceBean(DeviceRepository deviceRepository, DeviceConfigurationRepository deviceConfigurationRepository,
-                             MachineRepository machineRepository, MachineStateRepository machineStateRepository) {
+                             MachineRepository machineRepository, MachineStateRepository machineStateRepository,
+                             DeviceHelper deviceHelper) {
         this.deviceRepository = deviceRepository;
         this.deviceConfigurationRepository = deviceConfigurationRepository;
         this.machineRepository = machineRepository;
         this.machineStateRepository = machineStateRepository;
+        this.deviceHelper = deviceHelper;
     }
 
     @Override
@@ -151,5 +157,58 @@ public class DeviceServiceBean implements DeviceService {
         deviceEntity.setDeviceDescription(device.getDeviceDescription());
         deviceRepository.save(deviceEntity);
         return true;
+    }
+
+    @Override
+    public List<OnlineDeviceDTO> getOnlineDevices() {
+        int minute = 5;
+        Date date = new Date(System.currentTimeMillis() - 60 * 1000 * minute);
+        List<MachineStateEntity> machineStateEntityList = machineStateRepository.findAllByCreatedAfter(date);
+        Set<String> deviceSerialNumberSet = new HashSet<>();
+        for (MachineStateEntity machineStateEntity : machineStateEntityList) {
+            deviceSerialNumberSet.add(machineStateEntity.getDeviceEntity().getSerialNumber());
+        }
+
+        List<OnlineDeviceDTO> onlineDeviceDTOS = new ArrayList<>();
+        for (String serialNumber : deviceSerialNumberSet) {
+            OnlineDeviceDTO onlineDeviceDTO = prepareOnlineDeviceDTO(serialNumber);
+            onlineDeviceDTOS.add(onlineDeviceDTO);
+        }
+
+        return onlineDeviceDTOS;
+    }
+
+    private OnlineDeviceDTO prepareOnlineDeviceDTO(String serialNumber) {
+        OnlineDeviceDTO onlineDeviceDTO = new OnlineDeviceDTO();
+        DeviceEntity deviceEntity = deviceRepository.findBySerialNumber(serialNumber);
+        if (deviceEntity.getDeviceConfigurationEntity() != null) {
+            onlineDeviceDTO.setMaxSpeed(deviceEntity.getDeviceConfigurationEntity().getMaxSpeed());
+            onlineDeviceDTO.setMaxDistance(deviceEntity.getDeviceConfigurationEntity().getMaxDistance());
+            onlineDeviceDTO.setInterval(deviceEntity.getDeviceConfigurationEntity().getSecondLatency());
+        }
+        onlineDeviceDTO.setSerialNumber(serialNumber);
+
+        onlineDeviceDTO.setOnline(true);
+        if (deviceEntity.getMachineEntity() != null) {
+            onlineDeviceDTO.setMachineName(deviceEntity.getMachineEntity().getVin());
+        }
+        MachineStateEntity machineStateEntity = machineStateRepository.findTopByMachineEntityAndDeviceEntityOrderByCreatedDesc(deviceEntity.getMachineEntity(), deviceEntity);
+        if (machineStateEntity != null) {
+            onlineDeviceDTO.setLastRecord(machineStateEntity.getCreated());
+        }
+        return onlineDeviceDTO;
+    }
+
+    @Override
+    public AllDeviceDTO getAllDevices() {
+        AllDeviceDTO allDeviceDTO = new AllDeviceDTO();
+        List<DeviceDTO> deviceDTOS = new ArrayList<>();
+        List<DeviceEntity> deviceEntities = deviceRepository.findAllByDeviceStateEntityIsNot(DeviceStateEntity.DELETED);
+        for(DeviceEntity deviceEntity : deviceEntities) {
+            DeviceDTO deviceDTO = deviceHelper.prepareDeviceDTO(deviceEntity);
+            deviceDTOS.add(deviceDTO);
+        }
+        allDeviceDTO.setDeviceDTOList(deviceDTOS);
+        return allDeviceDTO;
     }
 }

@@ -85,6 +85,14 @@ namespace IO.Swagger.Test
             // TODO unit test for the property 'Action'
         }
         /// <summary>
+        /// Test the property 'Create'
+        /// </summary>
+        [Test]
+        public void CreateTest()
+        {
+            // TODO unit test for the property 'Create'
+        }
+        /// <summary>
         /// Test the property 'DeviceConfigurationDTO'
         /// </summary>
         [Test]

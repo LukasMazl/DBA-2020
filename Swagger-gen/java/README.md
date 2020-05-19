@@ -107,12 +107,14 @@ Class | Method | HTTP request | Description
 *MachinecontrollerApi* | [**createMachineUsingPOST**](docs/MachinecontrollerApi.md#createMachineUsingPOST) | **POST** /api/v1/machine/create | createMachine
 *MachinecontrollerApi* | [**deleteMachineUsingPOST**](docs/MachinecontrollerApi.md#deleteMachineUsingPOST) | **POST** /api/v1/machine/delete | deleteMachine
 *MachinecontrollerApi* | [**updateMachineUsingPOST**](docs/MachinecontrollerApi.md#updateMachineUsingPOST) | **POST** /api/v1/machine/update/{vin-code} | updateMachine
+*ReaddatacontrollerApi* | [**getAllDeviceUsingPOST**](docs/ReaddatacontrollerApi.md#getAllDeviceUsingPOST) | **POST** /api/v1/data/getAllDevices | getAllDevice
 *ReaddatacontrollerApi* | [**getAllMachinesUsingPOST**](docs/ReaddatacontrollerApi.md#getAllMachinesUsingPOST) | **POST** /api/v1/data/getAllMachines | getAllMachines
-*ReaddatacontrollerApi* | [**getRecordsForMachineUsingPOST**](docs/ReaddatacontrollerApi.md#getRecordsForMachineUsingPOST) | **POST** /api/v1/data/machine/{vin} | getRecordsForMachine
+*ReaddatacontrollerApi* | [**getRecordsForMachineUsingPOST**](docs/ReaddatacontrollerApi.md#getRecordsForMachineUsingPOST) | **POST** /api/v1/data/machine | getRecordsForMachine
 
 
 ## Documentation for Models
 
+ - [AllDeviceDTO](docs/AllDeviceDTO.md)
  - [AllFreeDeviceDTO](docs/AllFreeDeviceDTO.md)
  - [AllMachineDTO](docs/AllMachineDTO.md)
  - [CreateDeviceDTO](docs/CreateDeviceDTO.md)
@@ -125,7 +127,9 @@ Class | Method | HTTP request | Description
  - [DeviceConfigurationDTO](docs/DeviceConfigurationDTO.md)
  - [DeviceConfigurationEntity](docs/DeviceConfigurationEntity.md)
  - [DeviceConfigurationResponse](docs/DeviceConfigurationResponse.md)
+ - [DeviceDTO](docs/DeviceDTO.md)
  - [DeviceEntity](docs/DeviceEntity.md)
+ - [GetRecordsForMachineDTO](docs/GetRecordsForMachineDTO.md)
  - [MachineDTO](docs/MachineDTO.md)
  - [MachineDataRecordDTO](docs/MachineDataRecordDTO.md)
  - [MachineDataRecordsDTO](docs/MachineDataRecordsDTO.md)
@@ -138,6 +142,7 @@ Class | Method | HTTP request | Description
  - [TakeDeviceResponse](docs/TakeDeviceResponse.md)
  - [UpdateDeviceDTO](docs/UpdateDeviceDTO.md)
  - [UpdateDeviceResponse](docs/UpdateDeviceResponse.md)
+ - [UpdateMachineDTO](docs/UpdateMachineDTO.md)
  - [UpdateMachineResponse](docs/UpdateMachineResponse.md)
  - [View](docs/View.md)
 

@@ -31,6 +31,7 @@ import io.swagger.client.model.CreateMachineDTO;
 import io.swagger.client.model.DeteleMachineResponse;
 import io.swagger.client.model.DeleteMachineDTO;
 import io.swagger.client.model.UpdateMachineResponse;
+import io.swagger.client.model.UpdateMachineDTO;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -88,11 +89,9 @@ public class MachinecontrollerApiTest {
      */
     @Test
     public void updateMachineUsingPOSTTest() throws ApiException {
+        UpdateMachineDTO updateMachineDTO = null;
         String vinCode = null;
-        String deviceDescription = null;
-        String deviceStateEntity = null;
-        String serialNumber = null;
-        // UpdateMachineResponse response = api.updateMachineUsingPOST(vinCode, deviceDescription, deviceStateEntity, serialNumber);
+        // UpdateMachineResponse response = api.updateMachineUsingPOST(updateMachineDTO, vinCode);
 
         // TODO: test validations
     }

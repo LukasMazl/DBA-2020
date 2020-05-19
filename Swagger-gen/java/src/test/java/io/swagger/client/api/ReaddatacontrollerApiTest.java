@@ -26,8 +26,10 @@
 package io.swagger.client.api;
 
 import io.swagger.client.ApiException;
+import io.swagger.client.model.AllDeviceDTO;
 import io.swagger.client.model.AllMachineDTO;
 import io.swagger.client.model.MachineDataRecordsDTO;
+import io.swagger.client.model.GetRecordsForMachineDTO;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -42,6 +44,21 @@ public class ReaddatacontrollerApiTest {
 
     private final ReaddatacontrollerApi api = new ReaddatacontrollerApi();
 
+    
+    /**
+     * getAllDevice
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getAllDeviceUsingPOSTTest() throws ApiException {
+        // AllDeviceDTO response = api.getAllDeviceUsingPOST();
+
+        // TODO: test validations
+    }
     
     /**
      * getAllMachines
@@ -68,10 +85,8 @@ public class ReaddatacontrollerApiTest {
      */
     @Test
     public void getRecordsForMachineUsingPOSTTest() throws ApiException {
-        List<String> columnValueList = null;
-        Integer pages = null;
-        String vin = null;
-        // MachineDataRecordsDTO response = api.getRecordsForMachineUsingPOST(columnValueList, pages, vin);
+        GetRecordsForMachineDTO getRecordsForMachineDTO = null;
+        // MachineDataRecordsDTO response = api.getRecordsForMachineUsingPOST(getRecordsForMachineDTO);
 
         // TODO: test validations
     }

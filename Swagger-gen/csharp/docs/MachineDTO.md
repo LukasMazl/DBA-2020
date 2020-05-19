@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Created** | **DateTime?** |  | [optional] 
+**Created** | **string** |  | [optional] 
 **Description** | **string** |  | [optional] 
 **Id** | **long?** |  | [optional] 
 **MachineEntityState** | **string** |  | [optional] 

@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**created** | [**DateTime**](DateTime.md) |  |  [optional]
+**created** | **String** |  |  [optional]
 **description** | **String** |  |  [optional]
 **id** | **Long** |  |  [optional]
 **machineEntityState** | [**MachineEntityStateEnum**](#MachineEntityStateEnum) |  |  [optional]
