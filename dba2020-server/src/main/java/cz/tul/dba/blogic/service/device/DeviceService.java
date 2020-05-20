@@ -4,6 +4,7 @@ import cz.tul.dba.blogic.entity.DeviceConfigurationEntity;
 import cz.tul.dba.blogic.entity.DeviceEntity;
 import cz.tul.dba.dto.DeviceDTO;
 import cz.tul.dba.dto.out.AllDeviceDTO;
+import cz.tul.dba.dto.out.FreeDeviceDTO;
 import cz.tul.dba.dto.out.OnlineDeviceDTO;
 
 import java.util.List;
@@ -15,7 +16,7 @@ public interface DeviceService {
      *
      * @return free devices
      */
-    List<DeviceDTO> getAllFreeDevices();
+    List<FreeDeviceDTO> getAllFreeDevices();
 
     /**
      * Method sets IOT unit on machine

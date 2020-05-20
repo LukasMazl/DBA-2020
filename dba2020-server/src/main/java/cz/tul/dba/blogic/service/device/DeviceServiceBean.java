@@ -4,12 +4,14 @@ import cz.tul.dba.blogic.entity.*;
 import cz.tul.dba.blogic.exception.DeviceNotFoundException;
 import cz.tul.dba.blogic.exception.MachineNotFoundException;
 import cz.tul.dba.blogic.helper.DeviceHelper;
+import cz.tul.dba.blogic.helper.MachineStateHelper;
 import cz.tul.dba.blogic.repository.DeviceConfigurationRepository;
 import cz.tul.dba.blogic.repository.DeviceRepository;
 import cz.tul.dba.blogic.repository.MachineRepository;
 import cz.tul.dba.blogic.repository.MachineStateRepository;
 import cz.tul.dba.dto.DeviceDTO;
 import cz.tul.dba.dto.out.AllDeviceDTO;
+import cz.tul.dba.dto.out.FreeDeviceDTO;
 import cz.tul.dba.dto.out.OnlineDeviceDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,11 +26,12 @@ public class DeviceServiceBean implements DeviceService {
     private MachineRepository machineRepository;
     private MachineStateRepository machineStateRepository;
     private DeviceHelper deviceHelper;
+    private MachineStateHelper machineStateHelper;
 
     @Autowired
     public DeviceServiceBean(DeviceRepository deviceRepository, DeviceConfigurationRepository deviceConfigurationRepository,
                              MachineRepository machineRepository, MachineStateRepository machineStateRepository,
-                             DeviceHelper deviceHelper) {
+                             DeviceHelper deviceHelper, MachineStateHelper machineStateHelperøó) {
         this.deviceRepository = deviceRepository;
         this.deviceConfigurationRepository = deviceConfigurationRepository;
         this.machineRepository = machineRepository;
@@ -37,11 +40,18 @@ public class DeviceServiceBean implements DeviceService {
     }
 
     @Override
-    public List<DeviceDTO> getAllFreeDevices() {
+    public List<FreeDeviceDTO> getAllFreeDevices() {
         List<DeviceEntity>  deviceEntities = deviceRepository.findAllByMachineEntityIsNullAndDeviceStateEntityNot(DeviceStateEntity.DELETED);
-        List<DeviceDTO> deviceDTOList = new ArrayList<>();
+        List<FreeDeviceDTO> deviceDTOList = new ArrayList<>();
         for(DeviceEntity deviceEntity: deviceEntities) {
-            deviceDTOList.add(deviceHelper.prepareDeviceDTO(deviceEntity));
+            FreeDeviceDTO deviceDTO = new FreeDeviceDTO();
+            deviceDTO.setSerialNumber(deviceEntity.getSerialNumber());
+            deviceDTO.setCreated(deviceEntity.getCreated().toString());
+            deviceDTO.setDeviceDescription(deviceEntity.getDeviceDescription());
+            deviceDTO.setDeviceStateEntity(deviceEntity.getDeviceStateEntity());
+            boolean isOnline = machineStateHelper.isDeviceOnline(5, deviceEntity);
+            deviceDTO.setOnline(isOnline);
+            deviceDTOList.add(deviceDTO);
         }
         return deviceDTOList;
     }

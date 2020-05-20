@@ -39,7 +39,7 @@ public class IOTDeviceController {
     @RequestMapping(path = "/api/v1/device/allFree", method = RequestMethod.POST,
             produces = MediaType.APPLICATION_JSON_VALUE)
     public AllFreeDeviceDTO getAllFreeDevice() {
-        List<DeviceDTO> deviceEntityList = deviceService.getAllFreeDevices();
+        List<FreeDeviceDTO> deviceEntityList = deviceService.getAllFreeDevices();
         AllFreeDeviceDTO allFreeDevice = new AllFreeDeviceDTO();
         allFreeDevice.setDeviceEntityList(deviceEntityList);
         return allFreeDevice;
