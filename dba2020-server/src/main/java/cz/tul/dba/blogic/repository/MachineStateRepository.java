@@ -16,5 +16,7 @@ public interface MachineStateRepository extends CrudRepository<MachineStateEntit
 
     MachineStateEntity findTopByMachineEntityAndDeviceEntityOrderByCreatedDesc(MachineEntity machineEntity, DeviceEntity deviceEntity);
 
+    MachineStateEntity findTopByDeviceEntityOrderByCreatedDesc(DeviceEntity deviceEntity);
+
     List<MachineStateEntity> findAllByMachineEntity(MachineEntity machineEntity, Pageable pageable);
 }

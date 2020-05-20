@@ -2,10 +2,12 @@ package cz.tul.dba.blogic.service.machine;
 
 import cz.tul.dba.blogic.entity.MachineEntity;
 import cz.tul.dba.blogic.entity.MachineEntityState;
+import cz.tul.dba.blogic.helper.DeviceHelper;
 import cz.tul.dba.blogic.helper.MachineStateHelper;
 import cz.tul.dba.blogic.repository.DeviceRepository;
 import cz.tul.dba.blogic.repository.MachineRepository;
 import cz.tul.dba.blogic.repository.MachineStateRepository;
+import cz.tul.dba.dto.DeviceDTO;
 import cz.tul.dba.dto.out.machine.AllMachineDTO;
 import cz.tul.dba.dto.out.machine.MachineDTO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,14 +23,18 @@ public class MachineServiceBean implements MachineService {
     private MachineRepository machineRepository;
     private DeviceRepository deviceRepository;
     private MachineStateRepository machineStateRepository;
+    private DeviceHelper deviceHelper;
     private MachineStateHelper machineStateHelper;
 
     @Autowired
-    public MachineServiceBean(MachineRepository machineRepository, DeviceRepository deviceRepository, MachineStateRepository machineStateRepository, MachineStateHelper machineStateHelper) {
+    public MachineServiceBean(MachineRepository machineRepository, DeviceRepository deviceRepository,
+                              MachineStateRepository machineStateRepository, MachineStateHelper machineStateHelper,
+                              DeviceHelper deviceHelper) {
         this.machineRepository = machineRepository;
         this.deviceRepository = deviceRepository;
         this.machineStateHelper = machineStateHelper;
         this.machineStateRepository = machineStateRepository;
+        this.deviceHelper = deviceHelper;
     }
 
     @Override
@@ -95,8 +101,13 @@ public class MachineServiceBean implements MachineService {
         machineDTO.setCreated(machineEntity.getCreated().toString());
         machineDTO.setId(machineEntity.getId());
         machineDTO.setVin(machineEntity.getVin());
+        machineDTO.setManufacturer(machineEntity.getManufacturer());
         machineDTO.setMachineEntityState(machineEntity.getMachineEntityState());
         machineDTO.setMachineTypeEntity(machineEntity.getMachineTypeEntity());
+        if(machineEntity.getDeviceEntity() != null) {
+            DeviceDTO deviceDTO = deviceHelper.prepareDeviceDTO(machineEntity.getDeviceEntity());
+            machineDTO.setDeviceDTO(deviceDTO);
+        }
         return machineDTO;
     }
 }

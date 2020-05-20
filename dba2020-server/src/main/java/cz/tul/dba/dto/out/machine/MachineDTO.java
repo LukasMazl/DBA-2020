@@ -1,10 +1,8 @@
 package cz.tul.dba.dto.out.machine;
 
-import cz.tul.dba.blogic.entity.MachineEntity;
 import cz.tul.dba.blogic.entity.MachineEntityState;
 import cz.tul.dba.blogic.entity.MachineTypeEntity;
-
-import java.util.Date;
+import cz.tul.dba.dto.DeviceDTO;
 
 public class MachineDTO {
 
@@ -15,6 +13,8 @@ public class MachineDTO {
     private String created;
     private MachineTypeEntity machineTypeEntity;
     private MachineEntityState machineEntityState;
+
+    private DeviceDTO deviceDTO;
 
     private boolean online;
 
@@ -80,5 +80,13 @@ public class MachineDTO {
 
     public void setMachineEntityState(MachineEntityState machineEntityState) {
         this.machineEntityState = machineEntityState;
+    }
+
+    public DeviceDTO getDeviceDTO() {
+        return deviceDTO;
+    }
+
+    public void setDeviceDTO(DeviceDTO deviceDTO) {
+        this.deviceDTO = deviceDTO;
     }
 }

@@ -31,6 +31,7 @@ public class MachineController {
     public CreateMachineResponse createMachine(@RequestBody CreateMachineDTO createMachineDTO) {
         boolean isOk = machineService.createMachine(createMachineDTO);
         CreateMachineResponse machineResponse = new CreateMachineResponse(isOk);
+        sendUpdate();
         return machineResponse;
     }
 
@@ -39,9 +40,13 @@ public class MachineController {
     public UpdateMachineResponse updateMachine(@RequestBody UpdateMachineDTO updateMachineDTO, @PathVariable("vin-code") String vinCode) {
         boolean isOk = machineService.updateMachine(updateMachineDTO, vinCode);
         UpdateMachineResponse machineResponse = new UpdateMachineResponse(isOk);
+        sendUpdate();
+        return machineResponse;
+    }
+
+    private void sendUpdate() {
         AllMachineDTO allMachineDTO = machineService.getAllMachines();
         messageSender.convertAndSend("/topics/machine/update", allMachineDTO);
-        return machineResponse;
     }
 
     @RequestMapping(path = "/api/v1/machine/delete", method = RequestMethod.POST,
@@ -50,6 +55,7 @@ public class MachineController {
         boolean isOk = machineService.deleteMachine(deleteMachineDTO.getVin());
         DeteleMachineResponse deteleMachineResponse = new DeteleMachineResponse();
         deteleMachineResponse.setOk(isOk);
+        sendUpdate();
         return deteleMachineResponse;
     }
 }

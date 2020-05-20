@@ -129,7 +129,7 @@ public class DeviceServiceBean implements DeviceService {
         DeviceEntity deviceEntity = new DeviceEntity();
         deviceEntity.setCreated(new Date());
         deviceEntity.setDeviceDescription(device.getDeviceDescription());
-        deviceEntity.setDeviceStateEntity(deviceEntity.getDeviceStateEntity());
+        deviceEntity.setDeviceStateEntity(device.getDeviceStateEntity());
         deviceEntity.setSerialNumber(device.getSerialNumber());
         deviceRepository.save(deviceEntity);
         return true;
@@ -191,10 +191,14 @@ public class DeviceServiceBean implements DeviceService {
         onlineDeviceDTO.setOnline(true);
         if (deviceEntity.getMachineEntity() != null) {
             onlineDeviceDTO.setMachineName(deviceEntity.getMachineEntity().getVin());
+        } else {
+            onlineDeviceDTO.setMachineName("----");
         }
-        MachineStateEntity machineStateEntity = machineStateRepository.findTopByMachineEntityAndDeviceEntityOrderByCreatedDesc(deviceEntity.getMachineEntity(), deviceEntity);
+        MachineStateEntity machineStateEntity = machineStateRepository.findTopByDeviceEntityOrderByCreatedDesc(deviceEntity);
         if (machineStateEntity != null) {
             onlineDeviceDTO.setLastRecord(machineStateEntity.getCreated());
+        } else {
+            //onlineDeviceDTO.setLastRecord();
         }
         return onlineDeviceDTO;
     }

@@ -88,6 +88,7 @@ public class IOTDeviceController {
         CreateDeviceResponse response = new CreateDeviceResponse();
         boolean ok = deviceService.createDevice(createDeviceDTO);
         response.setOk(ok);
+        sendDeviceUpdate();
         return response;
     }
 
@@ -97,6 +98,7 @@ public class IOTDeviceController {
         UpdateDeviceResponse response = new UpdateDeviceResponse();
         boolean ok = deviceService.updateDevice(serialNumber, updateDeviceDTO);
         response.setOk(ok);
+        sendDeviceUpdate();
         return response;
     }
 
@@ -106,6 +108,12 @@ public class IOTDeviceController {
         DeleteDeviceResponse response = new DeleteDeviceResponse();
         boolean ok = deviceService.deleteDevice(serialNumber);
         response.setOk(ok);
+        sendDeviceUpdate();
         return response;
     }
+
+    private void sendDeviceUpdate() {
+        messageSender.convertAndSend("/topics/device/update", deviceService.getAllDevices());
+    }
+
 }

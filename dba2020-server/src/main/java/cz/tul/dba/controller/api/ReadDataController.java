@@ -31,7 +31,6 @@ public class ReadDataController {
 
     @RequestMapping(path = "/api/v1/data/getAllMachines", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public AllMachineDTO getAllMachines() {
-        messageSender.convertAndSend("/topics/all", "helloo");
         return machineService.getAllMachines();
     }
 
