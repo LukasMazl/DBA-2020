@@ -37,8 +37,13 @@ public class DeviceServiceBean implements DeviceService {
     }
 
     @Override
-    public List<DeviceEntity> getAllFreeDevices() {
-        return deviceRepository.findAllByMachineEntityIsNullAndDeviceStateEntityNot(DeviceStateEntity.DELETED);
+    public List<DeviceDTO> getAllFreeDevices() {
+        List<DeviceEntity>  deviceEntities = deviceRepository.findAllByMachineEntityIsNullAndDeviceStateEntityNot(DeviceStateEntity.DELETED);
+        List<DeviceDTO> deviceDTOList = new ArrayList<>();
+        for(DeviceEntity deviceEntity: deviceEntities) {
+            deviceDTOList.add(deviceHelper.prepareDeviceDTO(deviceEntity));
+        }
+        return deviceDTOList;
     }
 
     @Override

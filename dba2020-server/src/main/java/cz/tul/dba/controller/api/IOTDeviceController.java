@@ -3,6 +3,7 @@ package cz.tul.dba.controller.api;
 import cz.tul.dba.blogic.entity.DeviceConfigurationEntity;
 import cz.tul.dba.blogic.entity.DeviceEntity;
 import cz.tul.dba.blogic.service.device.DeviceService;
+import cz.tul.dba.dto.DeviceDTO;
 import cz.tul.dba.dto.in.*;
 import cz.tul.dba.dto.out.*;
 import cz.tul.dba.dto.out.responce.*;
@@ -38,7 +39,7 @@ public class IOTDeviceController {
     @RequestMapping(path = "/api/v1/device/allFree", method = RequestMethod.POST,
             produces = MediaType.APPLICATION_JSON_VALUE)
     public AllFreeDeviceDTO getAllFreeDevice() {
-        List<DeviceEntity> deviceEntityList = deviceService.getAllFreeDevices();
+        List<DeviceDTO> deviceEntityList = deviceService.getAllFreeDevices();
         AllFreeDeviceDTO allFreeDevice = new AllFreeDeviceDTO();
         allFreeDevice.setDeviceEntityList(deviceEntityList);
         return allFreeDevice;

@@ -2,6 +2,7 @@ package cz.tul.dba.blogic.service.device;
 
 import cz.tul.dba.blogic.entity.DeviceConfigurationEntity;
 import cz.tul.dba.blogic.entity.DeviceEntity;
+import cz.tul.dba.dto.DeviceDTO;
 import cz.tul.dba.dto.out.AllDeviceDTO;
 import cz.tul.dba.dto.out.OnlineDeviceDTO;
 
@@ -14,7 +15,7 @@ public interface DeviceService {
      *
      * @return free devices
      */
-    List<DeviceEntity> getAllFreeDevices();
+    List<DeviceDTO> getAllFreeDevices();
 
     /**
      * Method sets IOT unit on machine
