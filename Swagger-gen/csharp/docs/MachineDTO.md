@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Created** | **string** |  | [optional] 
 **Description** | **string** |  | [optional] 
+**DeviceDTO** | [**DeviceDTO**](DeviceDTO.md) |  | [optional] 
 **Id** | **long?** |  | [optional] 
 **MachineEntityState** | **string** |  | [optional] 
 **MachineTypeEntity** | **string** |  | [optional] 

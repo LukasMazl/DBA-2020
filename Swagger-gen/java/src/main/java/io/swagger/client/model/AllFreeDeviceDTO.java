@@ -29,7 +29,7 @@ import java.util.Objects;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import io.swagger.client.model.DeviceEntity;
+import io.swagger.client.model.FreeDeviceDTO;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,17 +37,17 @@ import java.util.List;
 /**
  * AllFreeDeviceDTO
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-19T23:38:25.855+02:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-21T01:32:09.218+02:00")
 public class AllFreeDeviceDTO   {
   @SerializedName("deviceEntityList")
-  private List<DeviceEntity> deviceEntityList = new ArrayList<DeviceEntity>();
+  private List<FreeDeviceDTO> deviceEntityList = new ArrayList<FreeDeviceDTO>();
 
-  public AllFreeDeviceDTO deviceEntityList(List<DeviceEntity> deviceEntityList) {
+  public AllFreeDeviceDTO deviceEntityList(List<FreeDeviceDTO> deviceEntityList) {
     this.deviceEntityList = deviceEntityList;
     return this;
   }
 
-  public AllFreeDeviceDTO addDeviceEntityListItem(DeviceEntity deviceEntityListItem) {
+  public AllFreeDeviceDTO addDeviceEntityListItem(FreeDeviceDTO deviceEntityListItem) {
     this.deviceEntityList.add(deviceEntityListItem);
     return this;
   }
@@ -57,11 +57,11 @@ public class AllFreeDeviceDTO   {
    * @return deviceEntityList
   **/
   @ApiModelProperty(example = "null", value = "")
-  public List<DeviceEntity> getDeviceEntityList() {
+  public List<FreeDeviceDTO> getDeviceEntityList() {
     return deviceEntityList;
   }
 
-  public void setDeviceEntityList(List<DeviceEntity> deviceEntityList) {
+  public void setDeviceEntityList(List<FreeDeviceDTO> deviceEntityList) {
     this.deviceEntityList = deviceEntityList;
   }
 

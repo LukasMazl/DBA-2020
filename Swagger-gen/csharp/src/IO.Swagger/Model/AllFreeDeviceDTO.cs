@@ -43,7 +43,7 @@ namespace IO.Swagger.Model
         /// Initializes a new instance of the <see cref="AllFreeDeviceDTO" /> class.
         /// </summary>
         /// <param name="DeviceEntityList">DeviceEntityList.</param>
-        public AllFreeDeviceDTO(List<DeviceEntity> DeviceEntityList = null)
+        public AllFreeDeviceDTO(List<FreeDeviceDTO> DeviceEntityList = null)
         {
             this.DeviceEntityList = DeviceEntityList;
         }
@@ -52,7 +52,7 @@ namespace IO.Swagger.Model
         /// Gets or Sets DeviceEntityList
         /// </summary>
         [DataMember(Name="deviceEntityList", EmitDefaultValue=false)]
-        public List<DeviceEntity> DeviceEntityList { get; set; }
+        public List<FreeDeviceDTO> DeviceEntityList { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

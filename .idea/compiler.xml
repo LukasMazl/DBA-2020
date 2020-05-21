@@ -11,8 +11,13 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="dba2020-device" target="1.5" />
+      <module name="dba2020-device" target="1.7" />
       <module name="dba2020-server" target="1.8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="dba2020-server" options="-parameters" />
+    </option>
   </component>
 </project>

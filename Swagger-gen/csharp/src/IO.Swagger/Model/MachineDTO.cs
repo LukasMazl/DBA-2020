@@ -124,16 +124,18 @@ namespace IO.Swagger.Model
         /// </summary>
         /// <param name="Created">Created.</param>
         /// <param name="Description">Description.</param>
+        /// <param name="DeviceDTO">DeviceDTO.</param>
         /// <param name="Id">Id.</param>
         /// <param name="MachineEntityState">MachineEntityState.</param>
         /// <param name="MachineTypeEntity">MachineTypeEntity.</param>
         /// <param name="Manufacturer">Manufacturer.</param>
         /// <param name="Online">Online.</param>
         /// <param name="Vin">Vin.</param>
-        public MachineDTO(string Created = null, string Description = null, long? Id = null, MachineEntityStateEnum? MachineEntityState = null, MachineTypeEntityEnum? MachineTypeEntity = null, string Manufacturer = null, bool? Online = null, string Vin = null)
+        public MachineDTO(string Created = null, string Description = null, DeviceDTO DeviceDTO = null, long? Id = null, MachineEntityStateEnum? MachineEntityState = null, MachineTypeEntityEnum? MachineTypeEntity = null, string Manufacturer = null, bool? Online = null, string Vin = null)
         {
             this.Created = Created;
             this.Description = Description;
+            this.DeviceDTO = DeviceDTO;
             this.Id = Id;
             this.MachineEntityState = MachineEntityState;
             this.MachineTypeEntity = MachineTypeEntity;
@@ -152,6 +154,11 @@ namespace IO.Swagger.Model
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
+        /// <summary>
+        /// Gets or Sets DeviceDTO
+        /// </summary>
+        [DataMember(Name="deviceDTO", EmitDefaultValue=false)]
+        public DeviceDTO DeviceDTO { get; set; }
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
@@ -182,6 +189,7 @@ namespace IO.Swagger.Model
             sb.Append("class MachineDTO {\n");
             sb.Append("  Created: ").Append(Created).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  DeviceDTO: ").Append(DeviceDTO).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  MachineEntityState: ").Append(MachineEntityState).Append("\n");
             sb.Append("  MachineTypeEntity: ").Append(MachineTypeEntity).Append("\n");
@@ -235,6 +243,11 @@ namespace IO.Swagger.Model
                     this.Description.Equals(other.Description)
                 ) && 
                 (
+                    this.DeviceDTO == other.DeviceDTO ||
+                    this.DeviceDTO != null &&
+                    this.DeviceDTO.Equals(other.DeviceDTO)
+                ) && 
+                (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
@@ -281,6 +294,8 @@ namespace IO.Swagger.Model
                     hash = hash * 59 + this.Created.GetHashCode();
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
+                if (this.DeviceDTO != null)
+                    hash = hash * 59 + this.DeviceDTO.GetHashCode();
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
                 if (this.MachineEntityState != null)

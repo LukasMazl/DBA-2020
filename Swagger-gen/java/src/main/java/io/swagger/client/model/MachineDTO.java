@@ -29,18 +29,22 @@ import java.util.Objects;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import io.swagger.client.model.DeviceDTO;
 
 
 /**
  * MachineDTO
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-19T23:38:25.855+02:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-21T01:32:09.218+02:00")
 public class MachineDTO   {
   @SerializedName("created")
   private String created = null;
 
   @SerializedName("description")
   private String description = null;
+
+  @SerializedName("deviceDTO")
+  private DeviceDTO deviceDTO = null;
 
   @SerializedName("id")
   private Long id = null;
@@ -153,6 +157,24 @@ public class MachineDTO   {
 
   public void setDescription(String description) {
     this.description = description;
+  }
+
+  public MachineDTO deviceDTO(DeviceDTO deviceDTO) {
+    this.deviceDTO = deviceDTO;
+    return this;
+  }
+
+   /**
+   * Get deviceDTO
+   * @return deviceDTO
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public DeviceDTO getDeviceDTO() {
+    return deviceDTO;
+  }
+
+  public void setDeviceDTO(DeviceDTO deviceDTO) {
+    this.deviceDTO = deviceDTO;
   }
 
   public MachineDTO id(Long id) {
@@ -275,6 +297,7 @@ public class MachineDTO   {
     MachineDTO machineDTO = (MachineDTO) o;
     return Objects.equals(this.created, machineDTO.created) &&
         Objects.equals(this.description, machineDTO.description) &&
+        Objects.equals(this.deviceDTO, machineDTO.deviceDTO) &&
         Objects.equals(this.id, machineDTO.id) &&
         Objects.equals(this.machineEntityState, machineDTO.machineEntityState) &&
         Objects.equals(this.machineTypeEntity, machineDTO.machineTypeEntity) &&
@@ -285,7 +308,7 @@ public class MachineDTO   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(created, description, id, machineEntityState, machineTypeEntity, manufacturer, online, vin);
+    return Objects.hash(created, description, deviceDTO, id, machineEntityState, machineTypeEntity, manufacturer, online, vin);
   }
 
   @Override
@@ -295,6 +318,7 @@ public class MachineDTO   {
     
     sb.append("    created: ").append(toIndentedString(created)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
+    sb.append("    deviceDTO: ").append(toIndentedString(deviceDTO)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    machineEntityState: ").append(toIndentedString(machineEntityState)).append("\n");
     sb.append("    machineTypeEntity: ").append(toIndentedString(machineTypeEntity)).append("\n");

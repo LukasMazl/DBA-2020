@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **created** | **String** |  |  [optional]
 **description** | **String** |  |  [optional]
+**deviceDTO** | [**DeviceDTO**](DeviceDTO.md) |  |  [optional]
 **id** | **Long** |  |  [optional]
 **machineEntityState** | [**MachineEntityStateEnum**](#MachineEntityStateEnum) |  |  [optional]
 **machineTypeEntity** | [**MachineTypeEntityEnum**](#MachineTypeEntityEnum) |  |  [optional]

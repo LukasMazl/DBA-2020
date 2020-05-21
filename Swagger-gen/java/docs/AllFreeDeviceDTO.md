@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**deviceEntityList** | [**List&lt;DeviceEntity&gt;**](DeviceEntity.md) |  |  [optional]
+**deviceEntityList** | [**List&lt;FreeDeviceDTO&gt;**](FreeDeviceDTO.md) |  |  [optional]
 
 
 

@@ -38,7 +38,7 @@ import java.util.Map;
 /**
  * ModelAndView
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-19T23:38:25.855+02:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-21T01:32:09.218+02:00")
 public class ModelAndView   {
   @SerializedName("empty")
   private Boolean empty = null;

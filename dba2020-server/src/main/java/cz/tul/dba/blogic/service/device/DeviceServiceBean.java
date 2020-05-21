@@ -31,12 +31,13 @@ public class DeviceServiceBean implements DeviceService {
     @Autowired
     public DeviceServiceBean(DeviceRepository deviceRepository, DeviceConfigurationRepository deviceConfigurationRepository,
                              MachineRepository machineRepository, MachineStateRepository machineStateRepository,
-                             DeviceHelper deviceHelper, MachineStateHelper machineStateHelperøó) {
+                             DeviceHelper deviceHelper, MachineStateHelper machineStateHelper) {
         this.deviceRepository = deviceRepository;
         this.deviceConfigurationRepository = deviceConfigurationRepository;
         this.machineRepository = machineRepository;
         this.machineStateRepository = machineStateRepository;
         this.deviceHelper = deviceHelper;
+        this.machineStateHelper = machineStateHelper;
     }
 
     @Override
