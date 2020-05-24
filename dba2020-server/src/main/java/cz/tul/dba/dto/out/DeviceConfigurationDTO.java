@@ -1,15 +1,34 @@
 package cz.tul.dba.dto.out;
 
-import cz.tul.dba.blogic.entity.DeviceConfigurationEntity;
-
 public class DeviceConfigurationDTO {
-    private DeviceConfigurationEntity deviceConfigurationEntity;
 
-    public DeviceConfigurationEntity getDeviceConfigurationEntity() {
-        return deviceConfigurationEntity;
+    private int latency;
+    private int speed;
+    private int distance;
+
+
+    public int getLatency() {
+        return latency;
     }
 
-    public void setDeviceConfigurationEntity(DeviceConfigurationEntity deviceConfigurationEntity) {
-        this.deviceConfigurationEntity = deviceConfigurationEntity;
+    public void setLatency(int latency) {
+        this.latency = latency;
     }
+
+    public int getSpeed() {
+        return speed;
+    }
+
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
+
+    public int getDistance() {
+        return distance;
+    }
+
+    public void setDistance(int distance) {
+        this.distance = distance;
+    }
+
 }

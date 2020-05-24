@@ -13,15 +13,15 @@ public class MachineStateEntity {
     private long id;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "device_id")
+    @JoinColumn(name = "device_id", nullable = false)
     private DeviceEntity deviceEntity;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "device_conf_id")
+    @JoinColumn(name = "device_conf_id", nullable = false)
     private DeviceConfigurationEntity configurationEntity;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "machine_id")
+    @JoinColumn(name = "machine_id", nullable = false)
     private MachineEntity machineEntity;
 
     @Column(name = "GPS_X", nullable = false)

@@ -68,9 +68,7 @@ public class IOTDeviceController {
     @RequestMapping(path = "/api/v1/device/configuration/{serialNumber}", method = RequestMethod.POST,
             produces = MediaType.APPLICATION_JSON_VALUE)
     public DeviceConfigurationDTO getDeviceConfiguration(@PathVariable String serialNumber) {
-        DeviceConfigurationEntity deviceConfigurationEntity = deviceService.getDeviceConfiguration(serialNumber);
-        DeviceConfigurationDTO deviceConfigurationDTO = new DeviceConfigurationDTO();
-        deviceConfigurationDTO.setDeviceConfigurationEntity(deviceConfigurationEntity);
+        DeviceConfigurationDTO deviceConfigurationDTO = deviceService.getDeviceConfiguration(serialNumber);
         return deviceConfigurationDTO;
     }
 

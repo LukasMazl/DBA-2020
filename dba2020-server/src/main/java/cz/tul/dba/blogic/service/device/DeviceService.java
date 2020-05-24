@@ -4,6 +4,7 @@ import cz.tul.dba.blogic.entity.DeviceConfigurationEntity;
 import cz.tul.dba.blogic.entity.DeviceEntity;
 import cz.tul.dba.dto.DeviceDTO;
 import cz.tul.dba.dto.out.AllDeviceDTO;
+import cz.tul.dba.dto.out.DeviceConfigurationDTO;
 import cz.tul.dba.dto.out.FreeDeviceDTO;
 import cz.tul.dba.dto.out.OnlineDeviceDTO;
 
@@ -41,7 +42,7 @@ public interface DeviceService {
      * @param serialNumber
      * @return device configuration
      */
-    DeviceConfigurationEntity getDeviceConfiguration(String serialNumber);
+    DeviceConfigurationDTO getDeviceConfiguration(String serialNumber);
 
     /**
      * Can be used for creating new device configuration

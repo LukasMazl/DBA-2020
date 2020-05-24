@@ -11,6 +11,7 @@ import cz.tul.dba.blogic.repository.MachineRepository;
 import cz.tul.dba.blogic.repository.MachineStateRepository;
 import cz.tul.dba.dto.DeviceDTO;
 import cz.tul.dba.dto.out.AllDeviceDTO;
+import cz.tul.dba.dto.out.DeviceConfigurationDTO;
 import cz.tul.dba.dto.out.FreeDeviceDTO;
 import cz.tul.dba.dto.out.OnlineDeviceDTO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -113,12 +114,21 @@ public class DeviceServiceBean implements DeviceService {
     }
 
     @Override
-    public DeviceConfigurationEntity getDeviceConfiguration(String serialNumber) {
+    public DeviceConfigurationDTO getDeviceConfiguration(String serialNumber) {
         DeviceEntity deviceEntity = deviceRepository.findBySerialNumberAndDeviceStateEntityNot(serialNumber, DeviceStateEntity.DELETED);
         if (deviceEntity == null) {
             throw new DeviceNotFoundException("Device with serial number " + serialNumber + " not found.");
         }
-        return deviceEntity.getDeviceConfigurationEntity();
+
+        DeviceConfigurationEntity deviceConfigurationEntity = deviceEntity.getDeviceConfigurationEntity();
+
+        DeviceConfigurationDTO deviceConfigurationDTO = new DeviceConfigurationDTO();
+
+        deviceConfigurationDTO.setDistance(deviceConfigurationEntity.getMaxDistance());
+        deviceConfigurationDTO.setLatency(deviceConfigurationEntity.getSecondLatency());
+        deviceConfigurationDTO.setSpeed(deviceConfigurationEntity.getMaxSpeed());
+
+        return deviceConfigurationDTO;
     }
 
     @Override
@@ -137,6 +147,8 @@ public class DeviceServiceBean implements DeviceService {
     private DeviceConfigurationEntity createConfigurationEntity(DeviceConfiguration deviceConfiguration) {
         DeviceConfigurationEntity deviceConfigurationEntity = new DeviceConfigurationEntity();
         deviceConfigurationEntity.setSecondLatency(deviceConfiguration.getSecondLatency());
+        deviceConfigurationEntity.setMaxDistance(deviceConfiguration.getMaxDistance());
+        deviceConfigurationEntity.setMaxSpeed(deviceConfiguration.getMaxSpeed());
         return deviceConfigurationEntity;
     }
 
