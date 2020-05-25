@@ -29,33 +29,74 @@ import java.util.Objects;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import io.swagger.client.model.DeviceConfigurationEntity;
 
 
 /**
  * DeviceConfigurationDTO
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-21T01:32:09.218+02:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-24T12:36:55.353+02:00")
 public class DeviceConfigurationDTO   {
-  @SerializedName("deviceConfigurationEntity")
-  private DeviceConfigurationEntity deviceConfigurationEntity = null;
+  @SerializedName("distance")
+  private Integer distance = null;
 
-  public DeviceConfigurationDTO deviceConfigurationEntity(DeviceConfigurationEntity deviceConfigurationEntity) {
-    this.deviceConfigurationEntity = deviceConfigurationEntity;
+  @SerializedName("latency")
+  private Integer latency = null;
+
+  @SerializedName("speed")
+  private Integer speed = null;
+
+  public DeviceConfigurationDTO distance(Integer distance) {
+    this.distance = distance;
     return this;
   }
 
    /**
-   * Get deviceConfigurationEntity
-   * @return deviceConfigurationEntity
+   * Get distance
+   * @return distance
   **/
   @ApiModelProperty(example = "null", value = "")
-  public DeviceConfigurationEntity getDeviceConfigurationEntity() {
-    return deviceConfigurationEntity;
+  public Integer getDistance() {
+    return distance;
   }
 
-  public void setDeviceConfigurationEntity(DeviceConfigurationEntity deviceConfigurationEntity) {
-    this.deviceConfigurationEntity = deviceConfigurationEntity;
+  public void setDistance(Integer distance) {
+    this.distance = distance;
+  }
+
+  public DeviceConfigurationDTO latency(Integer latency) {
+    this.latency = latency;
+    return this;
+  }
+
+   /**
+   * Get latency
+   * @return latency
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public Integer getLatency() {
+    return latency;
+  }
+
+  public void setLatency(Integer latency) {
+    this.latency = latency;
+  }
+
+  public DeviceConfigurationDTO speed(Integer speed) {
+    this.speed = speed;
+    return this;
+  }
+
+   /**
+   * Get speed
+   * @return speed
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public Integer getSpeed() {
+    return speed;
+  }
+
+  public void setSpeed(Integer speed) {
+    this.speed = speed;
   }
 
 
@@ -68,12 +109,14 @@ public class DeviceConfigurationDTO   {
       return false;
     }
     DeviceConfigurationDTO deviceConfigurationDTO = (DeviceConfigurationDTO) o;
-    return Objects.equals(this.deviceConfigurationEntity, deviceConfigurationDTO.deviceConfigurationEntity);
+    return Objects.equals(this.distance, deviceConfigurationDTO.distance) &&
+        Objects.equals(this.latency, deviceConfigurationDTO.latency) &&
+        Objects.equals(this.speed, deviceConfigurationDTO.speed);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(deviceConfigurationEntity);
+    return Objects.hash(distance, latency, speed);
   }
 
   @Override
@@ -81,7 +124,9 @@ public class DeviceConfigurationDTO   {
     StringBuilder sb = new StringBuilder();
     sb.append("class DeviceConfigurationDTO {\n");
     
-    sb.append("    deviceConfigurationEntity: ").append(toIndentedString(deviceConfigurationEntity)).append("\n");
+    sb.append("    distance: ").append(toIndentedString(distance)).append("\n");
+    sb.append("    latency: ").append(toIndentedString(latency)).append("\n");
+    sb.append("    speed: ").append(toIndentedString(speed)).append("\n");
     sb.append("}");
     return sb.toString();
   }

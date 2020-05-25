@@ -34,7 +34,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * DeleteMachineDTO
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-21T01:32:09.218+02:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-24T12:36:55.353+02:00")
 public class DeleteMachineDTO   {
   @SerializedName("vin")
   private String vin = null;

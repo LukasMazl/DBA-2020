@@ -26,13 +26,79 @@
 package io.swagger.client.model;
 
 import java.util.Objects;
+import com.google.gson.annotations.SerializedName;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
 
 /**
  * NewDeviceConfigurationDTO
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-21T01:32:09.218+02:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-24T12:36:55.353+02:00")
 public class NewDeviceConfigurationDTO   {
+  @SerializedName("distance")
+  private Integer distance = null;
+
+  @SerializedName("latency")
+  private Integer latency = null;
+
+  @SerializedName("speed")
+  private Integer speed = null;
+
+  public NewDeviceConfigurationDTO distance(Integer distance) {
+    this.distance = distance;
+    return this;
+  }
+
+   /**
+   * Get distance
+   * @return distance
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public Integer getDistance() {
+    return distance;
+  }
+
+  public void setDistance(Integer distance) {
+    this.distance = distance;
+  }
+
+  public NewDeviceConfigurationDTO latency(Integer latency) {
+    this.latency = latency;
+    return this;
+  }
+
+   /**
+   * Get latency
+   * @return latency
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public Integer getLatency() {
+    return latency;
+  }
+
+  public void setLatency(Integer latency) {
+    this.latency = latency;
+  }
+
+  public NewDeviceConfigurationDTO speed(Integer speed) {
+    this.speed = speed;
+    return this;
+  }
+
+   /**
+   * Get speed
+   * @return speed
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public Integer getSpeed() {
+    return speed;
+  }
+
+  public void setSpeed(Integer speed) {
+    this.speed = speed;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -42,12 +108,15 @@ public class NewDeviceConfigurationDTO   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return true;
+    NewDeviceConfigurationDTO newDeviceConfigurationDTO = (NewDeviceConfigurationDTO) o;
+    return Objects.equals(this.distance, newDeviceConfigurationDTO.distance) &&
+        Objects.equals(this.latency, newDeviceConfigurationDTO.latency) &&
+        Objects.equals(this.speed, newDeviceConfigurationDTO.speed);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash();
+    return Objects.hash(distance, latency, speed);
   }
 
   @Override
@@ -55,6 +124,9 @@ public class NewDeviceConfigurationDTO   {
     StringBuilder sb = new StringBuilder();
     sb.append("class NewDeviceConfigurationDTO {\n");
     
+    sb.append("    distance: ").append(toIndentedString(distance)).append("\n");
+    sb.append("    latency: ").append(toIndentedString(latency)).append("\n");
+    sb.append("    speed: ").append(toIndentedString(speed)).append("\n");
     sb.append("}");
     return sb.toString();
   }

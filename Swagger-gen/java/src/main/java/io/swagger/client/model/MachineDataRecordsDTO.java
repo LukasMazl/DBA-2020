@@ -37,7 +37,7 @@ import java.util.List;
 /**
  * MachineDataRecordsDTO
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-21T01:32:09.218+02:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-24T12:36:55.353+02:00")
 public class MachineDataRecordsDTO   {
   @SerializedName("machineDataRecordDTOS")
   private List<MachineDataRecordDTO> machineDataRecordDTOS = new ArrayList<MachineDataRecordDTO>();

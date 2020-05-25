@@ -7,6 +7,7 @@ import javax.persistence.*;
 public class DeviceConfigurationEntity {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "device_conf_id")
     private long id;
 

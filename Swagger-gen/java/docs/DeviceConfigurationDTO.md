@@ -4,7 +4,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**deviceConfigurationEntity** | [**DeviceConfigurationEntity**](DeviceConfigurationEntity.md) |  |  [optional]
+**distance** | **Integer** |  |  [optional]
+**latency** | **Integer** |  |  [optional]
+**speed** | **Integer** |  |  [optional]
 
 
 

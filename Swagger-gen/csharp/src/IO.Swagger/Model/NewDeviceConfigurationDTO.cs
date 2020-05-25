@@ -42,11 +42,31 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="NewDeviceConfigurationDTO" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        public NewDeviceConfigurationDTO()
+        /// <param name="Distance">Distance.</param>
+        /// <param name="Latency">Latency.</param>
+        /// <param name="Speed">Speed.</param>
+        public NewDeviceConfigurationDTO(int? Distance = null, int? Latency = null, int? Speed = null)
         {
+            this.Distance = Distance;
+            this.Latency = Latency;
+            this.Speed = Speed;
         }
         
+        /// <summary>
+        /// Gets or Sets Distance
+        /// </summary>
+        [DataMember(Name="distance", EmitDefaultValue=false)]
+        public int? Distance { get; set; }
+        /// <summary>
+        /// Gets or Sets Latency
+        /// </summary>
+        [DataMember(Name="latency", EmitDefaultValue=false)]
+        public int? Latency { get; set; }
+        /// <summary>
+        /// Gets or Sets Speed
+        /// </summary>
+        [DataMember(Name="speed", EmitDefaultValue=false)]
+        public int? Speed { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -55,6 +75,9 @@ namespace IO.Swagger.Model
         {
             var sb = new StringBuilder();
             sb.Append("class NewDeviceConfigurationDTO {\n");
+            sb.Append("  Distance: ").Append(Distance).Append("\n");
+            sb.Append("  Latency: ").Append(Latency).Append("\n");
+            sb.Append("  Speed: ").Append(Speed).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -90,7 +113,22 @@ namespace IO.Swagger.Model
             if (other == null)
                 return false;
 
-            return false;
+            return 
+                (
+                    this.Distance == other.Distance ||
+                    this.Distance != null &&
+                    this.Distance.Equals(other.Distance)
+                ) && 
+                (
+                    this.Latency == other.Latency ||
+                    this.Latency != null &&
+                    this.Latency.Equals(other.Latency)
+                ) && 
+                (
+                    this.Speed == other.Speed ||
+                    this.Speed != null &&
+                    this.Speed.Equals(other.Speed)
+                );
         }
 
         /// <summary>
@@ -104,6 +142,12 @@ namespace IO.Swagger.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.Distance != null)
+                    hash = hash * 59 + this.Distance.GetHashCode();
+                if (this.Latency != null)
+                    hash = hash * 59 + this.Latency.GetHashCode();
+                if (this.Speed != null)
+                    hash = hash * 59 + this.Speed.GetHashCode();
                 return hash;
             }
         }

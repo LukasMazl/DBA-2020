@@ -138,6 +138,8 @@ public class DeviceServiceBean implements DeviceService {
             throw new DeviceNotFoundException("Device with serial number " + serialNumber + " not found.");
         }
         DeviceConfigurationEntity deviceConfigurationEntity = createConfigurationEntity(deviceConfiguration);
+        deviceEntity.setDeviceConfigurationEntity(null);
+        deviceRepository.save(deviceEntity);
         deviceConfigurationRepository.save(deviceConfigurationEntity);
         deviceEntity.setDeviceConfigurationEntity(deviceConfigurationEntity);
         deviceRepository.save(deviceEntity);
